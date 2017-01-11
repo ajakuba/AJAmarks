@@ -1,0 +1,13 @@
+/*C1*/SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+COMMIT
+/*C2*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C3*/SET SCHEMA PUBLIC
+drop table Student if exists
+drop sequence hibernate_sequence if exists
+DISCONNECT
+/*C4*/SET SCHEMA PUBLIC
+create sequence hibernate_sequence start with 1 increment by 1
+create table Student (id_student bigint not null, first_name varchar(255), last_name varchar(255), primary key (id_student))
+DISCONNECT
