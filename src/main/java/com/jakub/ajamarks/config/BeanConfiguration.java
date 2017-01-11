@@ -6,12 +6,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import static org.springframework.context.annotation.FilterType.ANNOTATION;
 
 @Configuration
 @ComponentScan(basePackages = "com.jakub.ajamarks", excludeFilters =
 @ComponentScan.Filter(type = ANNOTATION, value = Configuration.class))
+@EnableJpaRepositories("com.jakub.ajamarks.repositories")
 @Import(value = DataBaseConfiguration.class)
 public class BeanConfiguration {
 
