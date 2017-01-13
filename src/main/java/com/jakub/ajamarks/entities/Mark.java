@@ -11,28 +11,30 @@ import java.util.List;
  */
 
 @Entity
-public enum Mark {
-    NDST(1), MRN(2), DST(3), DB(4), BDB(5), CEL(6);
+public class Mark {
 
     @Id
     @GeneratedValue
-    private long mark_id;
+    private long idMark;
     private int markValue;
+    private String markName;
     @ManyToMany
     private List<Student> studentList;
 
     Mark(){};
 
     Mark(int markValue){
+        if(markValue>6 || markValue<1)
+            throw new IllegalArgumentException();
         this.markValue=markValue;
     }
 
-    public long getMark_id() {
-        return mark_id;
+    public long getIdMark() {
+        return idMark;
     }
 
-    public void setMark_id(long mark_id) {
-        this.mark_id = mark_id;
+    public void setIdMark(long idMark) {
+        this.idMark = idMark;
     }
 
     public int getMarkValue() {
@@ -43,6 +45,14 @@ public enum Mark {
         this.markValue = markValue;
     }
 
+    public String getMarkName() {
+        return markName;
+    }
+
+    public void setMarkName(String markName) {
+        this.markName = markName;
+    }
+
     public List<Student> getStudentList() {
         return studentList;
     }
@@ -50,4 +60,6 @@ public enum Mark {
     public void setStudentList(List<Student> studentList) {
         this.studentList = studentList;
     }
+
+
 }

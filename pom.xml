@@ -7,6 +7,16 @@
     <groupId>com.jakub.ajamarks</groupId>
     <artifactId>AJAmarks</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <jdk.version>1.8</jdk.version>
+        <mvn.compiler.version>3.5.1</mvn.compiler.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>

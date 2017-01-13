@@ -5,7 +5,7 @@ import static org.testng.Assert.*;
 /**
  * Created by ja on 11.01.17.
  */
-public class ClassRepositoryTest {
+public class ClassroomRepositoryTest {
     @org.testng.annotations.BeforeMethod
     public void setUp() throws Exception {
 

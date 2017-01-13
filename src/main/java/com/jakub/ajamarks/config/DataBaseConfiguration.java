@@ -45,6 +45,7 @@ public class DataBaseConfiguration {
     @Bean
     public Properties jpaProperties() {
         Properties properties = new Properties();
+        properties.setProperty("hibernate.hbm2ddl.import_files", "initial_data.sql");
         properties.setProperty("hibernate.hbm2ddl.auto", "create");
         properties.setProperty("hibernate.connection.useUnicode", "true");
         properties.setProperty("hibernate.connection.characterEncoding", "UTF-8");

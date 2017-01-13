@@ -1,8 +1,6 @@
 package com.jakub.ajamarks.entities;
 
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -13,20 +11,21 @@ public class Classroom {
 
     @Id
     @GeneratedValue
-    private long classRoom_Id;
-
+    private long idClassroom;
+    @Column(unique = true)
     private int classroomNumber;
+    @Column(unique = true)
     private String classroomName;
 
     @OneToMany(mappedBy = "classroom")
     private Set<Student> studentsInClassroom;
 
-    public long getClassRoom_Id() {
-        return classRoom_Id;
+    public long getIdClassroom() {
+        return idClassroom;
     }
 
-    public void setClassRoom_Id(long classRoom_Id) {
-        this.classRoom_Id = classRoom_Id;
+    public void setIdClassroom(long idClassroom) {
+        this.idClassroom = idClassroom;
     }
 
     public int getClassroomNumber() {

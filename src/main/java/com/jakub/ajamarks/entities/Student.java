@@ -12,22 +12,23 @@ public class Student {
 
     @Id
     @GeneratedValue
-    private long id_student;
+    private long idStudent;
     @Column(unique = true, nullable = false)
     private String userName;
     private String first_name;
     private String last_name;
     @ManyToOne
+    @JoinColumn(name = ("classroomId"))
     private Classroom classroom;
     @ManyToMany(mappedBy = "studentList")
     private List<Mark> markList;
 
-    public long getId_student() {
-        return id_student;
+    public long getIdStudent() {
+        return idStudent;
     }
 
-    public void setId_student(long id_student) {
-        this.id_student = id_student;
+    public void setIdStudent(long idStudent) {
+        this.idStudent = idStudent;
     }
 
     public String getUserName() {
