@@ -56,8 +56,8 @@ fabric.properties
 
 ### Java ###
 *.class
-/target/classes
-/home/ja
+/target/classes/
+/home/ja/
 
 # BlueJ files
 *.ctxt
