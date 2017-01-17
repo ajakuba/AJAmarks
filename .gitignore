@@ -57,7 +57,10 @@ fabric.properties
 ### Java ###
 *.class
 /target/classes/
+/target/test-classes/
 /home/ja/
+/target/initdata.*
+
 
 # BlueJ files
 *.ctxt
