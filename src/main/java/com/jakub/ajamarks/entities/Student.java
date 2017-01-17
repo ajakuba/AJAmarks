@@ -15,12 +15,12 @@ public class Student {
     private long idStudent;
     @Column(unique = true, nullable = false)
     private String userName;
-    private String first_name;
-    private String last_name;
+    private String firstName;
+    private String lastName;
     @ManyToOne
     @JoinColumn(name = ("classroomId"))
     private Classroom classroom;
-    @ManyToMany(mappedBy = "studentList")
+    @ManyToMany(mappedBy = "studentSet")
     private List<Mark> markList;
 
     public long getIdStudent() {
@@ -39,20 +39,20 @@ public class Student {
         this.userName = userName;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Classroom getClassroom() {
@@ -69,5 +69,33 @@ public class Student {
 
     public void setMarkList(List<Mark> markList) {
         this.markList = markList;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Student student = (Student) o;
+
+        if (userName != null ? !userName.equals(student.userName) : student.userName != null) return false;
+        if (firstName != null ? !firstName.equals(student.firstName) : student.firstName != null) return false;
+        return lastName != null ? lastName.equals(student.lastName) : student.lastName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = userName != null ? userName.hashCode() : 0;
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "idStudent=" + idStudent +
+
+                '}';
     }
 }

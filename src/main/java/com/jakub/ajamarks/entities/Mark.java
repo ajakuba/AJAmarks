@@ -1,16 +1,25 @@
 package com.jakub.ajamarks.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.List;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created by ja on 11.01.17.
  */
 
+@EqualsAndHashCode(exclude = {"idMark", "studentSet"})
+@ToString
 @Entity
+
+//string: "findByMarkValueNamedQuery" mas be the same as method name in MarkRepository, the same for MarkName
+@NamedQueries({
+        @NamedQuery(name = "Mark.findByMarkValueNamedQuery", query = "select m from Mark m where m.markValue = ?1"),
+        @NamedQuery(name = "Mark.findByMarkNameNamedQuery", query = "select m from Mark m where m.markName = ?1")
+        })
+
 public class Mark {
 
     @Id
@@ -19,14 +28,9 @@ public class Mark {
     private int markValue;
     private String markName;
     @ManyToMany
-    private List<Student> studentList;
+    private Set<Student> studentSet;
 
-    Mark(){};
-
-    Mark(int markValue){
-        if(markValue>6 || markValue<1)
-            throw new IllegalArgumentException();
-        this.markValue=markValue;
+    public Mark() {
     }
 
     public long getIdMark() {
@@ -53,12 +57,12 @@ public class Mark {
         this.markName = markName;
     }
 
-    public List<Student> getStudentList() {
-        return studentList;
+    public Set<Student> getStudentSet() {
+        return studentSet;
     }
 
-    public void setStudentList(List<Student> studentList) {
-        this.studentList = studentList;
+    public void setStudentSet(Set<Student> studentSet) {
+        this.studentSet = studentSet;
     }
 
 

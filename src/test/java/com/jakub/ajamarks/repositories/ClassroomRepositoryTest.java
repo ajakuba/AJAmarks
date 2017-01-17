@@ -1,7 +1,5 @@
 package com.jakub.ajamarks.repositories;
 
-import static org.testng.Assert.*;
-
 /**
  * Created by ja on 11.01.17.
  */
