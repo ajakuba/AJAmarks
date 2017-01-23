@@ -20,7 +20,7 @@ import java.util.Set;
         @NamedQuery(name = "Mark.findByMarkNameNamedQuery", query = "select m from Mark m where m.markName = ?1")
         })
 
-public class Mark {
+public class Mark implements Comparable{
 
     @Id
     @GeneratedValue
@@ -66,4 +66,9 @@ public class Mark {
     }
 
 
+    @Override
+    public int compareTo(Object o) {
+        Mark o1 = (Mark) o;
+        return this.getMarkValue()-o1.getMarkValue();
+    }
 }

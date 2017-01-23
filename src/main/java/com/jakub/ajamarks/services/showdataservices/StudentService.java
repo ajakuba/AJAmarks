@@ -19,7 +19,7 @@ public interface StudentService {
     Student getStudentById(long id);
     Student getStudentByUserName(String userName);
     Collection<Student> getAllByOrderByLastNameDesc(int classroomNumber);
-    Collection<Student> getClassroomStudentsByClassroom(Classroom classroom);
+    Collection<Student> getClassroomStudentsByClassroom(String classroomName);
     List<Student> getStudentsWithGivenMark(Mark givenMark);
     List<Student> getStudentsWithoutGivenMark(Mark givenMark);
 }

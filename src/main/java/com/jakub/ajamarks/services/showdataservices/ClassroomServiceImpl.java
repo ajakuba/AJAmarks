@@ -5,6 +5,7 @@ import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.ClassroomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.Set;
  * Created by ja on 12.01.17.
  */
 @Service
+@Transactional
 public class ClassroomServiceImpl implements ClassroomService {
 
     @Autowired

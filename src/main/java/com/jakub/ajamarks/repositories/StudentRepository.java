@@ -1,6 +1,5 @@
 package com.jakub.ajamarks.repositories;
 
-import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -34,8 +33,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
     @Query("select u from Student u order by u.lastName desc")
     List <Student> findAllOrderByLastNameDesc();
 
-    @Query("select u from Student u where u.classroom = ?1")
-    List<Student> findByClassroom(Classroom classroom);
+    List<Student> findByClassroomClassroomName(String classroomName);
 
 
 

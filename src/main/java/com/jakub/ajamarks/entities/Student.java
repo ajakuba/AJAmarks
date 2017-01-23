@@ -1,5 +1,8 @@
 package com.jakub.ajamarks.entities;
 
+import lombok.EqualsAndHashCode;
+import org.springframework.expression.spel.CompilablePropertyAccessor;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -7,8 +10,9 @@ import java.util.List;
  * Created by ja on 11.01.17.
  */
 
+@EqualsAndHashCode(exclude = {"idStudent", "markList"})
 @Entity
-public class Student {
+public class Student implements Comparable {
 
     @Id
     @GeneratedValue
@@ -18,7 +22,7 @@ public class Student {
     private String firstName;
     private String lastName;
     @ManyToOne
-    @JoinColumn(name = ("classroomId"))
+    @JoinColumn
     private Classroom classroom;
     @ManyToMany(mappedBy = "studentSet")
     private List<Mark> markList;
@@ -71,31 +75,23 @@ public class Student {
         this.markList = markList;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Student student = (Student) o;
-
-        if (userName != null ? !userName.equals(student.userName) : student.userName != null) return false;
-        if (firstName != null ? !firstName.equals(student.firstName) : student.firstName != null) return false;
-        return lastName != null ? lastName.equals(student.lastName) : student.lastName == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = userName != null ? userName.hashCode() : 0;
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        return result;
-    }
 
     @Override
     public String toString() {
         return "Student{" +
                 "idStudent=" + idStudent +
+                "name=" + lastName +
+                "user=" + userName+
 
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Student student = (Student) o;
+        String firstStudent = this.getLastName().concat(" ").concat(this.getFirstName()).concat(" ").concat(this.getUserName());
+        String secondStudent = student.getLastName().concat(" ").concat(student.getFirstName()).concat(" ").concat(student.getUserName());
+        return firstStudent.compareTo(secondStudent);
+
     }
 }

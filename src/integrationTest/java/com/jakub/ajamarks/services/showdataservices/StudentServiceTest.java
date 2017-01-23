@@ -163,7 +163,7 @@ public class StudentServiceTest {
         //given
         Student student = new Student();
         student.setFirstName("Jakab2");
-        student.setLastName("Ja");
+        student.setLastName("2a");
         student.setUserName("aj");
         student.setClassroom(classroom);
         student.setMarkList(Collections.emptyList());
@@ -189,7 +189,7 @@ public class StudentServiceTest {
         //given
         studentService.saveStudent(student2);
         //when
-        Collection<Student> classroomStudentsByClassroom = studentService.getClassroomStudentsByClassroom(classroom);
+        Collection<Student> classroomStudentsByClassroom = studentService.getClassroomStudentsByClassroom(classroom.getClassroomName());
         //then
         assertThat(2, is(classroomStudentsByClassroom.size()));
         assertThat(classroomStudentsByClassroom, hasItem(student1));

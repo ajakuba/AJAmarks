@@ -1,11 +1,11 @@
 package com.jakub.ajamarks.services.showdataservices;
 
-import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Mark;
 import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -17,6 +17,7 @@ import java.util.List;
  */
 
 @Service
+@Transactional
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
@@ -60,8 +61,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Collection<Student> getClassroomStudentsByClassroom(Classroom classroom) {
-        return studentRepository.findByClassroom(classroom);
+    public Collection<Student> getClassroomStudentsByClassroom(String classroomName) {
+        return studentRepository.findByClassroomClassroomName(classroomName);
     }
 
     @Override
