@@ -25,7 +25,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {DataBaseForTestConfiguration.class})
 @Transactional
-public class MarkServiceTest {
+public class MarkServiceIntegrationTest {
 
     @Autowired
     MarkService markService;

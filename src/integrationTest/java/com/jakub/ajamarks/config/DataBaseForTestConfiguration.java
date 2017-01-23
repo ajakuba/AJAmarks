@@ -1,6 +1,8 @@
 package com.jakub.ajamarks.config;
 
+import org.springframework.beans.factory.config.PropertyOverrideConfigurer;
 import org.springframework.context.annotation.*;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -17,11 +19,11 @@ import java.util.Properties;
  */
 
 @Configuration
-@PropertySources({
+//@PropertySources({
 //        @PropertySource("classpath:hsqlfortest.properties"),
-        @PropertySource("classpath:mysqlfortest.properties")
-})
-//@PropertySource("classpath:mysqlfortest.properties")
+//        @PropertySource("classpath:mysqlfortest.properties")
+//})
+@PropertySource("classpath:mysqlfortest.properties")
 @ComponentScan(basePackages = "com.jakub.ajamarks")
 @EnableJpaRepositories("com.jakub.ajamarks.repositories")
 @EnableTransactionManagement
@@ -38,12 +40,14 @@ public class DataBaseForTestConfiguration {
     }
 
     @Bean
+    public static PropertyOverrideConfigurer propertyOverrideConfigurerDev() {
+        PropertyOverrideConfigurer overrideConfigurer = new PropertyOverrideConfigurer();
+        overrideConfigurer.setLocation(new ClassPathResource("mysqlfortest.properties"));
+        return overrideConfigurer;
+    }
+
+    @Bean
     public DataSource dataSource() {
-        DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/markstest");
-        driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        driverManagerDataSource.setUsername("markstest");
-        driverManagerDataSource.setPassword("markstest");
         return new DriverManagerDataSource();
     }
 

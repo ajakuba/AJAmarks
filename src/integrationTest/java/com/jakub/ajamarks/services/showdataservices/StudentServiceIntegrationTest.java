@@ -26,7 +26,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = DataBaseForTestConfiguration.class)
 @Transactional
-public class StudentServiceTest {
+public class StudentServiceIntegrationTest {
 
     @Autowired
     private StudentService studentService;

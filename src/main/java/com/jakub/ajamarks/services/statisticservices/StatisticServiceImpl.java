@@ -126,7 +126,10 @@ public class StatisticServiceImpl implements StatisticService {
 
         studentRepositoryAll.remove(studentRepository.findByUserName(userName));
         studentRepositoryAll.removeIf(student -> student.getMarkList().isEmpty());
-        List<Student> studentsAboveAverage = studentRepositoryAll.stream().filter(student -> countAverageMarkForUser(student.getUserName()) > studentAverage).collect(Collectors.toList());
+        List<Student> studentsAboveAverage = studentRepositoryAll
+                .stream()
+                .filter(student -> countAverageMarkForUser(student.getUserName()) > studentAverage)
+                .collect(Collectors.toList());
 
         return studentsAboveAverage;
     }
@@ -156,7 +159,10 @@ public class StatisticServiceImpl implements StatisticService {
 
         double userAverage = countAverageMarkForUser(userName);
 
-        long numberOfStudentsAboveUserAverage = studentsAverageList.stream().filter(aDouble -> aDouble > userAverage).count();
+        long numberOfStudentsAboveUserAverage = studentsAverageList
+                .stream()
+                .filter(aDouble -> aDouble > userAverage)
+                .count();
 
         return (int) numberOfStudentsAboveUserAverage;
     }
@@ -209,9 +215,8 @@ public class StatisticServiceImpl implements StatisticService {
         markList.forEach(mark -> integerStudentMap.put(mark, new TreeSet<>()));
 
         List<Student> studentRepositoryAll = studentRepository.findAll();
-        System.out.println(studentRepositoryAll);
+
         studentRepositoryAll.removeIf(student -> student.getMarkList().isEmpty());
-        System.out.println(studentRepositoryAll);
 
         studentRepositoryAll
                 .forEach(student -> student.getMarkList()

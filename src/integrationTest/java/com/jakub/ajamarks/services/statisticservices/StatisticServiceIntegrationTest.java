@@ -30,7 +30,7 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = DataBaseForTestConfiguration.class)
 @Transactional
-public class StatisticServiceTest {
+public class StatisticServiceIntegrationTest {
 
     @Autowired
     private StatisticService statisticService;
@@ -206,7 +206,6 @@ public class StatisticServiceTest {
         double expectedAverage = 2;
         //when
         Double classroomAverage = statisticService.countAverageMarkForClassroom(classroom2.getClassroomName());
-        System.out.println(classroomAverage);
         //then
         assertThat(expectedAverage, is(classroomAverage));
 

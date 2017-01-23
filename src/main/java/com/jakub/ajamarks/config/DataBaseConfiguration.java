@@ -66,7 +66,7 @@ public class DataBaseConfiguration {
     }
 
     @Bean
-    @Profile("test")
+  //  @Profile("test")
     public static PropertyOverrideConfigurer propertyOverrideConfigurerTest() {
         PropertyOverrideConfigurer overrideConfigurer = new PropertyOverrideConfigurer();
         overrideConfigurer.setLocation(new ClassPathResource("hsql.properties"));

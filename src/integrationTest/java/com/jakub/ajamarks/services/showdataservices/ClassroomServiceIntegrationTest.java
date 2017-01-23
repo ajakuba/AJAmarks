@@ -26,7 +26,7 @@ import static org.junit.Assert.assertSame;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {DataBaseForTestConfiguration.class})
 @Transactional
-public class ClassroomServiceTest {
+public class ClassroomServiceIntegrationTest {
 
     @Autowired
     ClassroomService classroomService;
@@ -70,7 +70,7 @@ public class ClassroomServiceTest {
         //when
         Classroom saveClassroom2 = classroomService.saveClassroom(classroom2);
         //then
-        assertThat(2, is(classroomService.getAll().size()));
+        assertThat(2, is(classroomService.getAllByClassroomNameAsc().size()));
         assertThat(classroom2, is(saveClassroom2));
     }
 
@@ -83,7 +83,7 @@ public class ClassroomServiceTest {
         cls.setStudentsInClassroom(Collections.emptySet());
         Classroom classroomByNumber = classroomService.getClassroomByNumber(1);
         //when
-        Classroom update = classroomService.updateByClassroomNumber(cls);
+        Classroom update = classroomService.updateClassroom(cls);
         //then
         assertThat(cls.getClassroomNumber(), is(update.getClassroomNumber()));
         assertThat(2, is(update.getClassroomNumber()));
@@ -95,16 +95,16 @@ public class ClassroomServiceTest {
         //given
         //when
         classroomService.delete(classroom1);
-        List<Classroom> all = classroomService.getAll();
+        List<Classroom> all = classroomService.getAllByClassroomNameAsc();
         //then
         assertThat(0, is(all.size()));
     }
 
     @Test
-    public void getAllTest() {
+    public void getAllByClassroomNameAscTest() {
         //given
         //when
-        List<Classroom> classroomList = classroomService.getAll();
+        List<Classroom> classroomList = classroomService.getAllByClassroomNameAsc();
         //then
         assertThat(1, is(classroomList.size()));
         assertThat(classroomList, hasItem(classroom1));
