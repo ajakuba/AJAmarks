@@ -4,26 +4,27 @@ import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.ClassroomRepository;
 
-import static org.junit.Assert.assertEquals;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import static org.mockito.Mockito.*;
-import org.junit.Before;
-import org.junit.Test;
+import static org.testng.Assert.*;
 
 import java.util.*;
+
 
 /**
  * Created by ja on 23.01.17.
  */
-public class ClassroomServiceTest {
+public class ClassroomServiceImplTest {
 
-    ClassroomServiceImpl classroomServiceImpl;
-    Classroom classroom1;
-    Classroom classroom2;
-    List<Classroom> classroomList;
-    Set<Student> studentSet;
+    private ClassroomServiceImpl classroomServiceImpl;
+    private Classroom classroom1;
+    private Classroom classroom2;
+    private List<Classroom> classroomList;
+    private Set<Student> studentSet;
 
-    @Before
-    public void testSetup(){
+    @BeforeMethod
+    public void testSetUp(){
 
         Student student1 = new Student();
         student1.setFirstName("Jakub");
@@ -65,15 +66,13 @@ public class ClassroomServiceTest {
         verify(classroomServiceImpl.classroomRepository).save(classroom1);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void saveClassroom_IllegalArgumentExceptionTest(){
         //given
         Classroom classroom3 = null;
-        when(classroomServiceImpl.classroomRepository.save(classroom3)).thenThrow(IllegalArgumentException.class);
         //when
         classroomServiceImpl.saveClassroom(classroom3);
         //then
-        verify(classroomServiceImpl.classroomRepository).save(classroom3);
     }
 
     @Test
@@ -86,15 +85,13 @@ public class ClassroomServiceTest {
         verify(classroomServiceImpl.classroomRepository).delete(classroom1);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void delete_IllegalArgumentExceptionTest(){
         //given
         Classroom classroom3 = null;
-        doThrow(IllegalArgumentException.class).when(classroomServiceImpl.classroomRepository).delete(classroom3);
         //when
         classroomServiceImpl.delete(classroom3);
         //then
-        verify(classroomServiceImpl.classroomRepository).delete(classroom3);
     }
 
     @Test
@@ -107,26 +104,22 @@ public class ClassroomServiceTest {
         verify(classroomServiceImpl.classroomRepository).findByClassroomName(classroom1.getClassroomName());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void update_IllegalArgumentExceptionTest(){
         //given
         Classroom classroom3 = new Classroom();
-        when(classroomServiceImpl.classroomRepository.findByClassroomName(classroom3.getClassroomName())).thenThrow(IllegalArgumentException.class);
         //when
         classroomServiceImpl.updateClassroom(classroom3);
         //then
-        verify(classroomServiceImpl.classroomRepository).findByClassroomName(classroom3.getClassroomName());
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test(expectedExceptions = NullPointerException.class)
     public void update_NullPointerExceptionTest(){
         //given
         Classroom classroom3 = null;
-        when(classroomServiceImpl.classroomRepository.findByClassroomName(classroom3.getClassroomName())).thenThrow(NullPointerException.class);
         //when
         classroomServiceImpl.updateClassroom(classroom3);
         //then
-        verify(classroomServiceImpl.classroomRepository).findByClassroomName(classroom3.getClassroomName());
     }
 
     @Test
@@ -150,15 +143,13 @@ public class ClassroomServiceTest {
         verify(classroomServiceImpl.classroomRepository).findOne(idClassroom);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void getClassroomById_IllegalArgumentExceptionTest(){
         //given
         long idClassroom = 0;
-        when(classroomServiceImpl.classroomRepository.findOne(idClassroom)).thenThrow(IllegalArgumentException.class);
         //when
         classroomServiceImpl.getClassroomById(idClassroom);
         //then
-        verify(classroomServiceImpl.classroomRepository).findOne(idClassroom);
     }
 
     @Test
@@ -172,15 +163,13 @@ public class ClassroomServiceTest {
         verify(classroomServiceImpl.classroomRepository).findByClassroomNumber(classroomNumber);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void getClassroomByNumber_IllegalArgumentExceptionTest(){
         //given
         int classroomNumber = 0;
-        when(classroomServiceImpl.classroomRepository.findByClassroomNumber(classroomNumber)).thenThrow(IllegalArgumentException.class);
         //when
         classroomServiceImpl.getClassroomByNumber(classroomNumber);
         //then
-        verify(classroomServiceImpl.classroomRepository).findByClassroomNumber(classroomNumber);
     }
 
     @Test
@@ -194,15 +183,13 @@ public class ClassroomServiceTest {
         verify(classroomServiceImpl.classroomRepository).findByClassroomName(classroomName);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void getClassroomByName_IllegalArgumentExceptionTest(){
         //given
         String classroomName = null;
-        when(classroomServiceImpl.classroomRepository.findByClassroomName(classroomName)).thenThrow(IllegalArgumentException.class);
         //when
         classroomServiceImpl.getClassroomByName(classroomName);
         //then
-        verify(classroomServiceImpl.classroomRepository).findByClassroomName(classroomName);
     }
 
     @Test
@@ -230,17 +217,24 @@ public class ClassroomServiceTest {
 
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest(){
         //given
         int classroomNumber = 0;
-        when(classroomServiceImpl.classroomRepository.findByClassroomNumber(classroomNumber)).thenThrow(IllegalArgumentException.class);
         //when
         classroomServiceImpl.getClassroomStudentsByClassroomNumber(classroomNumber);
         //then
-        verify(classroomServiceImpl.classroomRepository).findByClassroomNumber(classroomNumber);
-
     }
+
+    @Test(expectedExceptions = NullPointerException.class)
+    public void getClassroomStudentsByClassroomNumber_NullPointerExceptionTest(){
+        //given
+        int classroomNumber = 21;
+        //when
+        classroomServiceImpl.getClassroomStudentsByClassroomNumber(classroomNumber);
+        //then
+    }
+
 
     @Test
     public void getClassroomStudentsByClassroomNameTest(){
@@ -267,15 +261,23 @@ public class ClassroomServiceTest {
         assertEquals(Collections.emptySet(), classroomStudentsByClassroomName);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest(){
         //given
         String classroomName = null;
-        when(classroomServiceImpl.classroomRepository.findByClassroomName(classroomName)).thenThrow(IllegalArgumentException.class);
         //when
         classroomServiceImpl.getClassroomStudentsByClassroomName(classroomName);
         //then
-        verify(classroomServiceImpl.classroomRepository).findByClassroomName(classroomName);
+
+    }
+
+    @Test(expectedExceptions = NullPointerException.class)
+    public void getClassroomStudentsByClassroomName_NullPointerExceptionTest(){
+        //given
+        String classroomName = "no name";
+        //when
+        classroomServiceImpl.getClassroomStudentsByClassroomName(classroomName);
+        //then
 
     }
 

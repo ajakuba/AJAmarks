@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="13.639" tests="93" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/home/ja/java/jdk1.8.0_77/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.77-b03"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/ja/IdeaProjects/AJAmarks"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="PL"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/ja/IdeaProjects/AJAmarks"/>
+    <property name="java.runtime.version" value="1.8.0_77-b03"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/home/ja/java/jdk1.8.0_77/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/lib/idea-2016.02.02/bin::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.4.0-31-generic"/>
+    <property name="user.home" value="/home/ja"/>
+    <property name="user.timezone" value="Europe/Warsaw"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="ja"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/home/ja/java/jdk1.8.0_77/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="pl"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_77"/>
+    <property name="java.ext.dirs" value="/home/ja/java/jdk1.8.0_77/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/home/ja/java/jdk1.8.0_77/jre/lib/resources.jar:/home/ja/java/jdk1.8.0_77/jre/lib/rt.jar:/home/ja/java/jdk1.8.0_77/jre/lib/sunrsasign.jar:/home/ja/java/jdk1.8.0_77/jre/lib/jsse.jar:/home/ja/java/jdk1.8.0_77/jre/lib/jce.jar:/home/ja/java/jdk1.8.0_77/jre/lib/charsets.jar:/home/ja/java/jdk1.8.0_77/jre/lib/jfr.jar:/home/ja/java/jdk1.8.0_77/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testFindStudentsInClassroom" classname="com.jakub.ajamarks.repositories.ClassroomRepositoryTest" time="0.001"/>
+  <testcase name="testFindStudentbyUserName" classname="com.jakub.ajamarks.repositories.StudentRepositoryTest" time="0"/>
+  <testcase name="deleteTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0.015"/>
+  <testcase name="delete_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0.003"/>
+  <testcase name="getAllTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0.002"/>
+  <testcase name="getClassroomStudentsByClassroomNameDescLastNameTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0.001"/>
+  <testcase name="getClassroomStudentsByClassroomNameDescLastName_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="getClassroomStudentsByClassroomNameDescLastNumberTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="getClassroomStudentsByClassroomNameDescLastNumber_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="getStudentByIdTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0.001"/>
+  <testcase name="getStudentById_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="getStudentByUserNameTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="getStudentByUserName_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0.001"/>
+  <testcase name="getStudentsWithGivenMarkTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0.039"/>
+  <testcase name="getStudentsWithGivenMark_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="getStudentsWithoutGivenMarkTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0.002"/>
+  <testcase name="getStudentsWithoutGivenMark_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="saveStudentTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="saveStudent_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="updateByUserNameTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0.001"/>
+  <testcase name="updateByUserName_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="updateByUserName_NullPointerExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceImplTest" time="0"/>
+  <testcase name="countQuantityOfEachMarkForSchoolTest on countQuantityOfEachMarkForSchoolTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.78"/>
+  <testcase name="isStudentAverageHigherThenInClassroomTest on isStudentAverageHigherThenInClassroomTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="1.061"/>
+  <testcase name="isStudentAverageHigherThenInAchoolTest on isStudentAverageHigherThenInAchoolTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.435"/>
+  <testcase name="countAverageMarkForSchoolTest on countAverageMarkForSchoolTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.385"/>
+  <testcase name="getStudentsAboveStudentAverageTest on getStudentsAboveStudentAverageTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.586"/>
+  <testcase name="countAverageMarkForUser_WithNoMarksTest on countAverageMarkForUser_WithNoMarksTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.548"/>
+  <testcase name="countAverageMarkForUserTest on countAverageMarkForUserTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.548"/>
+  <testcase name="countHowManyStudentsAboveStudentAverageTest on countHowManyStudentsAboveStudentAverageTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.502"/>
+  <testcase name="countHowManyStudentsAboveSchoolAverageTest on countHowManyStudentsAboveSchoolAverageTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.421"/>
+  <testcase name="sortStudentsByAverageAscTest on sortStudentsByAverageAscTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="1.194"/>
+  <testcase name="countAverageMarkForClassroomTest on countAverageMarkForClassroomTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.493"/>
+  <testcase name="getFromClassroomMarkStudentListMapTest on getFromClassroomMarkStudentListMapTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.411"/>
+  <testcase name="getFromSchoolMarkStudentListMapTest on getFromSchoolMarkStudentListMapTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.51"/>
+  <testcase name="getStudentsAboveSchoolAverageTest on getStudentsAboveSchoolAverageTest(com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest)" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" time="0.452"/>
+  <testcase name="getStudentsByGivenMarkNameTest on getStudentsByGivenMarkNameTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.247"/>
+  <testcase name="updateByMarkValueTest on updateByMarkValueTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.142"/>
+  <testcase name="getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest on getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.133"/>
+  <testcase name="getAllTest on getAllTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.16"/>
+  <testcase name="saveMarkTest on saveMarkTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.167"/>
+  <testcase name="getStudentsByGivenMarkName_NoGivenMarkNameTest on getStudentsByGivenMarkName_NoGivenMarkNameTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.142"/>
+  <testcase name="getByMarkNameTest on getByMarkNameTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.133"/>
+  <testcase name="getStudentsByGivenMarkValueTest on getStudentsByGivenMarkValueTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.166"/>
+  <testcase name="getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest on getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.141"/>
+  <testcase name="getStudentsByGivenMarkValue_NoGivenMarkVaslueTest on getStudentsByGivenMarkValue_NoGivenMarkVaslueTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.133"/>
+  <testcase name="getByMarkValueTest on getByMarkValueTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.133"/>
+  <testcase name="deleteTest on deleteTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.159"/>
+  <testcase name="getClassroomStudentsByClassroomNumber_NoStudentsTest on getClassroomStudentsByClassroomNumber_NoStudentsTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.013"/>
+  <testcase name="saveClassroomTest on saveClassroomTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomByIdTest on getClassroomByIdTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="delete_IllegalArgumentExceptionTest on delete_IllegalArgumentExceptionTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomStudentsByClassroomNumberTest on getClassroomStudentsByClassroomNumberTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomByNumberTest on getClassroomByNumberTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest on getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomStudentsByClassroomName_NoStudentsTest on getClassroomStudentsByClassroomName_NoStudentsTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="saveClassroom_IllegalArgumentExceptionTest on saveClassroom_IllegalArgumentExceptionTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="updateTest on updateTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomById_IllegalArgumentExceptionTest on getClassroomById_IllegalArgumentExceptionTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest on getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="update_NullPointerExceptionTest on update_NullPointerExceptionTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="update_IllegalArgumentExceptionTest on update_IllegalArgumentExceptionTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomByNumber_IllegalArgumentExceptionTest on getClassroomByNumber_IllegalArgumentExceptionTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomByNameTest on getClassroomByNameTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomStudentsByClassroomNameTest on getClassroomStudentsByClassroomNameTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="deleteTest on deleteTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomByName_IllegalArgumentExceptionTest on getClassroomByName_IllegalArgumentExceptionTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getAllByClassroomNameAscTest on getAllByClassroomNameAscTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="getClassroomStudentsByClassroomNumber_NoStudentsForGivenClassroomNumberTest on getClassroomStudentsByClassroomNumber_NoStudentsForGivenClassroomNumberTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.095"/>
+  <testcase name="saveClassroomTest on saveClassroomTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.091"/>
+  <testcase name="getClassroomByIdTest on getClassroomByIdTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.06"/>
+  <testcase name="updateByClassroomNumberTest on updateByClassroomNumberTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.058"/>
+  <testcase name="getClassroomStudentsByClassroomNumberTest on getClassroomStudentsByClassroomNumberTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.067"/>
+  <testcase name="getClassroomByNumberTest on getClassroomByNumberTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.066"/>
+  <testcase name="getClassroomByName on getClassroomByName(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.209"/>
+  <testcase name="getClassroomStudentsByClassroomName_NoStudentsForGivenClassroomNameTest on getClassroomStudentsByClassroomName_NoStudentsForGivenClassroomNameTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.083"/>
+  <testcase name="getClassroomStudentsByClassroomName_NoGivenClassroomNameTest on getClassroomStudentsByClassroomName_NoGivenClassroomNameTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.065"/>
+  <testcase name="getClassroomStudentsByClassroomNameTest on getClassroomStudentsByClassroomNameTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.058"/>
+  <testcase name="deleteTest on deleteTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.058"/>
+  <testcase name="getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest on getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.058"/>
+  <testcase name="getAllByClassroomNameAscTest on getAllByClassroomNameAscTest(com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" time="0.074"/>
+  <testcase name="getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest on getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.47"/>
+  <testcase name="getClassroomStudentsByClassroomNameDescLastNameTest on getClassroomStudentsByClassroomNameDescLastNameTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.166"/>
+  <testcase name="getStudentByIdTest on getStudentByIdTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.152"/>
+  <testcase name="saveStudentTest on saveStudentTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.237"/>
+  <testcase name="getStudentsWithGivenMark_NoStudensForGivenMarkTest on getStudentsWithGivenMark_NoStudensForGivenMarkTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.142"/>
+  <testcase name="getAllTest on getAllTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.192"/>
+  <testcase name="getClassroomStudentsByClassroomNumberDescLastNameTest on getClassroomStudentsByClassroomNumberDescLastNameTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.235"/>
+  <testcase name="getStudentsWithoutGivenMarkTest on getStudentsWithoutGivenMarkTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.158"/>
+  <testcase name="updateByUserNameTest on updateByUserNameTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.15"/>
+  <testcase name="getStudentByUserNameTest on getStudentByUserNameTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.141"/>
+  <testcase name="getStudentsWithGivenMarkTest on getStudentsWithGivenMarkTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.159"/>
+  <testcase name="deleteTest on deleteTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)" classname="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" time="0.134"/>
+</testsuite>

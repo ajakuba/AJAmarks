@@ -75,14 +75,12 @@ public class Student implements Comparable {
         this.markList = markList;
     }
 
-
     @Override
     public String toString() {
         return "Student{" +
                 "idStudent=" + idStudent +
                 "name=" + lastName +
                 "user=" + userName+
-
                 '}';
     }
 

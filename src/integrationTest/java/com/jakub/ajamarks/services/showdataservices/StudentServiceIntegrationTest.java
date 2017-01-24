@@ -159,7 +159,7 @@ public class StudentServiceIntegrationTest {
     }
 
     @Test
-    public void getAllByOrderByLastNameDescTest() {
+    public void getClassroomStudentsByClassroomNumberDescLastNameTest() {
         //given
         Student student = new Student();
         student.setFirstName("Jakab2");
@@ -169,7 +169,7 @@ public class StudentServiceIntegrationTest {
         student.setMarkList(Collections.emptyList());
         studentService.saveStudent(student);
         //when
-        Collection<Student> allByOrderByClassroomDesc = studentService.getAllByOrderByLastNameDesc(classroom.getClassroomNumber());
+        Collection<Student> allByOrderByClassroomDesc = studentService.getClassroomStudentsByClassroomNumberDescLastName(classroom.getClassroomNumber());
 
         //then
         assertThat(2, is(allByOrderByClassroomDesc.size()));
@@ -185,11 +185,11 @@ public class StudentServiceIntegrationTest {
     }
 
     @Test
-    public void getClassroomStudentsByClassroomTest() {
+    public void getClassroomStudentsByClassroomNameDescLastNameTest() {
         //given
         studentService.saveStudent(student2);
         //when
-        Collection<Student> classroomStudentsByClassroom = studentService.getClassroomStudentsByClassroom(classroom.getClassroomName());
+        Collection<Student> classroomStudentsByClassroom = studentService.getClassroomStudentsByClassroomNameDescLastName(classroom.getClassroomName());
         //then
         assertThat(2, is(classroomStudentsByClassroom.size()));
         assertThat(classroomStudentsByClassroom, hasItem(student1));
@@ -201,7 +201,7 @@ public class StudentServiceIntegrationTest {
         //given
         Student student = studentService.saveStudent(student2);
         //when
-        List<Student> studentsWithGivenMark = studentService.getStudentsWithGivenMark(mark2);
+        List<Student> studentsWithGivenMark = studentService.getStudentsWithGivenMark(mark2.getMarkValue());
         //then
         assertThat(studentsWithGivenMark, hasItem(student));
     }
@@ -210,7 +210,7 @@ public class StudentServiceIntegrationTest {
     public void getStudentsWithGivenMark_NoStudensForGivenMarkTest() {
         //given
         //when
-        List<Student> studentsWithGivenMark = studentService.getStudentsWithGivenMark(mark2);
+        List<Student> studentsWithGivenMark = studentService.getStudentsWithGivenMark(mark2.getMarkValue());
         //then
         assertThat(0, is(studentsWithGivenMark.size()));
         assertThat(Collections.emptyList(), is(studentsWithGivenMark));
@@ -221,7 +221,7 @@ public class StudentServiceIntegrationTest {
         //given
         Student student = studentService.saveStudent(student2);
         //when
-        List<Student> studentsWithoutGivenMark = studentService.getStudentsWithoutGivenMark(mark1);
+        List<Student> studentsWithoutGivenMark = studentService.getStudentsWithoutGivenMark(mark1.getMarkValue());
         //then
         assertThat(studentsWithoutGivenMark, hasItem(student));
     }
@@ -230,7 +230,7 @@ public class StudentServiceIntegrationTest {
     public void getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest() {
         //given
         //when
-        List<Student> studentsWithoutGivenMark = studentService.getStudentsWithoutGivenMark(mark1);
+        List<Student> studentsWithoutGivenMark = studentService.getStudentsWithoutGivenMark(mark1.getMarkValue());
         //then
         assertThat(0, is(studentsWithoutGivenMark.size()));
         assertThat(Collections.emptyList(), is(studentsWithoutGivenMark));

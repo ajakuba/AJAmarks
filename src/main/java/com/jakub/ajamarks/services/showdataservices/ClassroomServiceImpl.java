@@ -60,6 +60,8 @@ public class ClassroomServiceImpl implements ClassroomService {
     public Set<Student> getClassroomStudentsByClassroomNumber(int classroomNumber) {
         Preconditions.checkArgument(classroomNumber > 0, "classroom number can't be less than 1");
         Classroom byClassroomNumber = classroomRepository.findByClassroomNumber(classroomNumber);
+        if(byClassroomNumber==null)
+            throw new NullPointerException("No such a classroom");
         Set<Student> studentsInClassroom = byClassroomNumber.getStudentsInClassroom();
         if (studentsInClassroom.size() > 0)
             return studentsInClassroom;
@@ -71,6 +73,8 @@ public class ClassroomServiceImpl implements ClassroomService {
     public Set<Student> getClassroomStudentsByClassroomName(String classroomName) {
         Preconditions.checkArgument(classroomName != null, "classroom name can't be null");
         Classroom byClassroomName = classroomRepository.findByClassroomName(classroomName);
+        if(byClassroomName==null)
+            throw new NullPointerException("No such a classroom");
         Set<Student> studentsInClassroom = byClassroomName.getStudentsInClassroom();
         if (studentsInClassroom.size() > 0)
             return studentsInClassroom;

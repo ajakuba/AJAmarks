@@ -1,5 +1,6 @@
 package com.jakub.ajamarks.services.statisticservices;
 
+import com.google.common.base.Preconditions;
 import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Mark;
 import com.jakub.ajamarks.entities.Student;
@@ -23,14 +24,15 @@ import java.util.stream.Collectors;
 public class StatisticServiceImpl implements StatisticService {
 
     @Autowired
-    private StudentRepository studentRepository;
+    StudentRepository studentRepository;
     @Autowired
-    private MarkRepository markRepository;
+    MarkRepository markRepository;
     @Autowired
-    private ClassroomRepository classroomRepository;
+    ClassroomRepository classroomRepository;
 
     @Override
     public Double countAverageMarkForUser(String userName) {
+        Preconditions.checkArgument(userName!=null, "student user name can't be null");
         return studentRepository.findByUserName(userName).getMarkList()
                 .stream()
                 .mapToInt(Mark::getMarkValue)
@@ -40,6 +42,7 @@ public class StatisticServiceImpl implements StatisticService {
 
     @Override
     public Double countAverageMarkForClassroom(String classroomName) {
+        Preconditions.checkArgument(classroomName!=null, "classroom name can't be null");
         List<Mark> markList = new ArrayList<>();
         List<Student> byClassroom = studentRepository.findByClassroomClassroomName(classroomName);
         byClassroom.stream().forEach(student -> markList.addAll(student.getMarkList()));
@@ -65,7 +68,6 @@ public class StatisticServiceImpl implements StatisticService {
 
     @Override
     public Map<Double, TreeSet<Student>> sortStudentsByAverageAsc() {
-
         Map<Double, TreeSet<Student>> doubleStudentMap = new TreeMap<>();
         List<Student> studentRepositoryAll = studentRepository.findAll();
         studentRepositoryAll.removeIf(student -> student.getMarkList().isEmpty());
@@ -85,21 +87,21 @@ public class StatisticServiceImpl implements StatisticService {
 
     @Override
     public boolean isStudentAverageHigherThenInClassroom(String userName) {
+        Preconditions.checkArgument(userName!=null, "student user name can't be null");
         Student student = studentRepository.findByUserName(userName);
         Classroom classroom = student.getClassroom();
 
         Double classroomAverage = countAverageMarkForClassroom(classroom.getClassroomName());
         Double studentAverage = countAverageMarkForUser(userName);
 
-        return classroomAverage > studentAverage ? false : true;
+        return classroomAverage >= studentAverage ? false : true;
     }
-
 
     public boolean isStudentAverageHigherThenInSchool(String userName) {
         Double schoolAverage = countAverageMarkForSchool();
         Double studentAverage = countAverageMarkForUser(userName);
 
-        return schoolAverage > studentAverage ? false : true;
+        return schoolAverage >= studentAverage ? false : true;
     }
 
     @Override
@@ -121,9 +123,7 @@ public class StatisticServiceImpl implements StatisticService {
     @Override
     public List<Student> getStudentsAboveStudentAverage(String userName) {
         Double studentAverage = countAverageMarkForUser(userName);
-
         List<Student> studentRepositoryAll = studentRepository.findAll();
-
         studentRepositoryAll.remove(studentRepository.findByUserName(userName));
         studentRepositoryAll.removeIf(student -> student.getMarkList().isEmpty());
         List<Student> studentsAboveAverage = studentRepositoryAll
@@ -152,6 +152,7 @@ public class StatisticServiceImpl implements StatisticService {
 
     @Override
     public int countHowManyStudentsAboveStudentAverage(String userName) {
+        Preconditions.checkArgument(userName!=null, "student user name can't be null");
         List<Double> studentsAverageList = new ArrayList<>();
 
         studentRepository.findAll().forEach(student ->
@@ -187,6 +188,7 @@ public class StatisticServiceImpl implements StatisticService {
 
     @Override
     public Map<Mark, Set<Student>> getFromClassroomMarkStudentListMap(String classroomName) {
+        Preconditions.checkArgument(classroomName!=null, "classroom name can't be null" );
         Map<Mark, Set<Student>> integerStudentMap = new TreeMap<>();
 
         List<Mark> markList = markRepository.findAll();

@@ -170,24 +170,21 @@ public class MarkServiceIntegrationTest {
         assertThat(1, is(studentsByGivenMarkValue.size()));
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void getStudentsByGivenMarkValue_NoGivenMarkVaslueTest() {
         //given
         //when
         Set<Student> studentsByGivenMarkValue = markService.getStudentsByGivenMarkValue(10);
         //then
-        assertThat(0, is(studentsByGivenMarkValue.size()));
     }
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest() {
         //given
         //when
-        Set<Student> studentsByGivenMarkValue = markService.getStudentsByGivenMarkValue(5);
+        markService.getStudentsByGivenMarkValue(5);
         //then
-        assertThat(0, is(studentsByGivenMarkValue.size()));
     }
-
 
     @Test
     public void getStudentsByGivenMarkNameTest() {
@@ -199,22 +196,20 @@ public class MarkServiceIntegrationTest {
         assertThat(2, is(studentsByGivenMarkValue.size()));
     }
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void getStudentsByGivenMarkName_NoGivenMarkNameTest() {
         //given
         //when
-        Set<Student> studentsByGivenMarkName = markService.getStudentsByGivenMarkName("dst");
+        markService.getStudentsByGivenMarkName("dst");
         //then
-        assertThat(0, is(studentsByGivenMarkName.size()));
     }
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest() {
         //given
         //when
-        Set<Student> studentsByGivenMarkName = markService.getStudentsByGivenMarkName("bdb");
+        markService.getStudentsByGivenMarkName("bdb");
         //then
-        assertThat(0, is(studentsByGivenMarkName.size()));
     }
 
 }

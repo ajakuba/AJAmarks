@@ -61,7 +61,7 @@ public class ClassroomServiceIntegrationTest {
     }
 
     @Test
-    public void saveClassroomTest(){
+    public void saveClassroomTest() {
         //given
         classroom2 = new Classroom();
         classroom2.setClassroomNumber(2);
@@ -91,7 +91,7 @@ public class ClassroomServiceIntegrationTest {
     }
 
     @Test
-    public void deleteTest(){
+    public void deleteTest() {
         //given
         //when
         classroomService.delete(classroom1);
@@ -151,14 +151,14 @@ public class ClassroomServiceIntegrationTest {
         assertSame(classroomStudentsByClassroomNumber.toArray()[0], savedStudent1);
     }
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest() {
         //given
-        int classroomNumber = 11111;
+        int classroomNumber = 111;
         //when
-        Collection<Student> classroomStudentsByClassroomNumber = classroomService.getClassroomStudentsByClassroomNumber(classroomNumber);
+        classroomService.getClassroomStudentsByClassroomNumber(classroomNumber);
         //then
-        assertThat(0, is(classroomStudentsByClassroomNumber.size()));
+
     }
 
     @Test
@@ -185,15 +185,13 @@ public class ClassroomServiceIntegrationTest {
         assertSame(classroomStudentsByClassroomName.toArray()[0], savedStudent1);
     }
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void getClassroomStudentsByClassroomName_NoGivenClassroomNameTest() {
         //given
         String classroomName = "no name";
-
         //when
-        Set<Student> classroomStudentsByClassroomName = classroomService.getClassroomStudentsByClassroomName(classroomName);
+        classroomService.getClassroomStudentsByClassroomName(classroomName);
         //then
-        assertThat(0, is(classroomStudentsByClassroomName.size()));
     }
 
     @Test
@@ -206,7 +204,6 @@ public class ClassroomServiceIntegrationTest {
         //then
         assertThat(0, is(classroomStudentsByClassroomName.size()));
     }
-
 
 
 }

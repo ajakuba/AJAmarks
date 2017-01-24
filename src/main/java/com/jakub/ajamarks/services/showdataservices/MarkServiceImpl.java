@@ -1,5 +1,6 @@
 package com.jakub.ajamarks.services.showdataservices;
 
+import com.google.common.base.Preconditions;
 import com.jakub.ajamarks.entities.Mark;
 import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.MarkRepository;
@@ -20,15 +21,18 @@ import java.util.Set;
 public class MarkServiceImpl implements MarkService {
 
     @Autowired
-    private MarkRepository markRepository;
+    MarkRepository markRepository;
 
     @Override
     public Mark saveMark(Mark mark) {
+        Preconditions.checkArgument(mark!=null, "Mark can not be null");
         return markRepository.save(mark);
     }
 
     @Override
     public Mark updateByMarkValue(Mark mark) {
+        Preconditions.checkArgument(mark!=null, "Mark can not be null");
+        Preconditions.checkNotNull(mark.getMarkValue(), "Mark value can't be null");
         Mark byMarkValueNamedQuery = markRepository.findByMarkValueNamedQuery(mark.getMarkValue());
         mark.setIdMark(byMarkValueNamedQuery.getIdMark());
         return markRepository.save(mark);
@@ -37,6 +41,7 @@ public class MarkServiceImpl implements MarkService {
 
     @Override
     public void delete(Mark mark) {
+        Preconditions.checkArgument(mark!=null, "Mark can not be null");
         markRepository.delete(mark);
     }
 
@@ -47,19 +52,22 @@ public class MarkServiceImpl implements MarkService {
 
     @Override
     public Mark getByMarkValue(int markValue) {
+        Preconditions.checkArgument(markValue>=1 && markValue<=6, "Mark value must be from 1 to 6 value");
         return markRepository.findByMarkValueNamedQuery(markValue);
     }
 
     @Override
     public Mark getByMarkName(String markName) {
+        Preconditions.checkArgument(markName!=null, "Mark name can't be null");
         return markRepository.findByMarkNameNamedQuery(markName);
     }
 
     @Override
     public Set<Student> getStudentsByGivenMarkValue(int markValue) {
+        Preconditions.checkArgument(markValue>=1 && markValue<=6, "Mark value must be from 1 to 6 value");
         Mark byMarkValueNamedQuery = markRepository.findByMarkValueNamedQuery(markValue);
         if(byMarkValueNamedQuery==null)
-            return Collections.emptySet();
+            throw new NullPointerException("No such a mark");
         else {
             Set<Student> studentSet = byMarkValueNamedQuery.getStudentSet();
             if (studentSet.size() > 0)
@@ -71,9 +79,10 @@ public class MarkServiceImpl implements MarkService {
 
     @Override
     public Set<Student> getStudentsByGivenMarkName(String markName) {
+        Preconditions.checkArgument(markName!=null, "Mark name can't be null");
         Mark byMarkNameNamedQuery = markRepository.findByMarkNameNamedQuery(markName);
         if (byMarkNameNamedQuery == null)
-            return Collections.emptySet();
+            throw new NullPointerException("No such a mark");
         else {
             Set<Student> studentSet = byMarkNameNamedQuery.getStudentSet();
             if (studentSet.size() > 0)

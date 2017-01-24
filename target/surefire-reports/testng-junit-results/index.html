@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
+              <span class="suite-name border-passed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Surefire_suite">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Surefire_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Surefire_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Surefire_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Surefire_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Surefire_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Surefire_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">71 methods,   71 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="countAverageMarkForClassroomTest">countAverageMarkForClassroomTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="countAverageMarkForSchoolTest">countAverageMarkForSchoolTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="countAverageMarkForUserTest">countAverageMarkForUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="countAverageMarkForUser_WithNoMarksTest">countAverageMarkForUser_WithNoMarksTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="countHowManyStudentsAboveSchoolAverageTest">countHowManyStudentsAboveSchoolAverageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="countHowManyStudentsAboveStudentAverageTest">countHowManyStudentsAboveStudentAverageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="countQuantityOfEachMarkForSchoolTest">countQuantityOfEachMarkForSchoolTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="deleteTest">deleteTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="deleteTest">deleteTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="deleteTest">deleteTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="deleteTest">deleteTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="delete_IllegalArgumentExceptionTest">delete_IllegalArgumentExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getAllByClassroomNameAscTest">getAllByClassroomNameAscTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getAllByClassroomNameAscTest">getAllByClassroomNameAscTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="getAllTest">getAllTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="getAllTest">getAllTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="getByMarkNameTest">getByMarkNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="getByMarkValueTest">getByMarkValueTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomByIdTest">getClassroomByIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getClassroomByIdTest">getClassroomByIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomById_IllegalArgumentExceptionTest">getClassroomById_IllegalArgumentExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getClassroomByName">getClassroomByName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomByNameTest">getClassroomByNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomByName_IllegalArgumentExceptionTest">getClassroomByName_IllegalArgumentExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getClassroomByNumberTest">getClassroomByNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomByNumberTest">getClassroomByNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomByNumber_IllegalArgumentExceptionTest">getClassroomByNumber_IllegalArgumentExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="getClassroomStudentsByClassroomNameDescLastNameTest">getClassroomStudentsByClassroomNameDescLastNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getClassroomStudentsByClassroomNameTest">getClassroomStudentsByClassroomNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomStudentsByClassroomNameTest">getClassroomStudentsByClassroomNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest">getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getClassroomStudentsByClassroomName_NoGivenClassroomNameTest">getClassroomStudentsByClassroomName_NoGivenClassroomNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getClassroomStudentsByClassroomName_NoStudentsForGivenClassroomNameTest">getClassroomStudentsByClassroomName_NoStudentsForGivenClassroomNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomStudentsByClassroomName_NoStudentsTest">getClassroomStudentsByClassroomName_NoStudentsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="getClassroomStudentsByClassroomNumberDescLastNameTest">getClassroomStudentsByClassroomNumberDescLastNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getClassroomStudentsByClassroomNumberTest">getClassroomStudentsByClassroomNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomStudentsByClassroomNumberTest">getClassroomStudentsByClassroomNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest">getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest">getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="getClassroomStudentsByClassroomNumber_NoStudentsForGivenClassroomNumberTest">getClassroomStudentsByClassroomNumber_NoStudentsForGivenClassroomNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="getClassroomStudentsByClassroomNumber_NoStudentsTest">getClassroomStudentsByClassroomNumber_NoStudentsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="getFromClassroomMarkStudentListMapTest">getFromClassroomMarkStudentListMapTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="getFromSchoolMarkStudentListMapTest">getFromSchoolMarkStudentListMapTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="getStudentByIdTest">getStudentByIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="getStudentByUserNameTest">getStudentByUserNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="getStudentsAboveSchoolAverageTest">getStudentsAboveSchoolAverageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="getStudentsAboveStudentAverageTest">getStudentsAboveStudentAverageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="getStudentsByGivenMarkNameTest">getStudentsByGivenMarkNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="getStudentsByGivenMarkName_NoGivenMarkNameTest">getStudentsByGivenMarkName_NoGivenMarkNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest">getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="getStudentsByGivenMarkValueTest">getStudentsByGivenMarkValueTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="getStudentsByGivenMarkValue_NoGivenMarkVaslueTest">getStudentsByGivenMarkValue_NoGivenMarkVaslueTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest">getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="getStudentsWithGivenMarkTest">getStudentsWithGivenMarkTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="getStudentsWithGivenMark_NoStudensForGivenMarkTest">getStudentsWithGivenMark_NoStudensForGivenMarkTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="getStudentsWithoutGivenMarkTest">getStudentsWithoutGivenMarkTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest">getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="isStudentAverageHigherThenInAchoolTest">isStudentAverageHigherThenInAchoolTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="isStudentAverageHigherThenInClassroomTest">isStudentAverageHigherThenInClassroomTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="saveClassroomTest">saveClassroomTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="saveClassroomTest">saveClassroomTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="saveClassroom_IllegalArgumentExceptionTest">saveClassroom_IllegalArgumentExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="saveMarkTest">saveMarkTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="saveStudentTest">saveStudentTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest" hash-for-method="sortStudentsByAverageAscTest">sortStudentsByAverageAscTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest" hash-for-method="updateByClassroomNumberTest">updateByClassroomNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" hash-for-method="updateByMarkValueTest">updateByMarkValueTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest" hash-for-method="updateByUserNameTest">updateByUserNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="updateTest">updateTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="update_IllegalArgumentExceptionTest">update_IllegalArgumentExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" hash-for-method="update_NullPointerExceptionTest">update_NullPointerExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteTest">
+                  </a> <!-- deleteTest -->
+                  <span class="method-name">deleteTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="delete_IllegalArgumentExceptionTest">
+                  </a> <!-- delete_IllegalArgumentExceptionTest -->
+                  <span class="method-name">delete_IllegalArgumentExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllByClassroomNameAscTest">
+                  </a> <!-- getAllByClassroomNameAscTest -->
+                  <span class="method-name">getAllByClassroomNameAscTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomByIdTest">
+                  </a> <!-- getClassroomByIdTest -->
+                  <span class="method-name">getClassroomByIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomById_IllegalArgumentExceptionTest">
+                  </a> <!-- getClassroomById_IllegalArgumentExceptionTest -->
+                  <span class="method-name">getClassroomById_IllegalArgumentExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomByNameTest">
+                  </a> <!-- getClassroomByNameTest -->
+                  <span class="method-name">getClassroomByNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomByName_IllegalArgumentExceptionTest">
+                  </a> <!-- getClassroomByName_IllegalArgumentExceptionTest -->
+                  <span class="method-name">getClassroomByName_IllegalArgumentExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomByNumberTest">
+                  </a> <!-- getClassroomByNumberTest -->
+                  <span class="method-name">getClassroomByNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomByNumber_IllegalArgumentExceptionTest">
+                  </a> <!-- getClassroomByNumber_IllegalArgumentExceptionTest -->
+                  <span class="method-name">getClassroomByNumber_IllegalArgumentExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNameTest">
+                  </a> <!-- getClassroomStudentsByClassroomNameTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest">
+                  </a> <!-- getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomName_NoStudentsTest">
+                  </a> <!-- getClassroomStudentsByClassroomName_NoStudentsTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomName_NoStudentsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNumberTest">
+                  </a> <!-- getClassroomStudentsByClassroomNumberTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest">
+                  </a> <!-- getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNumber_NoStudentsTest">
+                  </a> <!-- getClassroomStudentsByClassroomNumber_NoStudentsTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNumber_NoStudentsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="saveClassroomTest">
+                  </a> <!-- saveClassroomTest -->
+                  <span class="method-name">saveClassroomTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="saveClassroom_IllegalArgumentExceptionTest">
+                  </a> <!-- saveClassroom_IllegalArgumentExceptionTest -->
+                  <span class="method-name">saveClassroom_IllegalArgumentExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateTest">
+                  </a> <!-- updateTest -->
+                  <span class="method-name">updateTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="update_IllegalArgumentExceptionTest">
+                  </a> <!-- update_IllegalArgumentExceptionTest -->
+                  <span class="method-name">update_IllegalArgumentExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="update_NullPointerExceptionTest">
+                  </a> <!-- update_NullPointerExceptionTest -->
+                  <span class="method-name">update_NullPointerExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteTest">
+                  </a> <!-- deleteTest -->
+                  <span class="method-name">deleteTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllByClassroomNameAscTest">
+                  </a> <!-- getAllByClassroomNameAscTest -->
+                  <span class="method-name">getAllByClassroomNameAscTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomByIdTest">
+                  </a> <!-- getClassroomByIdTest -->
+                  <span class="method-name">getClassroomByIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomByName">
+                  </a> <!-- getClassroomByName -->
+                  <span class="method-name">getClassroomByName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomByNumberTest">
+                  </a> <!-- getClassroomByNumberTest -->
+                  <span class="method-name">getClassroomByNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNameTest">
+                  </a> <!-- getClassroomStudentsByClassroomNameTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomName_NoGivenClassroomNameTest">
+                  </a> <!-- getClassroomStudentsByClassroomName_NoGivenClassroomNameTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomName_NoGivenClassroomNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomName_NoStudentsForGivenClassroomNameTest">
+                  </a> <!-- getClassroomStudentsByClassroomName_NoStudentsForGivenClassroomNameTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomName_NoStudentsForGivenClassroomNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNumberTest">
+                  </a> <!-- getClassroomStudentsByClassroomNumberTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest">
+                  </a> <!-- getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNumber_NoStudentsForGivenClassroomNumberTest">
+                  </a> <!-- getClassroomStudentsByClassroomNumber_NoStudentsForGivenClassroomNumberTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNumber_NoStudentsForGivenClassroomNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="saveClassroomTest">
+                  </a> <!-- saveClassroomTest -->
+                  <span class="method-name">saveClassroomTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateByClassroomNumberTest">
+                  </a> <!-- updateByClassroomNumberTest -->
+                  <span class="method-name">updateByClassroomNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="countAverageMarkForClassroomTest">
+                  </a> <!-- countAverageMarkForClassroomTest -->
+                  <span class="method-name">countAverageMarkForClassroomTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="countAverageMarkForSchoolTest">
+                  </a> <!-- countAverageMarkForSchoolTest -->
+                  <span class="method-name">countAverageMarkForSchoolTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="countAverageMarkForUserTest">
+                  </a> <!-- countAverageMarkForUserTest -->
+                  <span class="method-name">countAverageMarkForUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="countAverageMarkForUser_WithNoMarksTest">
+                  </a> <!-- countAverageMarkForUser_WithNoMarksTest -->
+                  <span class="method-name">countAverageMarkForUser_WithNoMarksTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="countHowManyStudentsAboveSchoolAverageTest">
+                  </a> <!-- countHowManyStudentsAboveSchoolAverageTest -->
+                  <span class="method-name">countHowManyStudentsAboveSchoolAverageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="countHowManyStudentsAboveStudentAverageTest">
+                  </a> <!-- countHowManyStudentsAboveStudentAverageTest -->
+                  <span class="method-name">countHowManyStudentsAboveStudentAverageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="countQuantityOfEachMarkForSchoolTest">
+                  </a> <!-- countQuantityOfEachMarkForSchoolTest -->
+                  <span class="method-name">countQuantityOfEachMarkForSchoolTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getFromClassroomMarkStudentListMapTest">
+                  </a> <!-- getFromClassroomMarkStudentListMapTest -->
+                  <span class="method-name">getFromClassroomMarkStudentListMapTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getFromSchoolMarkStudentListMapTest">
+                  </a> <!-- getFromSchoolMarkStudentListMapTest -->
+                  <span class="method-name">getFromSchoolMarkStudentListMapTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsAboveSchoolAverageTest">
+                  </a> <!-- getStudentsAboveSchoolAverageTest -->
+                  <span class="method-name">getStudentsAboveSchoolAverageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsAboveStudentAverageTest">
+                  </a> <!-- getStudentsAboveStudentAverageTest -->
+                  <span class="method-name">getStudentsAboveStudentAverageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isStudentAverageHigherThenInAchoolTest">
+                  </a> <!-- isStudentAverageHigherThenInAchoolTest -->
+                  <span class="method-name">isStudentAverageHigherThenInAchoolTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isStudentAverageHigherThenInClassroomTest">
+                  </a> <!-- isStudentAverageHigherThenInClassroomTest -->
+                  <span class="method-name">isStudentAverageHigherThenInClassroomTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sortStudentsByAverageAscTest">
+                  </a> <!-- sortStudentsByAverageAscTest -->
+                  <span class="method-name">sortStudentsByAverageAscTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteTest">
+                  </a> <!-- deleteTest -->
+                  <span class="method-name">deleteTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllTest">
+                  </a> <!-- getAllTest -->
+                  <span class="method-name">getAllTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getByMarkNameTest">
+                  </a> <!-- getByMarkNameTest -->
+                  <span class="method-name">getByMarkNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getByMarkValueTest">
+                  </a> <!-- getByMarkValueTest -->
+                  <span class="method-name">getByMarkValueTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsByGivenMarkNameTest">
+                  </a> <!-- getStudentsByGivenMarkNameTest -->
+                  <span class="method-name">getStudentsByGivenMarkNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsByGivenMarkName_NoGivenMarkNameTest">
+                  </a> <!-- getStudentsByGivenMarkName_NoGivenMarkNameTest -->
+                  <span class="method-name">getStudentsByGivenMarkName_NoGivenMarkNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest">
+                  </a> <!-- getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest -->
+                  <span class="method-name">getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsByGivenMarkValueTest">
+                  </a> <!-- getStudentsByGivenMarkValueTest -->
+                  <span class="method-name">getStudentsByGivenMarkValueTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsByGivenMarkValue_NoGivenMarkVaslueTest">
+                  </a> <!-- getStudentsByGivenMarkValue_NoGivenMarkVaslueTest -->
+                  <span class="method-name">getStudentsByGivenMarkValue_NoGivenMarkVaslueTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest">
+                  </a> <!-- getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest -->
+                  <span class="method-name">getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="saveMarkTest">
+                  </a> <!-- saveMarkTest -->
+                  <span class="method-name">saveMarkTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateByMarkValueTest">
+                  </a> <!-- updateByMarkValueTest -->
+                  <span class="method-name">updateByMarkValueTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteTest">
+                  </a> <!-- deleteTest -->
+                  <span class="method-name">deleteTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllTest">
+                  </a> <!-- getAllTest -->
+                  <span class="method-name">getAllTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNameDescLastNameTest">
+                  </a> <!-- getClassroomStudentsByClassroomNameDescLastNameTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNameDescLastNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getClassroomStudentsByClassroomNumberDescLastNameTest">
+                  </a> <!-- getClassroomStudentsByClassroomNumberDescLastNameTest -->
+                  <span class="method-name">getClassroomStudentsByClassroomNumberDescLastNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentByIdTest">
+                  </a> <!-- getStudentByIdTest -->
+                  <span class="method-name">getStudentByIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentByUserNameTest">
+                  </a> <!-- getStudentByUserNameTest -->
+                  <span class="method-name">getStudentByUserNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsWithGivenMarkTest">
+                  </a> <!-- getStudentsWithGivenMarkTest -->
+                  <span class="method-name">getStudentsWithGivenMarkTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsWithGivenMark_NoStudensForGivenMarkTest">
+                  </a> <!-- getStudentsWithGivenMark_NoStudensForGivenMarkTest -->
+                  <span class="method-name">getStudentsWithGivenMark_NoStudensForGivenMarkTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsWithoutGivenMarkTest">
+                  </a> <!-- getStudentsWithoutGivenMarkTest -->
+                  <span class="method-name">getStudentsWithoutGivenMarkTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest">
+                  </a> <!-- getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest -->
+                  <span class="method-name">getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="saveStudentTest">
+                  </a> <!-- saveStudentTest -->
+                  <span class="method-name">saveStudentTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateByUserNameTest">
+                  </a> <!-- updateByUserNameTest -->
+                  <span class="method-name">updateByUserNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Surefire suite&quot; junit=&quot;true&quot;&gt;
+  &lt;test name=&quot;Surefire test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest&quot;/&gt;
+      &lt;class name=&quot;com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest&quot;/&gt;
+      &lt;class name=&quot;com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest&quot;/&gt;
+      &lt;class name=&quot;com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest&quot;/&gt;
+      &lt;class name=&quot;com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (5 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(71);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'sortStudentsByAverageAscTest')
+data.setCell(0, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(0, 3, 1194);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'isStudentAverageHigherThenInClassroomTest')
+data.setCell(1, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(1, 3, 1060);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'countQuantityOfEachMarkForSchoolTest')
+data.setCell(2, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(2, 3, 780);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'getStudentsAboveStudentAverageTest')
+data.setCell(3, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(3, 3, 586);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'countAverageMarkForUser_WithNoMarksTest')
+data.setCell(4, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(4, 3, 548);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'countAverageMarkForUserTest')
+data.setCell(5, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(5, 3, 548);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'getFromSchoolMarkStudentListMapTest')
+data.setCell(6, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(6, 3, 510);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'countHowManyStudentsAboveStudentAverageTest')
+data.setCell(7, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(7, 3, 502);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'countAverageMarkForClassroomTest')
+data.setCell(8, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(8, 3, 493);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest')
+data.setCell(9, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(9, 3, 476);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'getStudentsAboveSchoolAverageTest')
+data.setCell(10, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(10, 3, 452);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'isStudentAverageHigherThenInAchoolTest')
+data.setCell(11, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(11, 3, 435);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'countHowManyStudentsAboveSchoolAverageTest')
+data.setCell(12, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(12, 3, 420);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'getFromClassroomMarkStudentListMapTest')
+data.setCell(13, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(13, 3, 412);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'countAverageMarkForSchoolTest')
+data.setCell(14, 2, 'com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest')
+data.setCell(14, 3, 385);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'getStudentsByGivenMarkNameTest')
+data.setCell(15, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(15, 3, 248);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'saveStudentTest')
+data.setCell(16, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(16, 3, 237);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'getClassroomStudentsByClassroomNumberDescLastNameTest')
+data.setCell(17, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(17, 3, 235);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'getClassroomByName')
+data.setCell(18, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(18, 3, 208);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'getAllTest')
+data.setCell(19, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(19, 3, 191);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'saveMarkTest')
+data.setCell(20, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(20, 3, 167);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'getClassroomStudentsByClassroomNameDescLastNameTest')
+data.setCell(21, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(21, 3, 167);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'getStudentsByGivenMarkValueTest')
+data.setCell(22, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(22, 3, 167);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'getAllTest')
+data.setCell(23, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(23, 3, 160);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'getStudentsWithGivenMarkTest')
+data.setCell(24, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(24, 3, 159);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'deleteTest')
+data.setCell(25, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(25, 3, 158);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'getStudentsWithoutGivenMarkTest')
+data.setCell(26, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(26, 3, 158);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'getStudentByIdTest')
+data.setCell(27, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(27, 3, 151);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'updateByUserNameTest')
+data.setCell(28, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(28, 3, 150);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest')
+data.setCell(29, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(29, 3, 142);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'updateByMarkValueTest')
+data.setCell(30, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(30, 3, 142);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'getStudentsWithGivenMark_NoStudensForGivenMarkTest')
+data.setCell(31, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(31, 3, 142);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'getStudentsByGivenMarkName_NoGivenMarkNameTest')
+data.setCell(32, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(32, 3, 142);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'getStudentByUserNameTest')
+data.setCell(33, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(33, 3, 141);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'deleteTest')
+data.setCell(34, 2, 'com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest')
+data.setCell(34, 3, 134);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest')
+data.setCell(35, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(35, 3, 134);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'getByMarkNameTest')
+data.setCell(36, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(36, 3, 133);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'getStudentsByGivenMarkValue_NoGivenMarkVaslueTest')
+data.setCell(37, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(37, 3, 133);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'getByMarkValueTest')
+data.setCell(38, 2, 'com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest')
+data.setCell(38, 3, 133);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'getClassroomStudentsByClassroomNumber_NoStudentsForGivenClassroomNumberTest')
+data.setCell(39, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(39, 3, 96);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'saveClassroomTest')
+data.setCell(40, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(40, 3, 91);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'getClassroomStudentsByClassroomName_NoStudentsForGivenClassroomNameTest')
+data.setCell(41, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(41, 3, 83);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'getAllByClassroomNameAscTest')
+data.setCell(42, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(42, 3, 75);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'getClassroomByNumberTest')
+data.setCell(43, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(43, 3, 67);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'getClassroomStudentsByClassroomNumberTest')
+data.setCell(44, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(44, 3, 67);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'getClassroomStudentsByClassroomName_NoGivenClassroomNameTest')
+data.setCell(45, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(45, 3, 65);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'getClassroomByIdTest')
+data.setCell(46, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(46, 3, 59);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'getClassroomStudentsByClassroomNameTest')
+data.setCell(47, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(47, 3, 58);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'deleteTest')
+data.setCell(48, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(48, 3, 58);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'updateByClassroomNumberTest')
+data.setCell(49, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(49, 3, 58);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest')
+data.setCell(50, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest')
+data.setCell(50, 3, 58);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'getClassroomStudentsByClassroomNumber_NoStudentsTest')
+data.setCell(51, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(51, 3, 13);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'getClassroomByIdTest')
+data.setCell(52, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(52, 3, 1);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'getClassroomById_IllegalArgumentExceptionTest')
+data.setCell(53, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(53, 3, 1);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'getClassroomStudentsByClassroomName_NoStudentsTest')
+data.setCell(54, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(54, 3, 1);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'getClassroomStudentsByClassroomNumberTest')
+data.setCell(55, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(55, 3, 1);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'getClassroomByNameTest')
+data.setCell(56, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(56, 3, 1);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'delete_IllegalArgumentExceptionTest')
+data.setCell(57, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(57, 3, 0);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'getClassroomByNumberTest')
+data.setCell(58, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(58, 3, 0);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'update_NullPointerExceptionTest')
+data.setCell(59, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(59, 3, 0);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'saveClassroomTest')
+data.setCell(60, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(60, 3, 0);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'saveClassroom_IllegalArgumentExceptionTest')
+data.setCell(61, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(61, 3, 0);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'getClassroomStudentsByClassroomNameTest')
+data.setCell(62, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(62, 3, 0);
+data.setCell(63, 0, 63)
+data.setCell(63, 1, 'getClassroomByNumber_IllegalArgumentExceptionTest')
+data.setCell(63, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(63, 3, 0);
+data.setCell(64, 0, 64)
+data.setCell(64, 1, 'updateTest')
+data.setCell(64, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(64, 3, 0);
+data.setCell(65, 0, 65)
+data.setCell(65, 1, 'getAllByClassroomNameAscTest')
+data.setCell(65, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(65, 3, 0);
+data.setCell(66, 0, 66)
+data.setCell(66, 1, 'getClassroomByName_IllegalArgumentExceptionTest')
+data.setCell(66, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(66, 3, 0);
+data.setCell(67, 0, 67)
+data.setCell(67, 1, 'getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest')
+data.setCell(67, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(67, 3, 0);
+data.setCell(68, 0, 68)
+data.setCell(68, 1, 'getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest')
+data.setCell(68, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(68, 3, 0);
+data.setCell(69, 0, 69)
+data.setCell(69, 1, 'update_IllegalArgumentExceptionTest')
+data.setCell(69, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(69, 3, 0);
+data.setCell(70, 0, 70)
+data.setCell(70, 1, 'deleteTest')
+data.setCell(70, 2, 'com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest')
+data.setCell(70, 3, 0);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.jakub.ajamarks.services.statisticservices.StatisticServiceIntegrationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">countQuantityOfEachMarkForSchoolTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">isStudentAverageHigherThenInClassroomTest</span>
+                <span class="method-start">781 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">isStudentAverageHigherThenInAchoolTest</span>
+                <span class="method-start">1842 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">countAverageMarkForSchoolTest</span>
+                <span class="method-start">2278 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsAboveStudentAverageTest</span>
+                <span class="method-start">2663 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">countAverageMarkForUser_WithNoMarksTest</span>
+                <span class="method-start">3249 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">countAverageMarkForUserTest</span>
+                <span class="method-start">3798 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">countHowManyStudentsAboveStudentAverageTest</span>
+                <span class="method-start">4347 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">countHowManyStudentsAboveSchoolAverageTest</span>
+                <span class="method-start">4849 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">sortStudentsByAverageAscTest</span>
+                <span class="method-start">5270 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">countAverageMarkForClassroomTest</span>
+                <span class="method-start">6465 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getFromClassroomMarkStudentListMapTest</span>
+                <span class="method-start">6958 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getFromSchoolMarkStudentListMapTest</span>
+                <span class="method-start">7371 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsAboveSchoolAverageTest</span>
+                <span class="method-start">7881 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getStudentsByGivenMarkNameTest</span>
+                <span class="method-start">8361 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateByMarkValueTest</span>
+                <span class="method-start">8610 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest</span>
+                <span class="method-start">8752 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAllTest</span>
+                <span class="method-start">8886 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">saveMarkTest</span>
+                <span class="method-start">9047 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsByGivenMarkName_NoGivenMarkNameTest</span>
+                <span class="method-start">9214 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getByMarkNameTest</span>
+                <span class="method-start">9357 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsByGivenMarkValueTest</span>
+                <span class="method-start">9491 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest</span>
+                <span class="method-start">9658 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsByGivenMarkValue_NoGivenMarkVaslueTest</span>
+                <span class="method-start">9801 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getByMarkValueTest</span>
+                <span class="method-start">9935 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteTest</span>
+                <span class="method-start">10069 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNumber_NoStudentsTest</span>
+                <span class="method-start">10230 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">saveClassroomTest</span>
+                <span class="method-start">10243 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomByIdTest</span>
+                <span class="method-start">10243 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">delete_IllegalArgumentExceptionTest</span>
+                <span class="method-start">10244 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNumberTest</span>
+                <span class="method-start">10244 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomByNumberTest</span>
+                <span class="method-start">10245 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest</span>
+                <span class="method-start">10245 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomName_NoStudentsTest</span>
+                <span class="method-start">10245 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">saveClassroom_IllegalArgumentExceptionTest</span>
+                <span class="method-start">10246 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateTest</span>
+                <span class="method-start">10246 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomById_IllegalArgumentExceptionTest</span>
+                <span class="method-start">10246 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest</span>
+                <span class="method-start">10247 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">update_NullPointerExceptionTest</span>
+                <span class="method-start">10247 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">update_IllegalArgumentExceptionTest</span>
+                <span class="method-start">10247 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomByNumber_IllegalArgumentExceptionTest</span>
+                <span class="method-start">10248 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomByNameTest</span>
+                <span class="method-start">10248 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNameTest</span>
+                <span class="method-start">10249 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteTest</span>
+                <span class="method-start">10249 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomByName_IllegalArgumentExceptionTest</span>
+                <span class="method-start">10250 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAllByClassroomNameAscTest</span>
+                <span class="method-start">10250 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.jakub.ajamarks.services.showdataservices.ClassroomServiceIntegrationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNumber_NoStudentsForGivenClassroomNumberTest</span>
+                <span class="method-start">10265 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">saveClassroomTest</span>
+                <span class="method-start">10362 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomByIdTest</span>
+                <span class="method-start">10454 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateByClassroomNumberTest</span>
+                <span class="method-start">10514 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNumberTest</span>
+                <span class="method-start">10572 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomByNumberTest</span>
+                <span class="method-start">10639 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomByName</span>
+                <span class="method-start">10706 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomName_NoStudentsForGivenClassroomNameTest</span>
+                <span class="method-start">10915 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomName_NoGivenClassroomNameTest</span>
+                <span class="method-start">11000 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNameTest</span>
+                <span class="method-start">11066 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteTest</span>
+                <span class="method-start">11124 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest</span>
+                <span class="method-start">11183 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAllByClassroomNameAscTest</span>
+                <span class="method-start">11241 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest</span>
+                <span class="method-start">11333 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNameDescLastNameTest</span>
+                <span class="method-start">11809 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentByIdTest</span>
+                <span class="method-start">11977 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">saveStudentTest</span>
+                <span class="method-start">12133 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsWithGivenMark_NoStudensForGivenMarkTest</span>
+                <span class="method-start">12370 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAllTest</span>
+                <span class="method-start">12513 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getClassroomStudentsByClassroomNumberDescLastNameTest</span>
+                <span class="method-start">12705 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsWithoutGivenMarkTest</span>
+                <span class="method-start">12941 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateByUserNameTest</span>
+                <span class="method-start">13100 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentByUserNameTest</span>
+                <span class="method-start">13251 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getStudentsWithGivenMarkTest</span>
+                <span class="method-start">13393 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteTest</span>
+                <span class="method-start">13552 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

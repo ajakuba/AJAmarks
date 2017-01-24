@@ -30,7 +30,4 @@ public class Classroom {
     @OneToMany(mappedBy = "classroom")
     private Set<Student> studentsInClassroom;
 
-
-
-
 }
