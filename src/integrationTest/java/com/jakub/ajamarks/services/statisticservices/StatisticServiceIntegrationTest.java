@@ -7,8 +7,6 @@ import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.ClassroomRepository;
 import com.jakub.ajamarks.repositories.MarkRepository;
 import com.jakub.ajamarks.repositories.StudentRepository;
-import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

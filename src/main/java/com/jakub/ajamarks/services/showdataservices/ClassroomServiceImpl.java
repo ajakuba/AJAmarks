@@ -4,6 +4,8 @@ import com.google.common.base.Preconditions;
 import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.ClassroomRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.hibernate.annotations.SourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +16,7 @@ import java.util.Set;
 
 @Service
 @Transactional
+@Slf4j
 public class ClassroomServiceImpl implements ClassroomService {
 
     @Autowired
@@ -21,6 +24,8 @@ public class ClassroomServiceImpl implements ClassroomService {
 
     public Classroom saveClassroom(Classroom classroom) {
         Preconditions.checkArgument(classroom != null, "classroom can't be null");
+        log.info("Classrom: {}", classroom);
+
         return classroomRepository.save(classroom);
     }
 

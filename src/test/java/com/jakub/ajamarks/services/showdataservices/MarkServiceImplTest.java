@@ -3,16 +3,17 @@ package com.jakub.ajamarks.services.showdataservices;
 import com.jakub.ajamarks.entities.Mark;
 import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.MarkRepository;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
-import static org.testng.Assert.*;
+
 
 /**
  * Created by ja on 24.01.17.
@@ -24,7 +25,7 @@ public class MarkServiceImplTest {
     private List<Mark> markList;
 
 
-    @BeforeMethod
+    @Before
     public void setUp() throws Exception {
 
         markServiceImpl = new MarkServiceImpl();
@@ -50,7 +51,7 @@ public class MarkServiceImplTest {
         verify(markServiceImpl.markRepository).save(mark);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void saveMark_IllegalArgumentExceptionTest() {
         //given
         mark = null;
@@ -70,7 +71,7 @@ public class MarkServiceImplTest {
         verify(markServiceImpl.markRepository).findByMarkValueNamedQuery(markValue);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void updateByMarkValue_IllegalArgumentExceptionTest()  {
         //given
         Mark mark3 = null;
@@ -80,7 +81,7 @@ public class MarkServiceImplTest {
         //then
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void updateByMarkValue_NullPointerExceptionTest()  {
         //given
         Mark mark3 = new Mark();
@@ -100,7 +101,7 @@ public class MarkServiceImplTest {
         verify(markServiceImpl.markRepository).delete(mark);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void deleteTest_IllegalArgumentException() {
         //given
         Mark mark3 = null;
@@ -131,7 +132,7 @@ public class MarkServiceImplTest {
         verify(markServiceImpl.markRepository).findByMarkValueNamedQuery(markValue);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getByMarkValue_IllegalArgumentExceptionTest() {
         //given
         int markValue = 7;
@@ -151,7 +152,7 @@ public class MarkServiceImplTest {
         verify(markServiceImpl.markRepository).findByMarkNameNamedQuery(markName);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getByMarkName_IllegalArgumentExceptionTest() {
         //given
         String markName = null;
@@ -185,7 +186,7 @@ public class MarkServiceImplTest {
     }
 
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testGetStudentsByGivenMarkValue() {
         //given
         int markValue = 10;
@@ -194,7 +195,7 @@ public class MarkServiceImplTest {
         //then
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void getStudentsByGivenMarkValue_NullPointerExceptionTest() {
         //given
         int markValue = 3;
@@ -229,7 +230,7 @@ public class MarkServiceImplTest {
     }
 
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getStudentsByGivenMarkName_IllegalArgumentExceptionTest() {
         //given
         String markName = null;
@@ -238,7 +239,7 @@ public class MarkServiceImplTest {
         //then
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void getStudentsByGivenMarkName_NullPointerExceptionTest() {
         //given
         String markName = "brak";

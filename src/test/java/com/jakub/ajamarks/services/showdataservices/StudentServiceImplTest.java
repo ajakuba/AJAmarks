@@ -5,15 +5,15 @@ import com.jakub.ajamarks.entities.Mark;
 import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.MarkRepository;
 import com.jakub.ajamarks.repositories.StudentRepository;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
-import static org.testng.Assert.*;
 
 /**
  * Created by ja on 24.01.17.
@@ -27,7 +27,7 @@ public class StudentServiceImplTest {
     private Mark mark;
 
 
-    @BeforeMethod
+    @Before
     public void testSetUp() throws Exception {
 
         studentServiceImpl = new StudentServiceImpl();
@@ -69,7 +69,7 @@ public class StudentServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void saveStudent_IllegalArgumentExceptionTest() {
         //given
         Student student3 = null;
@@ -90,7 +90,7 @@ public class StudentServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void updateByUserName_IllegalArgumentExceptionTest() {
         //given
         Student student = null;
@@ -100,7 +100,7 @@ public class StudentServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void updateByUserName_NullPointerExceptionTest() {
         //given
         Student student = new Student();
@@ -119,7 +119,7 @@ public class StudentServiceImplTest {
         verify(studentServiceImpl.studentRepository).delete(student1);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void delete_IllegalArgumentExceptionTest() {
         //given
         Student student3 = null;
@@ -150,7 +150,7 @@ public class StudentServiceImplTest {
         verify(studentServiceImpl.studentRepository).findOne(idStudent);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getStudentById_IllegalArgumentExceptionTest() {
         //given
         long idStudent = -1;
@@ -170,7 +170,7 @@ public class StudentServiceImplTest {
         verify(studentServiceImpl.studentRepository).findByUserName(userName);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getStudentByUserName_IllegalArgumentExceptionTest() throws Exception {
         //given
         String userName = null;
@@ -190,7 +190,7 @@ public class StudentServiceImplTest {
         verify(studentServiceImpl.studentRepository).findByClassroomClassroomNumber(classroomNumber);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getClassroomStudentsByClassroomNameDescLastNumber_IllegalArgumentExceptionTest() {
         //given
         int classroomNumber = 0;
@@ -211,7 +211,7 @@ public class StudentServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getClassroomStudentsByClassroomNameDescLastName_IllegalArgumentExceptionTest() {
         //given
         String classroomName = null;
@@ -235,7 +235,7 @@ public class StudentServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getStudentsWithGivenMark_IllegalArgumentExceptionTest() {
         //given
         int markValue = 10;
@@ -260,7 +260,7 @@ public class StudentServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getStudentsWithoutGivenMark_IllegalArgumentExceptionTest() {
         //given
         int markValue = 10;

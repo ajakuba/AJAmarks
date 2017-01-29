@@ -4,13 +4,14 @@ import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.ClassroomRepository;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
-import static org.testng.Assert.*;
+
 
 import java.util.*;
-
 
 /**
  * Created by ja on 23.01.17.
@@ -23,7 +24,7 @@ public class ClassroomServiceImplTest {
     private List<Classroom> classroomList;
     private Set<Student> studentSet;
 
-    @BeforeMethod
+    @Before
     public void testSetUp(){
 
         Student student1 = new Student();
@@ -66,7 +67,7 @@ public class ClassroomServiceImplTest {
         verify(classroomServiceImpl.classroomRepository).save(classroom1);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void saveClassroom_IllegalArgumentExceptionTest(){
         //given
         Classroom classroom3 = null;
@@ -85,7 +86,7 @@ public class ClassroomServiceImplTest {
         verify(classroomServiceImpl.classroomRepository).delete(classroom1);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void delete_IllegalArgumentExceptionTest(){
         //given
         Classroom classroom3 = null;
@@ -104,7 +105,7 @@ public class ClassroomServiceImplTest {
         verify(classroomServiceImpl.classroomRepository).findByClassroomName(classroom1.getClassroomName());
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void update_IllegalArgumentExceptionTest(){
         //given
         Classroom classroom3 = new Classroom();
@@ -113,7 +114,7 @@ public class ClassroomServiceImplTest {
         //then
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void update_NullPointerExceptionTest(){
         //given
         Classroom classroom3 = null;
@@ -143,7 +144,7 @@ public class ClassroomServiceImplTest {
         verify(classroomServiceImpl.classroomRepository).findOne(idClassroom);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getClassroomById_IllegalArgumentExceptionTest(){
         //given
         long idClassroom = 0;
@@ -163,7 +164,7 @@ public class ClassroomServiceImplTest {
         verify(classroomServiceImpl.classroomRepository).findByClassroomNumber(classroomNumber);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getClassroomByNumber_IllegalArgumentExceptionTest(){
         //given
         int classroomNumber = 0;
@@ -183,7 +184,7 @@ public class ClassroomServiceImplTest {
         verify(classroomServiceImpl.classroomRepository).findByClassroomName(classroomName);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getClassroomByName_IllegalArgumentExceptionTest(){
         //given
         String classroomName = null;
@@ -217,7 +218,7 @@ public class ClassroomServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest(){
         //given
         int classroomNumber = 0;
@@ -226,7 +227,7 @@ public class ClassroomServiceImplTest {
         //then
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void getClassroomStudentsByClassroomNumber_NullPointerExceptionTest(){
         //given
         int classroomNumber = 21;
@@ -261,7 +262,7 @@ public class ClassroomServiceImplTest {
         assertEquals(Collections.emptySet(), classroomStudentsByClassroomName);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest(){
         //given
         String classroomName = null;
@@ -271,7 +272,7 @@ public class ClassroomServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void getClassroomStudentsByClassroomName_NullPointerExceptionTest(){
         //given
         String classroomName = "no name";

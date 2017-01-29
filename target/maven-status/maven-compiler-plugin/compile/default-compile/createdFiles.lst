@@ -1,0 +1,17 @@
+com/jakub/ajamarks/entities/Classroom.class
+com/jakub/ajamarks/services/showdataservices/MarkServiceImpl.class
+com/jakub/ajamarks/services/showdataservices/StudentServiceImpl.class
+com/jakub/ajamarks/services/showdataservices/MarkService.class
+com/jakub/ajamarks/entities/Student.class
+com/jakub/ajamarks/entities/Mark.class
+com/jakub/ajamarks/config/DataBaseConfiguration.class
+Start.class
+com/jakub/ajamarks/repositories/MarkRepository.class
+com/jakub/ajamarks/repositories/ClassroomRepository.class
+com/jakub/ajamarks/services/statisticservices/StatisticServiceImpl.class
+com/jakub/ajamarks/services/showdataservices/ClassroomService.class
+com/jakub/ajamarks/services/showdataservices/ClassroomServiceImpl.class
+com/jakub/ajamarks/services/showdataservices/StudentService.class
+com/jakub/ajamarks/repositories/StudentRepository.class
+com/jakub/ajamarks/services/statisticservices/StatisticService.class
+com/jakub/ajamarks/config/BeanConfiguration.class

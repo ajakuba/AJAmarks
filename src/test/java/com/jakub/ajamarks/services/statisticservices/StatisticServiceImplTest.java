@@ -6,14 +6,13 @@ import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.repositories.ClassroomRepository;
 import com.jakub.ajamarks.repositories.MarkRepository;
 import com.jakub.ajamarks.repositories.StudentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.*;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
-import static org.testng.Assert.*;
 
 /**
  * Created by ja on 24.01.17.
@@ -27,7 +26,7 @@ public class StatisticServiceImplTest {
     private List<Student> studentList;
     private ArrayList<Mark> markList;
 
-    @BeforeMethod
+    @Before
     public void setUp() throws Exception {
 
         statisticServiceImpl = new StatisticServiceImpl();
@@ -71,10 +70,10 @@ public class StatisticServiceImplTest {
         Double aDouble = statisticServiceImpl.countAverageMarkForUser(userName);
         //then
         verify(statisticServiceImpl.studentRepository).findByUserName(userName);
-        assertEquals(5d, aDouble);
+        assertEquals(new Double(5d), aDouble);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void countAverageMarkForUser_IllegalArgumentExceptionTest() {
         //given
         String userName = null;
@@ -92,10 +91,10 @@ public class StatisticServiceImplTest {
         Double aDouble = statisticServiceImpl.countAverageMarkForClassroom(classroomName);
         //then
         verify(statisticServiceImpl.studentRepository).findByClassroomClassroomName(classroomName);
-        assertEquals(5d, aDouble);
+        assertEquals(new Double(5d), aDouble);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void countAverageMarkForClassroom_IllegalArgumentExceptionTest() {
         //given
         String classroomName = null;
@@ -112,7 +111,7 @@ public class StatisticServiceImplTest {
         Double aDouble = statisticServiceImpl.countAverageMarkForSchool();
         //then
         verify(statisticServiceImpl.studentRepository).findAll();
-        assertEquals(5d, aDouble);
+        assertEquals(new Double(5d), aDouble);
 
     }
 
@@ -142,7 +141,7 @@ public class StatisticServiceImplTest {
         verify(statisticServiceImpl.studentRepository).findByClassroomClassroomName(classroomName);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void isStudentAverageHigherThenInClassroom_IllegalArgumentExceptionTest() {
         //given
         String userName = null;
@@ -165,7 +164,7 @@ public class StatisticServiceImplTest {
         assertEquals(false, studentAverageHigherThenInSchool);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void isStudentAverageHigherThenInSchool_IllegalArgumentExceptionTest() {
         //given
         String userName = null;
@@ -200,7 +199,7 @@ public class StatisticServiceImplTest {
         verify(statisticServiceImpl.studentRepository, atLeast(2)).findByUserName(userName);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getStudentsAboveStudentAverage_IllegalArgumentExceptionTest() {
         //given
         String userName = null;
@@ -236,7 +235,7 @@ public class StatisticServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void countHowManyStudentsAboveStudentAverage_IllegalArgumentExceptionTest() {
         //given
         String userName = null;
@@ -273,7 +272,7 @@ public class StatisticServiceImplTest {
 
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getFromClassroomMarkStudentListMap_IllegalArgumentExceptionTest() {
         //given
         String classroomName = null;
