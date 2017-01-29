@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AJAmarks.iml" filepath="$PROJECT_DIR$/AJAmarks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AJAmarksService/AJAmarksService.iml" filepath="$PROJECT_DIR$/AJAmarksService/AJAmarksService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AJAmarksWeb/AJAmarksWeb.iml" filepath="$PROJECT_DIR$/AJAmarksWeb/AJAmarksWeb.iml" />
     </modules>
   </component>
 </project>

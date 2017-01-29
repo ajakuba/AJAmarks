@@ -7,11 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="AJAmarks" />
+        <module name="AJAmarksService" />
+        <module name="AJAmarksWeb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AJAmarks" target="1.8" />
+      <module name="AJAmarksService" target="1.8" />
+      <module name="AJAmarksWeb" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

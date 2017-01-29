@@ -17,9 +17,7 @@ public class Start {
 
     public static void main(String[] args) {
 
-        log.error("");
-
-        new AnnotationConfigApplicationContext(BeanConfiguration.class);
+       new AnnotationConfigApplicationContext(BeanConfiguration.class);
 
     }
 }
