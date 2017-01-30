@@ -1,3 +1,6 @@
 /home/ja/IdeaProjects/AJAmarks/AJAmarksWeb/src/main/java/com/jakub/ajamarks/controllers/StudentController.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksWeb/src/main/java/com/jakub/ajamarks/config/WebAppInitializer.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksWeb/src/main/java/com/jakub/ajamarks/controllers/MarkController.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksWeb/src/main/java/com/jakub/ajamarks/controllers/ClassroomController.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksWeb/src/main/java/com/jakub/ajamarks/controllers/EntryController.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksWeb/src/main/java/com/jakub/ajamarks/config/WebAppConfiguration.java

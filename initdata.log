@@ -22,4 +22,38 @@ alter table Student add constraint UK_orqg4vl6ad1a5k3a2sm91o1mr unique (userName
 alter table Mark_Student add constraint FKfxl0phv2tj9g3dna8hlb6xx8l foreign key (studentSet_idStudent) references Student
 alter table Mark_Student add constraint FKdfmuuam9heqr02fj5co8b1qqx foreign key (markList_idMark) references Mark
 alter table Student add constraint FKtcmv23dul20y0s7po3do3a7og foreign key (classroom_idClassroom) references Classroom
+INSERT INTO CLASSROOM VALUES(1,'Pierwsza',11)
+COMMIT
+INSERT INTO CLASSROOM VALUES(2,'Druga',22)
+COMMIT
+INSERT INTO CLASSROOM VALUES(3,'Trzecia',33)
+COMMIT
+INSERT INTO CLASSROOM VALUES(4,'Czwarta',44)
+COMMIT
+INSERT INTO CLASSROOM VALUES(5,'Pi\u0105ta',55)
+COMMIT
+INSERT INTO CLASSROOM VALUES(6,'Sz\u00f3sta',66)
+COMMIT
+INSERT INTO CLASSROOM VALUES(7,'Si\u00f3dma',77)
+COMMIT
+INSERT INTO CLASSROOM VALUES(8,'\u00d3sma',88)
+COMMIT
+INSERT INTO MARK VALUES(1,'NDST',1)
+COMMIT
+INSERT INTO MARK VALUES(2,'MRN',2)
+COMMIT
+INSERT INTO MARK VALUES(3,'DST',3)
+COMMIT
+INSERT INTO MARK VALUES(4,'DB',4)
+COMMIT
+INSERT INTO MARK VALUES(5,'BDB',5)
+COMMIT
+INSERT INTO MARK VALUES(6,'CEL',6)
+COMMIT
+DISCONNECT
+/*C8*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C9*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C10*/SET SCHEMA PUBLIC
 DISCONNECT
