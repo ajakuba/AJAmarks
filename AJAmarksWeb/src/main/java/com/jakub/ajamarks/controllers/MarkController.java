@@ -11,12 +11,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-
-/**
- * Created by ja on 30.01.17.
- */
 
 @Controller
 @RequestMapping("api/mark")
@@ -27,7 +25,7 @@ public class MarkController {
     @Autowired
     StudentService studentService;
 
-    @PostMapping("addMark")
+    @PostMapping("aMark")
     public
     @ResponseBody
     HttpEntity<Mark> addMark(
@@ -45,7 +43,7 @@ public class MarkController {
         }
     }
 
-    @PostMapping("createMark")
+    @PostMapping("cMark")
     public
     @ResponseBody
     HttpEntity<Mark> createMark(@RequestBody Mark mark) {
@@ -57,7 +55,7 @@ public class MarkController {
         }
     }
 
-    @DeleteMapping("deleteMark/{markValue}")
+    @DeleteMapping("dMark/{markValue}")
     public
     @ResponseBody
     void deleteMark(
@@ -66,7 +64,7 @@ public class MarkController {
         markService.delete(mark);
     }
 
-    @PutMapping("updateMark")
+    @PutMapping("uMark")
     public ResponseEntity updateMark(@RequestBody Mark mark) {
         try {
             Mark updatedMark = markService.updateMark(mark);
@@ -76,7 +74,7 @@ public class MarkController {
         }
     }
 
-    @GetMapping("showMarks")
+    @GetMapping("marks")
     public
     @ResponseBody
     List<Mark> showAllMarks() {
@@ -84,7 +82,7 @@ public class MarkController {
     }
 
 
-    @GetMapping("getBy/{markValue}")
+    @GetMapping("mark/{markValue:\\d}")
     public
     @ResponseBody
     ResponseEntity showByMarkValue(@PathVariable int markValue) {
@@ -94,31 +92,33 @@ public class MarkController {
         return new ResponseEntity(markService.getByMarkValue(markValue), HttpStatus.OK);
     }
 
-    @GetMapping("getBy/{markName}")
+    @GetMapping("mark/{markName:[A-Za-z]+}")
     public
     @ResponseBody
     Mark showByMarkValue(@PathVariable String markName) {
         return markService.getByMarkName(markName);
     }
 
-    @GetMapping("getStudentsByGivenMarkValue/{markValue}")
+    @GetMapping("studentsWithGivenMarkValue/{markValue}")
     public
     @ResponseBody
     ResponseEntity getStudentsByGivenMarkValue(@PathVariable int markValue) {
         try {
             Set<Student> studentsByGivenMarkValue = markService.getStudentsByGivenMarkValue(markValue);
+            Collections.sort(new ArrayList<>(studentsByGivenMarkValue));
             return new ResponseEntity(studentsByGivenMarkValue, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
 
-    @GetMapping("getStudentsByGivenMarkName/{markName")
+    @GetMapping("studentsWithGivenMarkName/{markName}")
     public
     @ResponseBody
     ResponseEntity getStudentsByGivenMarkName(@PathVariable String markName) {
         try {
             Set<Student> studentsByGivenMarkName = markService.getStudentsByGivenMarkName(markName);
+            Collections.sort(new ArrayList<>(studentsByGivenMarkName));
             return new ResponseEntity(studentsByGivenMarkName, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);

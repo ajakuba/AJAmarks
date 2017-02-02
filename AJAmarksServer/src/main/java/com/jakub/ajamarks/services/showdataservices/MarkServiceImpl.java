@@ -70,31 +70,24 @@ public class MarkServiceImpl implements MarkService {
     @Override
     public Set<Student> getStudentsByGivenMarkValue(int markValue) {
         Preconditions.checkArgument(markValue >= 1 && markValue <= 6, "Mark value must be from 1 to 6 value");
-        Mark byMarkValueNamedQuery = markRepository.findByMarkValueNamedQuery(markValue);
-        if (byMarkValueNamedQuery == null)
-            throw new NullPointerException("No such a mark");
-        else {
-            Set<Student> studentSet = byMarkValueNamedQuery.getStudentsWithMark();
-            if (studentSet.size() > 0)
-                return studentSet;
-            else
-                return Collections.emptySet();
-        }
+        Set<Student> studentsWithMark = markRepository.findByMarkValueNamedQuery(markValue).getStudentsWithMark();
+
+        if (studentsWithMark.size() > 0)
+            return studentsWithMark;
+        else
+            return Collections.emptySet();
     }
 
     @Override
     public Set<Student> getStudentsByGivenMarkName(String markName) {
         Preconditions.checkArgument(markName != null, "Mark name can't be null");
-        Mark byMarkNameNamedQuery = markRepository.findByMarkNameNamedQuery(markName);
-        if (byMarkNameNamedQuery == null)
-            throw new NullPointerException("No such a mark");
-        else {
-            Set<Student> studentSet = byMarkNameNamedQuery.getStudentsWithMark();
-            if (studentSet.size() > 0)
-                return studentSet;
-            else
-                return Collections.emptySet();
-        }
+        Set<Student> studentsWithMark = markRepository.findByMarkNameNamedQuery(markName).getStudentsWithMark();
+
+        if (studentsWithMark.size() > 0)
+            return studentsWithMark;
+        else
+            return Collections.emptySet();
+
     }
 
 

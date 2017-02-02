@@ -4,12 +4,15 @@
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/repositories/StudentRepository.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/MarkServiceImpl.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/ClassroomService.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/serializers/StudentSerializer.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/statisticservices/StatisticServiceImpl.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/MarkService.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/repositories/ClassroomRepository.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/StudentService.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/serializers/MarkSerializer.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/Start.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/ClassroomServiceImpl.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/serializers/ClassroomSerializer.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/entities/Classroom.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/entities/Mark.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/StudentServiceImpl.java

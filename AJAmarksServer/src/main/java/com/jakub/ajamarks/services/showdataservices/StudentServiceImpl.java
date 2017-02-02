@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by ja on 15.01.17.
@@ -66,19 +63,19 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Collection<Student> getClassroomStudentsByClassroomNumberDescLastName(int classroomNumber) {
+    public List<Student> getClassroomStudentsByClassroomNumberDescLastName(int classroomNumber) {
         Preconditions.checkArgument(classroomNumber > 0, "classroom number can't be less than 1");
         return studentRepository.findByClassroomClassroomNumber(classroomNumber);
     }
 
     @Override
-    public Collection<Student> getClassroomStudentsByClassroomNameDescLastName(String classroomName) {
+    public List<Student> getClassroomStudentsByClassroomNameDescLastName(String classroomName) {
         Preconditions.checkArgument(classroomName!=null, "classroom name can't be null");
         return studentRepository.findByClassroomClassroomName(classroomName);
     }
 
     @Override
-    public List<Student> getStudentsWithGivenMark(int markValue) {
+    public List<Student> getStudentsWithGivenMarkValue(int markValue) {
         Preconditions.checkArgument(markValue>=1 && markValue<=6, "mark mast be from 1 to 6 ");
         List<Student> studentList = new ArrayList<>();
 
@@ -96,7 +93,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Student> getStudentsWithoutGivenMark(int markValue) {
+    public List<Student> getStudentsWithoutGivenMarkValue(int markValue) {
         Preconditions.checkArgument(markValue>=1 && markValue<=6, "mark mast be from 1 to 6 ");
         List<Student> studentList = new ArrayList<>();
 

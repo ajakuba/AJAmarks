@@ -9,4 +9,3 @@
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/test/java/com/jakub/ajamarks/services/showdataservices/MarkServiceImplTest.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/integrationTest/java/com/jakub/ajamarks/services/showdataservices/StudentServiceIntegrationTest.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/integrationTest/java/com/jakub/ajamarks/repositories/ClassroomRepositoryIntegrationTest.java
-/home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/integrationTest/java/com/jakub/ajamarks/config/IntegrationTest.java

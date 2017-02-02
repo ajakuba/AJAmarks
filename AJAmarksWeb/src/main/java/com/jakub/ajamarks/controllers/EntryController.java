@@ -22,7 +22,7 @@ public class EntryController {
     public String login(Model model){
 
         logger.info("Witaj");
-        model.addAllAttributes(new ArrayList<>());
+        model.addAttribute("Hallo", "Witaj");
         return "entry";
     }
 }

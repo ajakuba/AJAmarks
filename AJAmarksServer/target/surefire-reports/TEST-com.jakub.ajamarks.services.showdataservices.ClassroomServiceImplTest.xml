@@ -59,11 +59,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="getClassroomStudentsByClassroomNumber_NoStudentsTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.113"/>
-  <testcase name="saveClassroomTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.004"/>
-  <testcase name="getClassroomByIdTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.001"/>
+  <testcase name="getClassroomStudentsByClassroomNumber_NoStudentsTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.117"/>
+  <testcase name="saveClassroomTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.001"/>
+  <testcase name="getClassroomByIdTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
   <testcase name="delete_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
-  <testcase name="getClassroomStudentsByClassroomNumberTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.001"/>
+  <testcase name="getClassroomStudentsByClassroomNumberTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
   <testcase name="getClassroomByNumberTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
   <testcase name="getClassroomStudentsByClassroomNumber_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
   <testcase name="getClassroomStudentsByClassroomNumber_NullPointerExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
@@ -74,7 +74,7 @@
   <testcase name="getClassroomById_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
   <testcase name="getClassroomStudentsByClassroomName_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.001"/>
   <testcase name="update_NullPointerExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
-  <testcase name="update_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
+  <testcase name="update_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.001"/>
   <testcase name="getClassroomByNumber_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
   <testcase name="getClassroomByNameTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0"/>
   <testcase name="getClassroomStudentsByClassroomNameTest" classname="com.jakub.ajamarks.services.showdataservices.ClassroomServiceImplTest" time="0.001"/>

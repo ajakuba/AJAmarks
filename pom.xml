@@ -21,13 +21,14 @@
         <slf4j.version>1.7.22</slf4j.version>
         <logback.version>1.0.1</logback.version>
         <jackson.version>2.7.5</jackson.version>
+        <springframework.version>4.3.0.RELEASE</springframework.version>
+
     </properties>
 
 
     <build>
         <finalName>ajamarks</finalName>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
@@ -128,6 +129,16 @@
     </build>
     <dependencies>
         <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>${jackson.version}</version>
@@ -154,13 +165,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.4.RELEASE</version>
+            <version>${springframework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>4.3.3.RELEASE</version>
-        </dependency>
+            <version>${springframework.version}</version>
+            </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
@@ -181,7 +192,11 @@
             <artifactId>hsqldb</artifactId>
             <version>2.3.4</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -191,7 +206,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.3.2.RELEASE</version>
+            <version>${springframework.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>

@@ -34,7 +34,7 @@ public class MarkServiceIntegrationTest {
     @Autowired
     ClassroomService classroomService;
 
-    private Mark mark1, mark2;
+    private Mark mark1, mark2, mark3;
     private Classroom classroom;
 
     @Before
@@ -54,11 +54,16 @@ public class MarkServiceIntegrationTest {
         mark2.setMarkValue(5);
         mark2.setStudentsWithMark(studentSetBdb);
 
+        mark3 = new Mark();
+        mark3.setMarkName("db");
+        mark3.setMarkValue(4);
+        mark3.setStudentsWithMark(null);
+
         List<Mark> markList1 = new ArrayList<>();
         List<Mark> markList2 = new ArrayList<>();
 
         Collections.addAll(markList1, mark1, mark1);
-        Collections.addAll(markList2, mark1, mark2);
+        Collections.addAll(markList2, mark1, mark2, mark3);
 
         Student student1 = new Student();
         student1.setFirstName("Jakub");
@@ -88,12 +93,13 @@ public class MarkServiceIntegrationTest {
         classroom.setStudentsInClassroom(studentSet);
 
         markService.saveMark(mark1);
+        markService.saveMark(mark2);
+        markService.saveMark(mark3);
+
 
         classroomService.saveClassroom(classroom);
         studentService.saveStudent(student1);
         studentService.saveStudent(student2);
-
-
     }
 
     @Test
@@ -102,7 +108,7 @@ public class MarkServiceIntegrationTest {
         //when
         Mark mark = markService.saveMark(mark2);
         //then
-        assertThat(2, is(markService.getAll().size()));
+        assertThat(3, is(markService.getAll().size()));
         assertThat(mark2, is(mark));
     }
 
@@ -122,10 +128,25 @@ public class MarkServiceIntegrationTest {
     @Test
     public void deleteTest() {
         //given
+        System.out.println("lol");
+        Mark mark = new Mark();
+        mark.setIdMark(32);
+        mark.setMarkValue(21);
+        mark.setMarkName("name");
+        markService.saveMark(mark);
+
+        assertThat(4, is(markService.getAll().size()));
+
+
         //when
-        markService.delete(mark1);
+
+        markService.delete(mark);
+
+        int size = markService.getAll().size();
+        System.out.println(size);
+
         //then
-        assertThat(0, is(markService.getAll().size()));
+        assertThat(3, is(markService.getAll().size()));
     }
 
     @Test
@@ -135,9 +156,10 @@ public class MarkServiceIntegrationTest {
         //when
         List<Mark> all = markService.getAll();
         //the
-        assertThat(2, is(all.size()));
+        assertThat(3, is(all.size()));
         assertThat(all, hasItem(mark1));
         assertThat(all, hasItem(mark2));
+        assertThat(all, hasItem(mark3));
     }
 
     @Test
@@ -173,6 +195,7 @@ public class MarkServiceIntegrationTest {
     @Test(expected = IllegalArgumentException.class)
     public void getStudentsByGivenMarkValue_NoGivenMarkVaslueTest() {
         //given
+
         //when
         Set<Student> studentsByGivenMarkValue = markService.getStudentsByGivenMarkValue(10);
         //then
@@ -182,7 +205,8 @@ public class MarkServiceIntegrationTest {
     public void getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest() {
         //given
         //when
-        markService.getStudentsByGivenMarkValue(5);
+        Set<Student> studentsByGivenMarkValue = markService.getStudentsByGivenMarkValue(4);
+        System.out.println(studentsByGivenMarkValue);
         //then
     }
 
@@ -208,7 +232,7 @@ public class MarkServiceIntegrationTest {
     public void getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest() {
         //given
         //when
-        markService.getStudentsByGivenMarkName("bdb");
+        markService.getStudentsByGivenMarkName("rrr");
         //then
     }
 

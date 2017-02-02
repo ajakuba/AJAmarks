@@ -27,8 +27,7 @@ public class ClassroomSerializer extends JsonSerializer<Classroom> {
         List<String> studentsFirstAndLastNameList = studentsInClassroom.stream().map(student -> {
             String firstName = student.getFirstName();
             String lastName = student.getLastName();
-            String studentName = firstName + " " + lastName;
-            return studentName;
+            return firstName.concat(lastName);
         }).collect(Collectors.toList());
 
         return studentsFirstAndLastNameList;

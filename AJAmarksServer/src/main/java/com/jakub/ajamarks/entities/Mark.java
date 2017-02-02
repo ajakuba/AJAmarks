@@ -12,9 +12,7 @@ import java.io.Serializable;
 import java.util.Set;
 
 @EqualsAndHashCode(exclude = {"idMark", "studentsWithMark"})
-@ToString
-@Getter
-@Setter
+
 @JsonSerialize(using = MarkSerializer.class)
 @Entity
 //string: "findByMarkValueNamedQuery" mas be the same as method name in MarkRepository, the same for MarkName
@@ -34,9 +32,50 @@ public class Mark implements Comparable, Serializable{
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Student> studentsWithMark;
 
+    public long getIdMark() {
+        return idMark;
+    }
+
+    public void setIdMark(long idMark) {
+        this.idMark = idMark;
+    }
+
+    public int getMarkValue() {
+        return markValue;
+    }
+
+    public void setMarkValue(int markValue) {
+        this.markValue = markValue;
+    }
+
+    public String getMarkName() {
+        return markName;
+    }
+
+    public void setMarkName(String markName) {
+        this.markName = markName;
+    }
+
+    public Set<Student> getStudentsWithMark() {
+        return studentsWithMark;
+    }
+
+    public void setStudentsWithMark(Set<Student> studentsWithMark) {
+        this.studentsWithMark = studentsWithMark;
+    }
+
     @Override
     public int compareTo(Object o) {
         Mark o1 = (Mark) o;
         return this.getMarkValue()-o1.getMarkValue();
+    }
+
+    @Override
+    public String toString() {
+        return "Mark{" +
+                "idMark=" + idMark +
+                ", markValue=" + markValue +
+                ", markName='" + markName + '\'' +
+                '}';
     }
 }

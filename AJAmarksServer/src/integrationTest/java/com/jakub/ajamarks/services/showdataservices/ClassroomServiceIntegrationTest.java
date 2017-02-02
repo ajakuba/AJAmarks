@@ -18,11 +18,6 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsCollectionContaining.hasItem;
 import static org.junit.Assert.assertSame;
 
-/**
- * Created by ja on 16.01.17.
- */
-
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {DataBaseForTestConfiguration.class})
 @Transactional

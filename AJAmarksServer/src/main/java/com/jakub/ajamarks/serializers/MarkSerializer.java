@@ -29,7 +29,7 @@ public class MarkSerializer extends JsonSerializer<Mark> {
         return studentsWithMark.stream().map(student -> {
             String firstName = student.getFirstName();
             String lastName = student.getLastName();
-            return firstName + " " + lastName;
+            return firstName.concat(lastName);
         }).collect(Collectors.toList());
     }
 }

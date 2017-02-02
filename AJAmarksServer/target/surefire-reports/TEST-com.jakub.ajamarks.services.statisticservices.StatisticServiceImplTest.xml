@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.219" tests="20" errors="0" skipped="0" failures="0">
+<testsuite name="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.21" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/ja/java/jdk1.8.0_77/jre/lib/amd64"/>
@@ -59,24 +59,24 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="countQuantityOfEachMarkForSchoolTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.184"/>
+  <testcase name="countQuantityOfEachMarkForSchoolTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.176"/>
   <testcase name="isStudentAverageHigherThenInClassroomTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.008"/>
-  <testcase name="isStudentAverageHigherThenInClassroom_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
-  <testcase name="countAverageMarkForSchoolTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
+  <testcase name="isStudentAverageHigherThenInClassroom_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
+  <testcase name="countAverageMarkForSchoolTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
   <testcase name="getStudentsAboveStudentAverageTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.006"/>
   <testcase name="countAverageMarkForUser_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
   <testcase name="isStudentAverageHigherThenInSchoolTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
-  <testcase name="countAverageMarkForUserTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
+  <testcase name="countAverageMarkForUserTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
   <testcase name="countHowManyStudentsAboveStudentAverageTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.005"/>
   <testcase name="countHowManyStudentsAboveSchoolAverageTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.004"/>
-  <testcase name="countHowManyStudentsAboveStudentAverage_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
+  <testcase name="countHowManyStudentsAboveStudentAverage_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
   <testcase name="sortStudentsByAverageAscTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
   <testcase name="getFromClassroomMarkStudentListMap_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
-  <testcase name="isStudentAverageHigherThenInSchool_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
-  <testcase name="countAverageMarkForClassroomTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
+  <testcase name="isStudentAverageHigherThenInSchool_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
+  <testcase name="countAverageMarkForClassroomTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
   <testcase name="getFromClassroomMarkStudentListMapTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.002"/>
-  <testcase name="getFromSchoolMarkStudentListMapTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
-  <testcase name="getStudentsAboveStudentAverage_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
+  <testcase name="getFromSchoolMarkStudentListMapTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.002"/>
+  <testcase name="getStudentsAboveStudentAverage_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
   <testcase name="getStudentsAboveSchoolAverageTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.002"/>
-  <testcase name="countAverageMarkForClassroom_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0"/>
+  <testcase name="countAverageMarkForClassroom_IllegalArgumentExceptionTest" classname="com.jakub.ajamarks.services.statisticservices.StatisticServiceImplTest" time="0.001"/>
 </testsuite>

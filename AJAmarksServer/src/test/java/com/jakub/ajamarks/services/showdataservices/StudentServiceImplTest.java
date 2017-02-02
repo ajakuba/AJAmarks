@@ -227,7 +227,7 @@ public class StudentServiceImplTest {
         when(studentServiceImpl.markRepository.findByMarkValueNamedQuery(markValue)).thenReturn(mark);
         when(studentServiceImpl.studentRepository.findAll()).thenReturn(studentList);
         //when
-        studentServiceImpl.getStudentsWithGivenMark(markValue);
+        studentServiceImpl.getStudentsWithGivenMarkValue(markValue);
         //then
         verify(studentServiceImpl.studentRepository).findAll();
         verify(studentServiceImpl.markRepository).findByMarkValueNamedQuery(markValue);
@@ -239,7 +239,7 @@ public class StudentServiceImplTest {
         //given
         int markValue = 10;
         //when
-        studentServiceImpl.getStudentsWithGivenMark(markValue);
+        studentServiceImpl.getStudentsWithGivenMarkValue(markValue);
         //then
     }
 
@@ -252,7 +252,7 @@ public class StudentServiceImplTest {
         when(studentServiceImpl.markRepository.findByMarkValueNamedQuery(markValue)).thenReturn(mark2);
         when(studentServiceImpl.studentRepository.findAll()).thenReturn(studentList);
         //when
-        studentServiceImpl.getStudentsWithoutGivenMark(markValue);
+        studentServiceImpl.getStudentsWithoutGivenMarkValue(markValue);
         //then
         verify(studentServiceImpl.markRepository).findByMarkValueNamedQuery(markValue);
         verify(studentServiceImpl.studentRepository).findAll();
@@ -264,7 +264,7 @@ public class StudentServiceImplTest {
         //given
         int markValue = 10;
         //when
-        studentServiceImpl.getStudentsWithoutGivenMark(markValue);
+        studentServiceImpl.getStudentsWithoutGivenMarkValue(markValue);
         //then
     }
 

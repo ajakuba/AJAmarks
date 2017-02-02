@@ -18,8 +18,8 @@ public interface StudentService {
     List<Student> getAll();
     Student getStudentById(long id);
     Student getStudentByUserName(String userName);
-    Collection<Student> getClassroomStudentsByClassroomNumberDescLastName(int classroomNumber);
-    Collection<Student> getClassroomStudentsByClassroomNameDescLastName(String classroomName);
-    List<Student> getStudentsWithGivenMark(int markValue);
-    List<Student> getStudentsWithoutGivenMark(int markValue);
+    List<Student> getClassroomStudentsByClassroomNumberDescLastName(int classroomNumber);
+    List<Student> getClassroomStudentsByClassroomNameDescLastName(String classroomName);
+    List<Student> getStudentsWithGivenMarkValue(int markValue);
+    List<Student> getStudentsWithoutGivenMarkValue(int markValue);
 }

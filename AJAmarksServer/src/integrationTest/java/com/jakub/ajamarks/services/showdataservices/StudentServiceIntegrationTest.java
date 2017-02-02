@@ -201,7 +201,7 @@ public class StudentServiceIntegrationTest {
         //given
         Student student = studentService.saveStudent(student2);
         //when
-        List<Student> studentsWithGivenMark = studentService.getStudentsWithGivenMark(mark2.getMarkValue());
+        List<Student> studentsWithGivenMark = studentService.getStudentsWithGivenMarkValue(mark2.getMarkValue());
         //then
         assertThat(studentsWithGivenMark, hasItem(student));
     }
@@ -210,7 +210,7 @@ public class StudentServiceIntegrationTest {
     public void getStudentsWithGivenMark_NoStudensForGivenMarkTest() {
         //given
         //when
-        List<Student> studentsWithGivenMark = studentService.getStudentsWithGivenMark(mark2.getMarkValue());
+        List<Student> studentsWithGivenMark = studentService.getStudentsWithGivenMarkValue(mark2.getMarkValue());
         //then
         assertThat(0, is(studentsWithGivenMark.size()));
         assertThat(Collections.emptyList(), is(studentsWithGivenMark));
@@ -221,7 +221,7 @@ public class StudentServiceIntegrationTest {
         //given
         Student student = studentService.saveStudent(student2);
         //when
-        List<Student> studentsWithoutGivenMark = studentService.getStudentsWithoutGivenMark(mark1.getMarkValue());
+        List<Student> studentsWithoutGivenMark = studentService.getStudentsWithoutGivenMarkValue(mark1.getMarkValue());
         //then
         assertThat(studentsWithoutGivenMark, hasItem(student));
     }
@@ -230,7 +230,7 @@ public class StudentServiceIntegrationTest {
     public void getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest() {
         //given
         //when
-        List<Student> studentsWithoutGivenMark = studentService.getStudentsWithoutGivenMark(mark1.getMarkValue());
+        List<Student> studentsWithoutGivenMark = studentService.getStudentsWithoutGivenMarkValue(mark1.getMarkValue());
         //then
         assertThat(0, is(studentsWithoutGivenMark.size()));
         assertThat(Collections.emptyList(), is(studentsWithoutGivenMark));

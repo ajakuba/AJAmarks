@@ -7,21 +7,22 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 /**
  * Created by ja on 30.01.17.
  */
-@Controller
-@RequestMapping("api/classroom")
+@RestController
+@RequestMapping("/api/classroom")
 public class ClassroomController {
 
     @Autowired
     ClassroomService classroomService;
 
-    @RequestMapping("getClassrooms")
-    public @ResponseBody List<Classroom> showAllClassrooms(){
+    @RequestMapping("/getClassrooms")
+    public List<Classroom> showAllClassrooms(){
         return classroomService.getAllByClassroomNameAsc();
     }
 

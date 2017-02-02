@@ -14,44 +14,27 @@
 
     <properties>
         <java-version>1.8</java-version>
-        <springframework.version>4.3.0.RELEASE</springframework.version>
-
-
     </properties>
 
-    <!--<build>-->
-        <!--<finalName>mark</finalName>-->
-        <!--<pluginManagement>-->
-            <!--<plugins>-->
+    <dependencies>
 
-            <!--</plugins>-->
-        <!--</pluginManagement>-->
-    <!--</build>-->
-<dependencies>
+        <dependency>
+            <groupId>com.jakub.ajamarks</groupId>
+            <artifactId>AJAmarksServer</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
 
-    <dependency>
-        <groupId>com.jakub.ajamarks</groupId>
-        <artifactId>AJAmarksServer</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-webmvc</artifactId>
-        <version>${springframework.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-databind</artifactId>
-        <version>${jackson.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>javax.servlet-api</artifactId>
-        <version>3.0.1</version>
-        <scope>provided</scope>
-    </dependency>
-</dependencies>
-
+    </dependencies>
 
 </project>
