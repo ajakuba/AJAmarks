@@ -13,7 +13,7 @@ import java.util.Set;
 public interface ClassroomService {
     Classroom saveClassroom(Classroom classroom);
     void delete(Classroom classroom);
-    Classroom updateClassroom(Classroom classroom);
+    Classroom updateClassroom(long classroomId, Classroom classroom);
     List<Classroom> getAllByClassroomNameAsc();
     Classroom getClassroomById(long id);
     Classroom getClassroomByNumber(int classNumber);

@@ -13,7 +13,7 @@ import java.util.List;
 
 public interface StudentService {
     Student saveStudent(Student student);
-    Student updateByUserName(Student student);
+    Student updateByUserName(long studentId, Student student);
     void delete(Student student);
     List<Student> getAll();
     Student getStudentById(long id);

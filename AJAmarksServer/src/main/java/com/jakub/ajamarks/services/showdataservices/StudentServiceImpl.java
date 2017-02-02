@@ -31,12 +31,16 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student updateByUserName(Student student) {
+    public Student updateByUserName(long studentId, Student student) {
         Preconditions.checkArgument(student!=null, "student can't be null");
         Preconditions.checkNotNull(student.getUserName(), "student name can't be null");
-        Student byUserName = studentRepository.findByUserName(student.getUserName());
-        student.setIdStudent(byUserName.getIdStudent());
-        return studentRepository.save(student);
+        Student foundStudent = studentRepository.findOne(studentId);
+        foundStudent.setFirstName(student.getFirstName());
+        foundStudent.setLastName(student.getLastName());
+        foundStudent.setUserName(student.getUserName());
+        foundStudent.setClassroom(student.getClassroom());
+        foundStudent.setStudentMarks(student.getStudentMarks());
+        return studentRepository.save(foundStudent);
     }
 
     @Override

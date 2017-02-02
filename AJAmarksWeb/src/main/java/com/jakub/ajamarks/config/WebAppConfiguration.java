@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
 
 /**
  * Created by ja on 29.01.17.
@@ -22,10 +23,10 @@ public class WebAppConfiguration extends WebMvcConfigurerAdapter {
 
     @Bean
     public InternalResourceViewResolver jspViewResolver() {
-        InternalResourceViewResolver bean = new InternalResourceViewResolver();
-        bean.setPrefix("/WEB-INF/jsp/");//folder gdzie poszukiwany jet widok
-        bean.setSuffix(".jsp"); //typ pliku jaki poszukujemy
-        return bean;
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        resolver.setPrefix("/WEB-INF/jsp/");//folder gdzie poszukiwany jet widok
+        resolver.setSuffix(".jsp"); //typ pliku jaki poszukujemy
+        return resolver;
     }
 
     @Override

@@ -41,6 +41,17 @@ public class ClassroomServiceImpl implements ClassroomService {
         classroomRepository.delete(classroom);
     }
 
+    @Override
+    public Classroom updateClassroom(long classroomId, Classroom classroom) {
+        Preconditions.checkNotNull(classroomId, "classroom identity number can not be null");
+        Preconditions.checkNotNull(classroom, "classroom can not be null");
+        Classroom foundClassroom = classroomRepository.findOne(classroomId);
+        foundClassroom.setClassroomName(classroom.getClassroomName());
+        foundClassroom.setClassroomNumber(classroom.getClassroomNumber());
+        foundClassroom.setStudentsInClassroom(classroom.getStudentsInClassroom());
+        return classroomRepository.save(foundClassroom);
+    }
+
     public List<Classroom> getAllByClassroomNameAsc() {
         return classroomRepository.findAllByOrderByClassroomNameAsc();
     }

@@ -12,7 +12,7 @@ import java.util.Set;
 public interface MarkService {
 
     Mark saveMark(Mark mark);
-    Mark updateMark(Mark mark);
+    Mark updateMark(long markId, Mark mark);
     void delete(Mark mark);
     List<Mark> getAll();
     Mark getByMarkValue(int markValue);

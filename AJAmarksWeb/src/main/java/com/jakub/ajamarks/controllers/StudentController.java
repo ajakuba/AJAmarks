@@ -1,6 +1,7 @@
 package com.jakub.ajamarks.controllers;
 
 
+import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.services.showdataservices.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -11,8 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-
-
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -22,7 +22,7 @@ public class StudentController {
     @Autowired
     StudentService studentService;
 
-    @PostMapping("astudent")
+    @PostMapping("student")
     public ResponseEntity addStudent(
             @RequestParam String userName,
             @RequestParam String firstName,
@@ -32,29 +32,31 @@ public class StudentController {
         student.setUserName(userName);
         student.setFirstName(firstName);
         student.setLastName(lastName);
+        student.setClassroom(new Classroom());
+        student.setStudentMarks(Collections.emptyList());
 
         try {
             Student savedStudent = studentService.saveStudent(student);
-            return new ResponseEntity(savedStudent, HttpStatus.OK);
+            return new ResponseEntity(savedStudent, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
         }
     }
 
-    @PostMapping("cstudent")
+    @PostMapping("studentNew")
     public ResponseEntity createStudent(@RequestBody Student student) {
         try {
             Student savedStudent = studentService.saveStudent(student);
-            return new ResponseEntity(savedStudent, HttpStatus.OK);
+            return new ResponseEntity(savedStudent, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
         }
     }
 
-    @PutMapping("uStudent")     
-    public ResponseEntity updateStudent(@RequestBody Student student) {
+    @PutMapping("student")
+    public ResponseEntity updateStudent(@PathVariable long studentId, @RequestBody Student student) {
         try {
-            Student updatedStudent = studentService.updateByUserName(student);
+            Student updatedStudent = studentService.updateByUserName(studentId, student);
             return new ResponseEntity(updatedStudent, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
@@ -62,9 +64,14 @@ public class StudentController {
     }
 
     @DeleteMapping("dStudent/{userName}")
-    public void deleteStudent(@PathVariable String userName) {
-        Student studentByUserName = studentService.getStudentByUserName(userName);
-        studentService.delete(studentByUserName);
+    public ResponseEntity deleteStudent(@PathVariable String userName) {
+        try {
+            Student studentByUserName = studentService.getStudentByUserName(userName);
+            studentService.delete(studentByUserName);
+            return new ResponseEntity(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
     }
 
     @GetMapping("students")
@@ -78,7 +85,7 @@ public class StudentController {
             Student studentById = studentService.getStudentById(studentId);
             return new ResponseEntity(studentById, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
     @GetMapping("student/{studentUser:[A-Za-z]+}")
@@ -87,40 +94,50 @@ public class StudentController {
             Student studentByUserName = studentService.getStudentByUserName(studentUser);
             return new ResponseEntity(studentByUserName, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
 
     @GetMapping("studentsWithGivenMarkValue/{markValue}")
-    public ResponseEntity getStudentsWithGivenMarkValue(@PathVariable int markvalue){
+    public ResponseEntity showStudentsWithGivenMarkValue(@PathVariable int markvalue){
         try{
             List<Student> studentsWithGivenMarkValue = studentService.getStudentsWithGivenMarkValue(markvalue);
+            Collections.sort(studentsWithGivenMarkValue);
             return new ResponseEntity(studentsWithGivenMarkValue, HttpStatus.OK);
         }catch(Exception e){
-            return new ResponseEntity(e.getMessage(), HttpStatus.OK);
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
 
     @GetMapping("studentsWithoutGivenMarkValue/{markValue}")
-    public ResponseEntity getStudentsWithoutGivenMarkValue(@PathVariable int markvalue){
+    public ResponseEntity showStudentsWithoutGivenMarkValue(@PathVariable int markvalue){
         try{
-            List<Student> studentsWithGivenMarkValue = studentService.getStudentsWithoutGivenMarkValue(markvalue);
-            return new ResponseEntity(studentsWithGivenMarkValue, HttpStatus.OK);
+            List<Student> studentsWithoutGivenMarkValue = studentService.getStudentsWithoutGivenMarkValue(markvalue);
+            Collections.sort(studentsWithoutGivenMarkValue);
+            return new ResponseEntity(studentsWithoutGivenMarkValue, HttpStatus.OK);
         }catch(Exception e){
-            return new ResponseEntity(e.getMessage(), HttpStatus.OK);
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
 
     @GetMapping("classroomStudentsByClassroomNumberDescLastName/{classroomNumber}")
-    public List<Student> getStudentsByClassroomNumber(@PathVariable int classroomNumber) {
-        List<Student> classroomStudentsByClassroomNumberDescLastName = studentService.getClassroomStudentsByClassroomNumberDescLastName(classroomNumber);
-        return classroomStudentsByClassroomNumberDescLastName;
+    public ResponseEntity showStudentsByClassroomNumber(@PathVariable int classroomNumber) {
+        try {
+            List<Student> classroomStudentsByClassroomNumberDescLastName = studentService.getClassroomStudentsByClassroomNumberDescLastName(classroomNumber);
+            return new ResponseEntity (classroomStudentsByClassroomNumberDescLastName, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity (e.getMessage(), HttpStatus.NOT_FOUND);
+        }
     }
 
     @GetMapping("classroomStudentsByClassroomNameDescLastName/{classroomName}")
-    public     List<Student> getStudentsByClassroomName(@PathVariable String classroomName) {
-        List<Student> classroomStudentsByClassroomNumberDescLastName = studentService.getClassroomStudentsByClassroomNameDescLastName(classroomName);
-        return classroomStudentsByClassroomNumberDescLastName;
+    public     ResponseEntity showStudentsByClassroomName(@PathVariable String classroomName) {
+        try {
+            List<Student> classroomStudentsByClassroomNumberDescLastName = studentService.getClassroomStudentsByClassroomNameDescLastName(classroomName);
+            return new ResponseEntity(classroomStudentsByClassroomNumberDescLastName, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
     }
 
 }

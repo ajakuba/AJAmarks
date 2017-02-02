@@ -1,8 +1,13 @@
+<page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1">
+<taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core">
+
+
+
 <html>
 <body>
 <h1>${headerMessage}</h1>
 <h1>Adding student</h1>
-<form action = "/ajamarks/restapi/student/submitionStudentAdmissionForm.html" method="post">
+<form action = "/ajamarks/jspapi/student/submitionStudentAdmissionForm.html" method="post">
 <p>
 Student's userName : <input type="text" name = "userName" />
 </p>

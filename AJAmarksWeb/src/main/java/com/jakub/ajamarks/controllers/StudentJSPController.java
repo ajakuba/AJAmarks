@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-@RequestMapping("restapi/student")
+@RequestMapping("jspapi/student")
 public class StudentJSPController {
 
     @Autowired
@@ -79,11 +79,11 @@ public class StudentJSPController {
     }
 
     //@ModelAtribute on method gives possibility to add to model some value - "wow" wchich will be dispalyd in jsp pages from two above methods
-    @ModelAttribute
-    public void addingParams(Model model1) {
-        model1.addAttribute("headerMessage", "Wow");
-
-    }
+//    @ModelAttribute
+//    public void addingParams(Model model1) {
+//        model1.addAttribute("headerMessage", "Wow");
+//
+//    }
 
 
 }
