@@ -79,32 +79,32 @@ public class StudentServiceImplTest {
 
 
     @Test
-    public void updateByUserNameTest() {
+    public void updateStudent() {
         //given
-        when(studentServiceImpl.studentRepository.findByUserName(student1.getUserName())).thenReturn(student1);
+        when(studentServiceImpl.studentRepository.findOne(1L)).thenReturn(student1);
         //when
-        studentServiceImpl.updateByUserName(student1);
+        studentServiceImpl.updateStudent(1L, student1);
         //then
-        verify(studentServiceImpl.studentRepository).findByUserName(student1.getUserName());
+        verify(studentServiceImpl.studentRepository).findOne(1L);
 
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void updateByUserName_IllegalArgumentExceptionTest() {
+    public void updateStudent_IllegalArgumentExceptionTest() {
         //given
         Student student = null;
         //when
-        studentServiceImpl.updateByUserName(student);
+        studentServiceImpl.updateStudent(0, student);
         //then
 
     }
 
     @Test(expected = NullPointerException.class)
-    public void updateByUserName_NullPointerExceptionTest() {
+    public void updateStudent_NullPointerExceptionTest() {
         //given
         Student student = new Student();
         //when
-        studentServiceImpl.updateByUserName(student);
+        studentServiceImpl.updateStudent(0, student);
         //then
     }
 

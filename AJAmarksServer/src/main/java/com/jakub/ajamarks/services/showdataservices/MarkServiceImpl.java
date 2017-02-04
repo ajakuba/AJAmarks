@@ -37,13 +37,10 @@ public class MarkServiceImpl implements MarkService {
     @Override
     public Mark updateMark(long markId, Mark mark) {
         Preconditions.checkArgument(markId > 0, "Mark can not be less than 1");
-        Preconditions.checkNotNull(mark.getMarkValue(), "Mark value can't be null");
+        Preconditions.checkNotNull(mark, "Mark can not be null");
         Mark foundMark = markRepository.findOne(markId);
-        foundMark.setMarkName(mark.getMarkName());
-        foundMark.setMarkValue(mark.getMarkValue());
-        foundMark.setStudentsWithMark(mark.getStudentsWithMark());
-        return markRepository.save(foundMark);
-
+        mark.setIdMark(foundMark.getIdMark());
+        return markRepository.save(mark);
     }
 
     @Override

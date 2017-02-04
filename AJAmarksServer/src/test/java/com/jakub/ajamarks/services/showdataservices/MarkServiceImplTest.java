@@ -61,33 +61,31 @@ public class MarkServiceImplTest {
     }
 
     @Test
-    public void updateByMarkValueTest() {
+    public void updateMarkTest() {
         //given
-        int markValue = mark.getMarkValue();
-        when(markServiceImpl.markRepository.findByMarkValueNamedQuery(markValue)).thenReturn(mark);
+        when(markServiceImpl.markRepository.findOne(5L)).thenReturn(mark);
         //when
-        markServiceImpl.updateMark(mark);
+        markServiceImpl.updateMark(5, mark);
         //then
-        verify(markServiceImpl.markRepository).findByMarkValueNamedQuery(markValue);
+        verify(markServiceImpl.markRepository).findOne(5L);
+        verify(markServiceImpl.markRepository).save(mark);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void updateByMarkValue_IllegalArgumentExceptionTest()  {
+    public void updateMark_IllegalArgumentExceptionTest()  {
         //given
-        Mark mark3 = null;
-
+        Mark mark3 = new Mark();
         //when
-        markServiceImpl.updateMark(mark3);
+        markServiceImpl.updateMark(0, mark3);
         //then
     }
 
     @Test(expected = NullPointerException.class)
-    public void updateByMarkValue_NullPointerExceptionTest()  {
+    public void updateMark_NullPointerExceptionTest()  {
         //given
-        Mark mark3 = new Mark();
-
+        Mark mark3 = null;
         //when
-        markServiceImpl.updateMark(mark3);
+        markServiceImpl.updateMark(1L, mark3);
         //then
     }
 

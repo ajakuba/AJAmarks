@@ -55,7 +55,7 @@ public class ClassroomController {
     public ResponseEntity updateClassroom(@PathVariable long classroomId, @RequestBody Classroom classroom) {
         try {
             Classroom updatedClassroom = classroomService.updateClassroom(classroomId, classroom);
-            return new ResponseEntity(updatedClassroom, HttpStatus.OK);
+            return new ResponseEntity(updatedClassroom, HttpStatus.OK   );
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
         }

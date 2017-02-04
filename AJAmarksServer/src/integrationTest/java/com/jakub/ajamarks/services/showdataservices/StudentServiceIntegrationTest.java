@@ -103,7 +103,7 @@ public class StudentServiceIntegrationTest {
     }
 
     @Test
-    public void updateByUserNameTest() {
+    public void updateStudentTest() {
         //given
         Student student = new Student();
         student.setFirstName("Jakub");
@@ -111,8 +111,9 @@ public class StudentServiceIntegrationTest {
         student.setUserName("aja");
         student.setClassroom(classroom);
         student.setStudentMarks(Collections.emptyList());
+        Student aja = studentService.getStudentByUserName("aja");
         //when
-        Student update = studentService.updateByUserName(student);
+        Student update = studentService.updateStudent(aja.getIdStudent(), student);
         //then
         assertThat(student, is(update));
         assertThat("ub", is(update.getLastName()));

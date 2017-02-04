@@ -41,13 +41,13 @@ public class ClassroomServiceImplTest {
         Collections.addAll(studentSet, student1, student2);
 
         classroom1 = new Classroom();
-        classroom1.setIdClassroom(1);
+        classroom1.setIdClassroom(1L);
         classroom1.setClassroomNumber(1);
         classroom1.setClassroomName("Pierwsza");
         classroom1.setStudentsInClassroom(Collections.emptySet());
 
         classroom2 = new Classroom();
-        classroom2.setIdClassroom(2);
+        classroom2.setIdClassroom(2L);
         classroom2.setClassroomNumber(2);
         classroom2.setClassroomName("Druga");
         classroom2.setStudentsInClassroom(studentSet);
@@ -97,30 +97,30 @@ public class ClassroomServiceImplTest {
     }
 
     @Test
-    public void updateTest(){
+    public void updateClassroomTest(){
         //given
-        when(classroomServiceImpl.classroomRepository.findByClassroomName(classroom1.getClassroomName())).thenReturn(classroom1);
+        when(classroomServiceImpl.classroomRepository.findOne(1L)).thenReturn(classroom1);
         //when
-        classroomServiceImpl.updateClassroom(classroom1);
+        classroomServiceImpl.updateClassroom(1L, classroom2);
         //then
-        verify(classroomServiceImpl.classroomRepository).findByClassroomName(classroom1.getClassroomName());
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void update_IllegalArgumentExceptionTest(){
-        //given
-        Classroom classroom3 = new Classroom();
-        //when
-        classroomServiceImpl.updateClassroom(classroom3);
-        //then
+        verify(classroomServiceImpl.classroomRepository).findOne(1L);
     }
 
     @Test(expected = NullPointerException.class)
-    public void update_NullPointerExceptionTest(){
+    public void updateClassroom_IllegalArgumentExceptionTest(){
         //given
         Classroom classroom3 = null;
         //when
-        classroomServiceImpl.updateClassroom(classroom3);
+        classroomServiceImpl.updateClassroom(1L, classroom3);
+        //then
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void updateClassroom_NullPointerExceptionTest(){
+        //given
+        Classroom classroom3 = new Classroom();
+        //when
+        classroomServiceImpl.updateClassroom(0L, classroom3);
         //then
     }
 

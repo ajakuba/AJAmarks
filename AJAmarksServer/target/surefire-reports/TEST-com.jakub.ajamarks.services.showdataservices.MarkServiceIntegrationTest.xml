@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="2.952" tests="12" errors="0" skipped="0" failures="2">
+<testsuite name="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="3.099" tests="11" errors="1" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/ja/java/jdk1.8.0_77/jre/lib/amd64"/>
@@ -59,73 +59,15 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="getStudentsByGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.247"/>
-  <testcase name="updateByMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.192"/>
-  <testcase name="getStudentsByGivenMarkValue_NoStudentsForGivenMarkVaslueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.297">
-    <failure message="Expected exception: java.lang.NullPointerException" type="java.lang.AssertionError">java.lang.AssertionError: Expected exception: java.lang.NullPointerException
-	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
-	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
-	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-</failure>
-    <system-out>Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
-Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
-Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
-Hibernate: insert into Classroom (classroomName, classroomNumber, idClassroom) values (?, ?, ?)
-Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
-Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
-Hibernate: insert into Mark_Student (studentMarks_idMark, studentsWithMark_idStudent) values (?, ?)
-Hibernate: insert into Mark_Student (studentMarks_idMark, studentsWithMark_idStudent) values (?, ?)
-Hibernate: insert into Mark_Student (studentMarks_idMark, studentsWithMark_idStudent) values (?, ?)
-Hibernate: select mark0_.idMark as idMark1_1_, mark0_.markName as markName2_1_, mark0_.markValue as markValu3_1_ from Mark mark0_ where mark0_.markValue=?
-</system-out>
-  </testcase>
-  <testcase name="getAllTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.44"/>
-  <testcase name="saveMarkTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.209"/>
-  <testcase name="getStudentsByGivenMarkName_NoGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.185"/>
-  <testcase name="getByMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.185"/>
-  <testcase name="getStudentsByGivenMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.208"/>
-  <testcase name="getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.235"/>
-  <testcase name="getStudentsByGivenMarkValue_NoGivenMarkVaslueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.227"/>
-  <testcase name="getByMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.283"/>
-  <testcase name="deleteTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.244">
-    <failure message="&#10;Expected: is &lt;3&gt;&#10;     but: was &lt;0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-Expected: is <3>
-     but: was <0>
+  <testcase name="getStudentsByGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.422"/>
+  <testcase name="getStudentsByGivenMarkValue_NoGivenMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.388"/>
+  <testcase name="getAllTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.25">
+    <failure message="&#10;Expected: is &lt;4&gt;&#10;     but: was &lt;3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+Expected: is <4>
+     but: was <3>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest.deleteTest(MarkServiceIntegrationTest.java:137)
+	at com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest.getAllTest(MarkServiceIntegrationTest.java:153)
 ]]></failure>
     <system-out>Hibernate: select next_val as id_val from hibernate_sequence for update
 Hibernate: update hibernate_sequence set next_val= ? where next_val=?
@@ -139,16 +81,128 @@ Hibernate: select next_val as id_val from hibernate_sequence for update
 Hibernate: update hibernate_sequence set next_val= ? where next_val=?
 Hibernate: select next_val as id_val from hibernate_sequence for update
 Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select mark0_.idMark as idMark1_1_0_, mark0_.markName as markName2_1_0_, mark0_.markValue as markValu3_1_0_ from Mark mark0_ where mark0_.idMark=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
 Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
 Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
 Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
 Hibernate: insert into Classroom (classroomName, classroomNumber, idClassroom) values (?, ?, ?)
 Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
 Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
+Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
 Hibernate: insert into Mark_Student (studentMarks_idMark, studentsWithMark_idStudent) values (?, ?)
 Hibernate: insert into Mark_Student (studentMarks_idMark, studentsWithMark_idStudent) values (?, ?)
 Hibernate: insert into Mark_Student (studentMarks_idMark, studentsWithMark_idStudent) values (?, ?)
 Hibernate: select mark0_.idMark as idMark1_1_, mark0_.markName as markName2_1_, mark0_.markValue as markValu3_1_ from Mark mark0_
+</system-out>
+  </testcase>
+  <testcase name="saveMarkTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.24"/>
+  <testcase name="getStudentsByGivenMarkName_NoGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.217"/>
+  <testcase name="getByMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.31"/>
+  <testcase name="getStudentsByGivenMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.226"/>
+  <testcase name="getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.255"/>
+  <testcase name="updateMarkTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.235"/>
+  <testcase name="getByMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.269"/>
+  <testcase name="deleteTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.287">
+    <error message="could not execute statement; SQL [n/a]; constraint [UK_4137lq07kliswfhiec7w2614y]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement" type="org.springframework.dao.DataIntegrityViolationException">org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [UK_4137lq07kliswfhiec7w2614y]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1039)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4098)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4030)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2677)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2134)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2434)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2352)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2337)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:204)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2934)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3434)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:582)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:456)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337)
+	at org.hibernate.event.internal.DefaultAutoFlushEventListener.onAutoFlush(DefaultAutoFlushEventListener.java:50)
+	at org.hibernate.internal.SessionImpl.autoFlushIfRequired(SessionImpl.java:1361)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1443)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1402)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1374)
+	at org.hibernate.Query.getResultList(Query.java:417)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:55)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:327)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:503)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:488)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy54.findAll(Unknown Source)
+	at com.jakub.ajamarks.services.showdataservices.MarkServiceImpl.getAll(MarkServiceImpl.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy55.getAll(Unknown Source)
+	at com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest.deleteTest(MarkServiceIntegrationTest.java:143)
+</error>
+    <system-out>Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select mark0_.idMark as idMark1_1_0_, mark0_.markName as markName2_1_0_, mark0_.markValue as markValu3_1_0_ from Mark mark0_ where mark0_.idMark=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select mark0_.idMark as idMark1_1_0_, mark0_.markName as markName2_1_0_, mark0_.markValue as markValu3_1_0_ from Mark mark0_ where mark0_.idMark=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
+Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
+Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
+Hibernate: insert into Classroom (classroomName, classroomNumber, idClassroom) values (?, ?, ?)
+Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
+Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
+Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
+Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
+01:26:34.457 [main] ERROR o.h.e.j.s.SqlExceptionHelper - Duplicate entry 'cel' for key 'UK_4137lq07kliswfhiec7w2614y'
 </system-out>
   </testcase>
 </testsuite>

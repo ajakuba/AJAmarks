@@ -12,6 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -56,7 +58,7 @@ public class StudentController {
     @PutMapping("student")
     public ResponseEntity updateStudent(@PathVariable long studentId, @RequestBody Student student) {
         try {
-            Student updatedStudent = studentService.updateByUserName(studentId, student);
+            Student updatedStudent = studentService.updateStudent(studentId, student);
             return new ResponseEntity(updatedStudent, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
@@ -75,8 +77,13 @@ public class StudentController {
     }
 
     @GetMapping("students")
-    public List<Student> showAllStudents() {
-        return studentService.getAll();
+    public ResponseEntity showAllStudents() {
+        try {
+            Collection<Student> all = studentService.getAll();
+            return new ResponseEntity(all, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
     }
 
     @GetMapping("student/{id:\\d+}")
@@ -102,7 +109,7 @@ public class StudentController {
     public ResponseEntity showStudentsWithGivenMarkValue(@PathVariable int markvalue){
         try{
             List<Student> studentsWithGivenMarkValue = studentService.getStudentsWithGivenMarkValue(markvalue);
-            Collections.sort(studentsWithGivenMarkValue);
+            Collections.sort(new ArrayList<>(studentsWithGivenMarkValue));
             return new ResponseEntity(studentsWithGivenMarkValue, HttpStatus.OK);
         }catch(Exception e){
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
@@ -113,7 +120,7 @@ public class StudentController {
     public ResponseEntity showStudentsWithoutGivenMarkValue(@PathVariable int markvalue){
         try{
             List<Student> studentsWithoutGivenMarkValue = studentService.getStudentsWithoutGivenMarkValue(markvalue);
-            Collections.sort(studentsWithoutGivenMarkValue);
+            Collections.sort(new ArrayList<>(studentsWithoutGivenMarkValue));
             return new ResponseEntity(studentsWithoutGivenMarkValue, HttpStatus.OK);
         }catch(Exception e){
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);

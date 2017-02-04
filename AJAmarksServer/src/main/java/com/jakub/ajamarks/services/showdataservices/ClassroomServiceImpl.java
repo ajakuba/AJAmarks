@@ -28,14 +28,6 @@ public class ClassroomServiceImpl implements ClassroomService {
         return classroomRepository.save(classroom);
     }
 
-    public Classroom updateClassroom(Classroom classroom) {
-        Preconditions.checkNotNull(classroom, "classroom can't be null");
-        Preconditions.checkArgument(classroom.getClassroomName() != null, "classroom name can't be null");
-        Classroom byClassroomName = classroomRepository.findByClassroomName(classroom.getClassroomName());
-        classroom.setIdClassroom(byClassroomName.getIdClassroom());
-        return classroomRepository.save(classroom);
-    }
-
     public void delete(Classroom classroom) {
         Preconditions.checkArgument(classroom != null, "classroom can't be null");
         classroomRepository.delete(classroom);
@@ -43,13 +35,11 @@ public class ClassroomServiceImpl implements ClassroomService {
 
     @Override
     public Classroom updateClassroom(long classroomId, Classroom classroom) {
-        Preconditions.checkNotNull(classroomId, "classroom identity number can not be null");
+        Preconditions.checkArgument(classroomId > 0, "classroom identity number can not be les than 1");
         Preconditions.checkNotNull(classroom, "classroom can not be null");
-        Classroom foundClassroom = classroomRepository.findOne(classroomId);
-        foundClassroom.setClassroomName(classroom.getClassroomName());
-        foundClassroom.setClassroomNumber(classroom.getClassroomNumber());
-        foundClassroom.setStudentsInClassroom(classroom.getStudentsInClassroom());
-        return classroomRepository.save(foundClassroom);
+        Classroom byClassroomName = classroomRepository.findOne(classroomId);
+        classroom.setIdClassroom(byClassroomName.getIdClassroom());
+        return classroomRepository.save(classroom);
     }
 
     public List<Classroom> getAllByClassroomNameAsc() {

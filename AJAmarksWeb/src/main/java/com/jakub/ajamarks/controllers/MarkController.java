@@ -3,9 +3,7 @@ package com.jakub.ajamarks.controllers;
 import com.jakub.ajamarks.entities.Mark;
 import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.services.showdataservices.MarkService;
-import com.jakub.ajamarks.services.showdataservices.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -22,8 +20,6 @@ public class MarkController {
 
     @Autowired
     MarkService markService;
-    @Autowired
-    StudentService studentService;
 
     @PostMapping("mark")
     public
@@ -84,7 +80,6 @@ public class MarkController {
         }
     }
 
-
     @GetMapping("mark/{markValue:\\d}")
     public
     @ResponseBody
@@ -103,7 +98,6 @@ public class MarkController {
             return new ResponseEntity(byMarkName, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
-
         }
     }
 

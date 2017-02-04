@@ -3,6 +3,7 @@ package com.jakub.ajamarks.services.showdataservices;
 import com.jakub.ajamarks.config.DataBaseForTestConfiguration;
 import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Student;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -53,6 +54,7 @@ public class ClassroomServiceIntegrationTest {
         classroom1.setStudentsInClassroom(studentList);
 
         saveClassroom = classroomService.saveClassroom(classroom1);
+        studentService.saveStudent(savedStudent1);
     }
 
     @Test
@@ -70,29 +72,34 @@ public class ClassroomServiceIntegrationTest {
     }
 
     @Test
-    public void updateByClassroomNumberTest() {
+    public void updateClassroomTest() {
         //given
         Classroom cls = new Classroom();
-        cls.setClassroomNumber(2);
-        cls.setClassroomName("Pierwsza");
+        cls.setClassroomNumber(11);
+        cls.setClassroomName("Jedenasta");
         cls.setStudentsInClassroom(Collections.emptySet());
-        Classroom classroomByNumber = classroomService.getClassroomByNumber(1);
+        Classroom pierwsza = classroomService.getClassroomByName("Pierwsza");
+        long id = pierwsza.getIdClassroom();
         //when
-        Classroom update = classroomService.updateClassroom(cls);
+        Classroom update = classroomService.updateClassroom(id, cls);
         //then
         assertThat(cls.getClassroomNumber(), is(update.getClassroomNumber()));
-        assertThat(2, is(update.getClassroomNumber()));
-        assertThat("Pierwsza", is(update.getClassroomName()));
+        assertThat(11, is(update.getClassroomNumber()));
+        assertThat("Jedenasta", is(update.getClassroomName()));
     }
 
     @Test
     public void deleteTest() {
         //given
         //when
-        classroomService.delete(classroom1);
-        List<Classroom> all = classroomService.getAllByClassroomNameAsc();
+        Classroom classroom = new Classroom();
+        classroom.setClassroomNumber(12);
+        classroom.setClassroomName("Dwanascie");
+        classroomService.saveClassroom(classroom);
+        assertThat(2, is(classroomService.getAllByClassroomNameAsc().size()));
+        classroomService.delete(classroom);
         //then
-        assertThat(0, is(all.size()));
+        assertThat(1, is(classroomService.getAllByClassroomNameAsc().size()));
     }
 
     @Test
