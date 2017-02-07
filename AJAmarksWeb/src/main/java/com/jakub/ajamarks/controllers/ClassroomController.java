@@ -21,7 +21,7 @@ import java.util.Set;
 public class ClassroomController {
 
     @Autowired
-    ClassroomService classroomService;
+    ClassroomService classroomServiceImpl;
 
     @PostMapping("classroom")
     public ResponseEntity addClassroom(
@@ -34,7 +34,7 @@ public class ClassroomController {
         classroom.setStudentsInClassroom(Collections.emptySet());
 
         try {
-            Classroom savedClassroom = classroomService.saveClassroom(classroom);
+            Classroom savedClassroom = classroomServiceImpl.saveClassroom(classroom);
             return new ResponseEntity(savedClassroom, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
@@ -44,7 +44,7 @@ public class ClassroomController {
     @PostMapping("classroomNew")
     public ResponseEntity createClassroom(@RequestBody Classroom classroom) {
         try {
-            Classroom savedClassroom = classroomService.saveClassroom(classroom);
+            Classroom savedClassroom = classroomServiceImpl.saveClassroom(classroom);
             return new ResponseEntity(savedClassroom, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
@@ -54,7 +54,7 @@ public class ClassroomController {
     @PutMapping("classroom/{classroomId://d}")
     public ResponseEntity updateClassroom(@PathVariable long classroomId, @RequestBody Classroom classroom) {
         try {
-            Classroom updatedClassroom = classroomService.updateClassroom(classroomId, classroom);
+            Classroom updatedClassroom = classroomServiceImpl.updateClassroom(classroomId, classroom);
             return new ResponseEntity(updatedClassroom, HttpStatus.OK   );
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
@@ -64,8 +64,8 @@ public class ClassroomController {
     @DeleteMapping("classroom/{classroomNumber}")
     public ResponseEntity deleteClassroom(@PathVariable int classNumber) {
         try {
-            Classroom classroomByNumber = classroomService.getClassroomByNumber(classNumber);
-            classroomService.delete(classroomByNumber);
+            Classroom classroomByNumber = classroomServiceImpl.getClassroomByNumber(classNumber);
+            classroomServiceImpl.delete(classroomByNumber);
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
@@ -75,7 +75,7 @@ public class ClassroomController {
     @GetMapping("/classroom")
     public ResponseEntity showAllClassrooms() {
         try {
-            List<Classroom> allByClassroomNameAsc = classroomService.getAllByClassroomNameAsc();
+            List<Classroom> allByClassroomNameAsc = classroomServiceImpl.getAllByClassroomNameAsc();
             return new ResponseEntity(allByClassroomNameAsc, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
@@ -85,7 +85,7 @@ public class ClassroomController {
     @GetMapping("classroomById/{classroomID}")
     public ResponseEntity showClassroomById(@PathVariable long classroomID){
         try {
-            Classroom classroomById = classroomService.getClassroomById(classroomID);
+            Classroom classroomById = classroomServiceImpl.getClassroomById(classroomID);
             return new ResponseEntity(classroomById, HttpStatus.OK);
         } catch (Exception e) {
             return  new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
@@ -95,7 +95,7 @@ public class ClassroomController {
     @GetMapping("classroom/{classroomNumber:\\d}")
     public ResponseEntity showClassroomByNumber(@PathVariable int classroomNumber) {
         try {
-            Classroom classroomByNumber = classroomService.getClassroomByNumber(classroomNumber);
+            Classroom classroomByNumber = classroomServiceImpl.getClassroomByNumber(classroomNumber);
             return new ResponseEntity(classroomByNumber, HttpStatus.OK);
         } catch (Exception e) {
             return  new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
@@ -105,7 +105,7 @@ public class ClassroomController {
     @GetMapping("classroom/{classroomName:[A-Za-z]+}")
     public ResponseEntity showClassroomByName(@PathVariable String classroomName){
         try {
-            Classroom classroomByName = classroomService.getClassroomByName(classroomName);
+            Classroom classroomByName = classroomServiceImpl.getClassroomByName(classroomName);
             return new ResponseEntity(classroomByName, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
@@ -115,7 +115,7 @@ public class ClassroomController {
     @GetMapping("classroomStudents/{classroomNumber:\\d}")
     public ResponseEntity showClassroomStudentsByClassroomNumber(@PathVariable int classroomNumber){
         try {
-            Set<Student> classroomStudentsByClassroomNumber = classroomService.getClassroomStudentsByClassroomNumber(classroomNumber);
+            Set<Student> classroomStudentsByClassroomNumber = classroomServiceImpl.getClassroomStudentsByClassroomNumber(classroomNumber);
             ArrayList<Student> students = new ArrayList<>(classroomStudentsByClassroomNumber);
             Collections.sort(students);
             return new ResponseEntity(students, HttpStatus.OK);
@@ -127,7 +127,7 @@ public class ClassroomController {
     @GetMapping("classroomStudents/{classroomName:[A-Za-z]+}")
     public ResponseEntity showClassroomStudentsByClassroomName(@PathVariable String classroomName){
         try {
-            Set<Student> classroomStudentsByClassroomName = classroomService.getClassroomStudentsByClassroomName(classroomName);
+            Set<Student> classroomStudentsByClassroomName = classroomServiceImpl.getClassroomStudentsByClassroomName(classroomName);
             ArrayList<Student> students = new ArrayList<>(classroomStudentsByClassroomName);
             Collections.sort(students);
             return new ResponseEntity(students, HttpStatus.OK);

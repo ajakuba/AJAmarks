@@ -1,4 +1,36 @@
 -------------------------------------------------------------------------------
 Test set: com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.119 sec - in com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest
+Tests run: 12, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 2.151 sec <<< FAILURE! - in com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest
+getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)  Time elapsed: 0.173 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: is <1>
+     but: was <0>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest.getStudentsWithoutGivenMark_NoStudentsForGicenMarkTest(StudentServiceIntegrationTest.java:236)
+
+saveStudentTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)  Time elapsed: 0.242 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: is <3>
+     but: was <2>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest.saveStudentTest(StudentServiceIntegrationTest.java:101)
+
+getAllTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)  Time elapsed: 0.262 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: is <3>
+     but: was <2>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest.getAllTest(StudentServiceIntegrationTest.java:139)
+
+deleteTest(com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest)  Time elapsed: 0.125 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: is <1>
+     but: was <0>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at com.jakub.ajamarks.services.showdataservices.StudentServiceIntegrationTest.deleteTest(StudentServiceIntegrationTest.java:129)
+

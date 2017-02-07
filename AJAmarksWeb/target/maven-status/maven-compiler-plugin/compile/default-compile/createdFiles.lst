@@ -1,8 +1,9 @@
 com/jakub/ajamarks/controllers/StudentJSPController.class
+com/jakub/ajamarks/config/WebAppConfigurationContext.class
+com/jakub/ajamarks/controllers/StudentController.class
+com/jakub/ajamarks/controllers/SubjectController.class
 com/jakub/ajamarks/controllers/EntryController.class
 com/jakub/ajamarks/config/SwaggerConfiguration.class
-com/jakub/ajamarks/config/WebAppConfiguration.class
 com/jakub/ajamarks/config/WebAppInitializer.class
 com/jakub/ajamarks/controllers/ClassroomController.class
-com/jakub/ajamarks/controllers/StudentController.class
 com/jakub/ajamarks/controllers/MarkController.class

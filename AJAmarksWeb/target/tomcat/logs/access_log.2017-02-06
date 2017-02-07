@@ -1,0 +1,7 @@
+127.0.0.1 - - [06/Feb/2017:23:14:51 +0100] "GET /ajamarks/api/subject/subject/101 HTTP/1.1" 500 1147 http-bio-8080-exec-1 78
+127.0.0.1 - - [06/Feb/2017:23:15:12 +0100] "GET /ajamarks/api/subject/subject/101L HTTP/1.1" 500 1147 http-bio-8080-exec-2 8
+127.0.0.1 - - [06/Feb/2017:23:15:49 +0100] "GET /ajamarks/api/mark/mark/101 HTTP/1.1" 405 1045 http-bio-8080-exec-3 10
+127.0.0.1 - - [06/Feb/2017:23:17:00 +0100] "GET /ajamarks/api/subject/subject/101 HTTP/1.1" 500 1147 http-bio-8080-exec-5 2
+127.0.0.1 - - [06/Feb/2017:23:20:44 +0100] "GET /ajamarks/api/subject/subject/101 HTTP/1.1" 500 1147 http-bio-8080-exec-6 3
+127.0.0.1 - - [06/Feb/2017:23:21:27 +0100] "GET /ajamarks/api/subject/subject/101 HTTP/1.1" 404 23 http-bio-8080-exec-1 112
+127.0.0.1 - - [06/Feb/2017:23:22:59 +0100] "GET /ajamarks/api/subject/subject/101 HTTP/1.1" 200 55 http-bio-8080-exec-1 172

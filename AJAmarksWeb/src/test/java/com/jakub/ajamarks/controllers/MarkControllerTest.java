@@ -29,8 +29,8 @@ public class MarkControllerTest {
     private List<Mark> markList;
     private Student student;
     private Classroom classroom;
-    Set<Student> studentSetInClassroom;
-    Set<Student> studentSetWithBDBMark;
+    private Set<Student> studentSetInClassroom;
+    private Set<Student> studentSetWithBDBMark;
 
 
     @Before

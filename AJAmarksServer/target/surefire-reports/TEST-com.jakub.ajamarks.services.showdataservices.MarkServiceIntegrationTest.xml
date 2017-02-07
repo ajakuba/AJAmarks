@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="3.099" tests="11" errors="1" skipped="0" failures="1">
+<testsuite name="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="5.183" tests="11" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/ja/java/jdk1.8.0_77/jre/lib/amd64"/>
@@ -59,52 +59,17 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="getStudentsByGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.422"/>
-  <testcase name="getStudentsByGivenMarkValue_NoGivenMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.388"/>
-  <testcase name="getAllTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.25">
-    <failure message="&#10;Expected: is &lt;4&gt;&#10;     but: was &lt;3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-Expected: is <4>
-     but: was <3>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest.getAllTest(MarkServiceIntegrationTest.java:153)
-]]></failure>
-    <system-out>Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select mark0_.idMark as idMark1_1_0_, mark0_.markName as markName2_1_0_, mark0_.markValue as markValu3_1_0_ from Mark mark0_ where mark0_.idMark=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
-Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
-Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
-Hibernate: insert into Classroom (classroomName, classroomNumber, idClassroom) values (?, ?, ?)
-Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
-Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
-Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
-Hibernate: insert into Mark_Student (studentMarks_idMark, studentsWithMark_idStudent) values (?, ?)
-Hibernate: insert into Mark_Student (studentMarks_idMark, studentsWithMark_idStudent) values (?, ?)
-Hibernate: insert into Mark_Student (studentMarks_idMark, studentsWithMark_idStudent) values (?, ?)
-Hibernate: select mark0_.idMark as idMark1_1_, mark0_.markName as markName2_1_, mark0_.markValue as markValu3_1_ from Mark mark0_
-</system-out>
-  </testcase>
-  <testcase name="saveMarkTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.24"/>
-  <testcase name="getStudentsByGivenMarkName_NoGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.217"/>
-  <testcase name="getByMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.31"/>
-  <testcase name="getStudentsByGivenMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.226"/>
-  <testcase name="getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.255"/>
-  <testcase name="updateMarkTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.235"/>
-  <testcase name="getByMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.269"/>
-  <testcase name="deleteTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.287">
+  <testcase name="getStudentsByGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.352"/>
+  <testcase name="getStudentsByGivenMarkValue_NoGivenMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.193"/>
+  <testcase name="getAllTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.258"/>
+  <testcase name="saveMarkTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.779"/>
+  <testcase name="getStudentsByGivenMarkName_NoGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.225"/>
+  <testcase name="getByMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.276"/>
+  <testcase name="getStudentsByGivenMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.465"/>
+  <testcase name="getStudentsByGivenMarkName_NoStudentsForGivenMarkNameTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.639"/>
+  <testcase name="updateMarkTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.686"/>
+  <testcase name="getByMarkValueTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.626"/>
+  <testcase name="deleteTest" classname="com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest" time="0.684">
     <error message="could not execute statement; SQL [n/a]; constraint [UK_4137lq07kliswfhiec7w2614y]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement" type="org.springframework.dao.DataIntegrityViolationException">org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [UK_4137lq07kliswfhiec7w2614y]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -174,7 +139,7 @@ Hibernate: select mark0_.idMark as idMark1_1_, mark0_.markName as markName2_1_, 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
 	at com.sun.proxy.$Proxy55.getAll(Unknown Source)
-	at com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest.deleteTest(MarkServiceIntegrationTest.java:143)
+	at com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest.deleteTest(MarkServiceIntegrationTest.java:141)
 </error>
     <system-out>Hibernate: select next_val as id_val from hibernate_sequence for update
 Hibernate: update hibernate_sequence set next_val= ? where next_val=?
@@ -182,6 +147,9 @@ Hibernate: select next_val as id_val from hibernate_sequence for update
 Hibernate: update hibernate_sequence set next_val= ? where next_val=?
 Hibernate: select next_val as id_val from hibernate_sequence for update
 Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select mark0_.idMark as idMark1_1_0_, mark0_.markName as markName2_1_0_, mark0_.markValue as markValu3_1_0_ from Mark mark0_ where mark0_.idMark=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
 Hibernate: select next_val as id_val from hibernate_sequence for update
 Hibernate: update hibernate_sequence set next_val= ? where next_val=?
 Hibernate: select next_val as id_val from hibernate_sequence for update
@@ -191,9 +159,7 @@ Hibernate: update hibernate_sequence set next_val= ? where next_val=?
 Hibernate: select mark0_.idMark as idMark1_1_0_, mark0_.markName as markName2_1_0_, mark0_.markValue as markValu3_1_0_ from Mark mark0_ where mark0_.idMark=?
 Hibernate: select next_val as id_val from hibernate_sequence for update
 Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: select mark0_.idMark as idMark1_1_0_, mark0_.markName as markName2_1_0_, mark0_.markValue as markValu3_1_0_ from Mark mark0_ where mark0_.idMark=?
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
 Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
 Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
 Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
@@ -201,8 +167,7 @@ Hibernate: insert into Classroom (classroomName, classroomNumber, idClassroom) v
 Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
 Hibernate: insert into Student (classroom_idClassroom, firstName, lastName, userName, idStudent) values (?, ?, ?, ?, ?)
 Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
-Hibernate: insert into Mark (markName, markValue, idMark) values (?, ?, ?)
-01:26:34.457 [main] ERROR o.h.e.j.s.SqlExceptionHelper - Duplicate entry 'cel' for key 'UK_4137lq07kliswfhiec7w2614y'
+00:28:04.519 [main] ERROR o.h.e.j.s.SqlExceptionHelper - Duplicate entry 'cel' for key 'UK_4137lq07kliswfhiec7w2614y'
 </system-out>
   </testcase>
 </testsuite>

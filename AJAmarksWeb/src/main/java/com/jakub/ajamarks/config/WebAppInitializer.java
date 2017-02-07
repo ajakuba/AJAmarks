@@ -28,7 +28,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 
     private WebApplicationContext getContext() {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.register(WebAppConfiguration.class);
+        context.register(WebAppConfigurationContext.class);
         //context.register(SecurityConfig.class);
         return context;
     }

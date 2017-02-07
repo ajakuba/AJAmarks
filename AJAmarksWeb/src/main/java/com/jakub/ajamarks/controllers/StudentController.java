@@ -65,7 +65,7 @@ public class StudentController {
         }
     }
 
-    @DeleteMapping("dStudent/{userName}")
+    @DeleteMapping("student/{userName}")
     public ResponseEntity deleteStudent(@PathVariable String userName) {
         try {
             Student studentByUserName = studentService.getStudentByUserName(userName);

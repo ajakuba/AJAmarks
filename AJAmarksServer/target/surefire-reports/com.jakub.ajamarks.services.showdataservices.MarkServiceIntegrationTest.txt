@@ -1,16 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 3.127 sec <<< FAILURE! - in com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest
-getAllTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)  Time elapsed: 0.25 sec  <<< FAILURE!
-java.lang.AssertionError: 
-Expected: is <4>
-     but: was <3>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest.getAllTest(MarkServiceIntegrationTest.java:153)
-
-deleteTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)  Time elapsed: 0.287 sec  <<< ERROR!
+Tests run: 11, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.188 sec <<< FAILURE! - in com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest
+deleteTest(com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest)  Time elapsed: 0.684 sec  <<< ERROR!
 org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [UK_4137lq07kliswfhiec7w2614y]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -80,5 +72,5 @@ org.springframework.dao.DataIntegrityViolationException: could not execute state
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
 	at com.sun.proxy.$Proxy55.getAll(Unknown Source)
-	at com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest.deleteTest(MarkServiceIntegrationTest.java:143)
+	at com.jakub.ajamarks.services.showdataservices.MarkServiceIntegrationTest.deleteTest(MarkServiceIntegrationTest.java:141)
 

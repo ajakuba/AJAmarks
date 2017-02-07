@@ -2,10 +2,5 @@ com/jakub/ajamarks/services/showdataservices/StudentServiceIntegrationTest.class
 com/jakub/ajamarks/services/statisticservices/StatisticServiceIntegrationTest.class
 com/jakub/ajamarks/services/showdataservices/MarkServiceIntegrationTest.class
 com/jakub/ajamarks/repositories/StudentRepositoryIntegrationTest.class
-com/jakub/ajamarks/services/statisticservices/StatisticServiceImplTest.class
 com/jakub/ajamarks/services/showdataservices/ClassroomServiceIntegrationTest.class
-com/jakub/ajamarks/services/showdataservices/MarkServiceImplTest.class
-com/jakub/ajamarks/services/showdataservices/ClassroomServiceImplTest.class
-com/jakub/ajamarks/services/showdataservices/StudentServiceImplTest.class
-com/jakub/ajamarks/config/DataBaseForTestConfiguration.class
 com/jakub/ajamarks/repositories/ClassroomRepositoryIntegrationTest.class

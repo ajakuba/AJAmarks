@@ -67,7 +67,7 @@ public class ClassroomServiceIntegrationTest {
         //when
         Classroom saveClassroom2 = classroomService.saveClassroom(classroom2);
         //then
-        assertThat(2, is(classroomService.getAllByClassroomNameAsc().size()));
+        assertThat(3, is(classroomService.getAllByClassroomNameAsc().size()));
         assertThat(classroom2, is(saveClassroom2));
     }
 
@@ -96,10 +96,10 @@ public class ClassroomServiceIntegrationTest {
         classroom.setClassroomNumber(12);
         classroom.setClassroomName("Dwanascie");
         classroomService.saveClassroom(classroom);
-        assertThat(2, is(classroomService.getAllByClassroomNameAsc().size()));
+        assertThat(3, is(classroomService.getAllByClassroomNameAsc().size()));
         classroomService.delete(classroom);
         //then
-        assertThat(1, is(classroomService.getAllByClassroomNameAsc().size()));
+        assertThat(2, is(classroomService.getAllByClassroomNameAsc().size()));
     }
 
     @Test
@@ -108,7 +108,7 @@ public class ClassroomServiceIntegrationTest {
         //when
         List<Classroom> classroomList = classroomService.getAllByClassroomNameAsc();
         //then
-        assertThat(1, is(classroomList.size()));
+        assertThat(2, is(classroomList.size()));
         assertThat(classroomList, hasItem(classroom1));
     }
 
@@ -157,6 +157,8 @@ public class ClassroomServiceIntegrationTest {
     public void getClassroomStudentsByClassroomNumber_NoGivenClassroomNumberTest() {
         //given
         int classroomNumber = 111;
+        Classroom classroomById = classroomService.getClassroomById(101);
+        classroomService.delete(classroomById);
         //when
         classroomService.getClassroomStudentsByClassroomNumber(classroomNumber);
         //then

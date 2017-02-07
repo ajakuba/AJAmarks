@@ -35,7 +35,7 @@ public class MarkServiceIntegrationTest {
     ClassroomService classroomService;
 
     private Mark mark1, mark2, mark3;
-    private Mark localMark;
+    private Mark markWithNoConnection;
     private Classroom classroom;
 
 
@@ -60,6 +60,11 @@ public class MarkServiceIntegrationTest {
         mark3.setMarkName("db");
         mark3.setMarkValue(4);
         mark3.setStudentsWithMark(null);
+
+        markWithNoConnection = new Mark();
+        markWithNoConnection.setIdMark(33);
+        markWithNoConnection.setMarkValue(6);
+        markWithNoConnection.setMarkName("cel");
 
         List<Mark> markList1 = new ArrayList<>();
         List<Mark> markList2 = new ArrayList<>();
@@ -97,18 +102,11 @@ public class MarkServiceIntegrationTest {
         markService.saveMark(mark1);
         markService.saveMark(mark2);
         markService.saveMark(mark3);
-
+        markService.saveMark(markWithNoConnection);
 
         classroomService.saveClassroom(classroom);
         studentService.saveStudent(student1);
         studentService.saveStudent(student2);
-
-        localMark = new Mark();
-        localMark.setIdMark(33);
-        localMark.setMarkValue(6);
-        localMark.setMarkName("cel");
-        markService.saveMark(localMark);
-
     }
 
     @Test
@@ -130,7 +128,7 @@ public class MarkServiceIntegrationTest {
         mark.setMarkName("ndst");
         Mark savedMark = markService.saveMark(mark);
         //then
-        assertThat(5, is(markService.getAll().size()));
+        assertThat(6, is(markService.getAll().size()));
         assertThat(savedMark, is(mark));
     }
 
@@ -138,7 +136,7 @@ public class MarkServiceIntegrationTest {
     public void deleteTest() {
         //given
         //when
-        markService.delete(localMark);
+        markService.delete(markWithNoConnection);
         //then
         assertThat(3, is(markService.getAll().size()));
     }
@@ -150,7 +148,7 @@ public class MarkServiceIntegrationTest {
         //when
         List<Mark> all = markService.getAll();
         //the
-        assertThat(3, is(all.size()));
+        assertThat(5, is(all.size()));
         assertThat(all, hasItem(mark1));
         assertThat(all, hasItem(mark2));
         assertThat(all, hasItem(mark3));

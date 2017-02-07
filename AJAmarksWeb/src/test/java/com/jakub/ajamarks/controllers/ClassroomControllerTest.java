@@ -6,7 +6,6 @@ import com.jakub.ajamarks.entities.Student;
 import com.jakub.ajamarks.services.showdataservices.ClassroomService;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
@@ -38,7 +37,7 @@ public class ClassroomControllerTest {
     public void setUp() {
 
         classroomController = new ClassroomController();
-        classroomController.classroomService = mock(ClassroomService.class);
+        classroomController.classroomServiceImpl = mock(ClassroomService.class);
 
         mark = new Mark();
         mark.setIdMark(1);
@@ -82,7 +81,7 @@ public class ClassroomControllerTest {
         //when
         ResponseEntity responseEntity = classroomController.addClassroom(1, "Pierwsza");
         //then
-        verify(classroomController.classroomService).saveClassroom(classroom);
+        verify(classroomController.classroomServiceImpl).saveClassroom(classroom);
         assertThat(responseEntity.getStatusCodeValue(), is(201));
     }
 
@@ -92,22 +91,22 @@ public class ClassroomControllerTest {
         Classroom classroom = new Classroom();
         classroom.setClassroomName("Pierwsza");
         classroom.setClassroomNumber(1);
-        when(classroomController.classroomService.saveClassroom(classroom)).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.saveClassroom(classroom)).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.addClassroom(1, "Pierwsza");
         //then
-        verify(classroomController.classroomService).saveClassroom(classroom);
+        verify(classroomController.classroomServiceImpl).saveClassroom(classroom);
         assertThat(responseEntity.getStatusCodeValue(), is(406));
     }
 
     @Test
     public void createClassroom() {
         //given
-        when(classroomController.classroomService.saveClassroom(classroom)).thenReturn(classroom);
+        when(classroomController.classroomServiceImpl.saveClassroom(classroom)).thenReturn(classroom);
         //when
         ResponseEntity responseEntity = classroomController.createClassroom(classroom);
         //then
-        verify(classroomController.classroomService).saveClassroom(classroom);
+        verify(classroomController.classroomServiceImpl).saveClassroom(classroom);
         assertThat(responseEntity.getStatusCodeValue(), is(201));
         assertThat(responseEntity.getBody(), is(classroom));
     }
@@ -115,22 +114,22 @@ public class ClassroomControllerTest {
     @Test
     public void createClassroomThrowException() {
         //given
-        when(classroomController.classroomService.saveClassroom(classroom)).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.saveClassroom(classroom)).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.createClassroom(this.classroom);
         //then
-        verify(classroomController.classroomService).saveClassroom(classroom);
+        verify(classroomController.classroomServiceImpl).saveClassroom(classroom);
         assertThat(responseEntity.getStatusCodeValue(), is(406));
     }
 
     @Test
     public void updateClassroom() {
         //given
-        when(classroomController.classroomService.updateClassroom(1, classroom)).thenReturn(classroom);
+        when(classroomController.classroomServiceImpl.updateClassroom(1, classroom)).thenReturn(classroom);
         //when
         ResponseEntity responseEntity = classroomController.updateClassroom(1, classroom);
         //then
-        verify(classroomController.classroomService).updateClassroom(1, classroom);
+        verify(classroomController.classroomServiceImpl).updateClassroom(1, classroom);
         assertThat(responseEntity.getBody(), is(classroom));
         assertThat(responseEntity.getStatusCodeValue(), is(200));
     }
@@ -138,44 +137,44 @@ public class ClassroomControllerTest {
     @Test
     public void updateClassroomThrowException() {
         //given
-        when(classroomController.classroomService.updateClassroom(1, classroom)).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.updateClassroom(1, classroom)).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.updateClassroom(1, classroom);
         //then
-        verify(classroomController.classroomService).updateClassroom(1, classroom);
+        verify(classroomController.classroomServiceImpl).updateClassroom(1, classroom);
         assertThat(responseEntity.getStatusCodeValue(), is(406));
     }
 
     @Test
     public void deleteClassroom() {
         //given
-        when(classroomController.classroomService.getClassroomByNumber(1)).thenReturn(classroom);
+        when(classroomController.classroomServiceImpl.getClassroomByNumber(1)).thenReturn(classroom);
         //when
         ResponseEntity responseEntity = classroomController.deleteClassroom(1);
         //then
-        verify(classroomController.classroomService).delete(classroom);
+        verify(classroomController.classroomServiceImpl).delete(classroom);
         assertThat(responseEntity.getStatusCodeValue(), is(204));
     }
 
     @Test
     public void deleteClassroomThrowException() {
         //given
-        when(classroomController.classroomService.getClassroomByNumber(1)).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.getClassroomByNumber(1)).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.deleteClassroom(1);
         //then
-        verify(classroomController.classroomService).getClassroomByNumber(1);
+        verify(classroomController.classroomServiceImpl).getClassroomByNumber(1);
         assertThat(responseEntity.getStatusCodeValue(), is(404));
     }
 
     @Test
     public void showAllClassrooms() {
         //given
-        when(classroomController.classroomService.getAllByClassroomNameAsc()).thenReturn(classroomList);
+        when(classroomController.classroomServiceImpl.getAllByClassroomNameAsc()).thenReturn(classroomList);
         //when
         ResponseEntity responseEntity = classroomController.showAllClassrooms();
         //then
-        verify(classroomController.classroomService).getAllByClassroomNameAsc();
+        verify(classroomController.classroomServiceImpl).getAllByClassroomNameAsc();
         assertThat(responseEntity.getBody(), is(classroomList));
         assertThat(responseEntity.getStatusCodeValue(), is(200));
     }
@@ -183,22 +182,22 @@ public class ClassroomControllerTest {
     @Test
     public void showAllClassroomsThrowException() {
         //given
-        when(classroomController.classroomService.getAllByClassroomNameAsc()).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.getAllByClassroomNameAsc()).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.showAllClassrooms();
         //then
-        verify(classroomController.classroomService).getAllByClassroomNameAsc();
+        verify(classroomController.classroomServiceImpl).getAllByClassroomNameAsc();
         assertThat(responseEntity.getStatusCodeValue(), is(404));
     }
 
     @Test
     public void showClassroomById() {
         //given
-        when(classroomController.classroomService.getClassroomById(1)).thenReturn(classroom);
+        when(classroomController.classroomServiceImpl.getClassroomById(1)).thenReturn(classroom);
         //when
         ResponseEntity responseEntity = classroomController.showClassroomById(1);
         //then
-        verify(classroomController.classroomService).getClassroomById(1);
+        verify(classroomController.classroomServiceImpl).getClassroomById(1);
         assertThat(responseEntity.getBody(), is(classroom));
         assertThat(responseEntity.getStatusCodeValue(), is(200));
     }
@@ -206,22 +205,22 @@ public class ClassroomControllerTest {
     @Test
     public void showClassroomByIdThrowException() {
         //given
-        when(classroomController.classroomService.getClassroomById(1)).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.getClassroomById(1)).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.showClassroomById(1);
         //then
-        verify(classroomController.classroomService).getClassroomById(1);
+        verify(classroomController.classroomServiceImpl).getClassroomById(1);
         assertThat(responseEntity.getStatusCodeValue(), is(404));
     }
 
     @Test
     public void showClassroomByNumber()  {
         //given
-        when(classroomController.classroomService.getClassroomByNumber(1)).thenReturn(classroom);
+        when(classroomController.classroomServiceImpl.getClassroomByNumber(1)).thenReturn(classroom);
         //when
         ResponseEntity responseEntity = classroomController.showClassroomByNumber(1);
         //then
-        verify(classroomController.classroomService).getClassroomByNumber(1);
+        verify(classroomController.classroomServiceImpl).getClassroomByNumber(1);
         assertThat(responseEntity.getBody(), is(classroom));
         assertThat(responseEntity.getStatusCodeValue(), is(200));
     }
@@ -229,22 +228,22 @@ public class ClassroomControllerTest {
     @Test
     public void showClassroomByNumberThrowExceptin()  {
         //given
-        when(classroomController.classroomService.getClassroomByNumber(1)).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.getClassroomByNumber(1)).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.showClassroomByNumber(1);
         //then
-        verify(classroomController.classroomService).getClassroomByNumber(1);
+        verify(classroomController.classroomServiceImpl).getClassroomByNumber(1);
         assertThat(responseEntity.getStatusCodeValue(), is(404));
     }
 
     @Test
     public void showClassroomByName() {
         //given
-        when(classroomController.classroomService.getClassroomByName("Pierwsza")).thenReturn(classroom);
+        when(classroomController.classroomServiceImpl.getClassroomByName("Pierwsza")).thenReturn(classroom);
         //when
         ResponseEntity responseEntity = classroomController.showClassroomByName("Pierwsza");
         //then
-        verify(classroomController.classroomService).getClassroomByName("Pierwsza");
+        verify(classroomController.classroomServiceImpl).getClassroomByName("Pierwsza");
         assertThat(responseEntity.getBody(), is(classroom));
         assertThat(responseEntity.getStatusCodeValue(), is(200));
     }
@@ -252,22 +251,22 @@ public class ClassroomControllerTest {
     @Test
     public void showClassroomByNameThrowException() {
         //given
-        when(classroomController.classroomService.getClassroomByName("Pierwsza")).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.getClassroomByName("Pierwsza")).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.showClassroomByName("Pierwsza");
         //then
-        verify(classroomController.classroomService).getClassroomByName("Pierwsza");
+        verify(classroomController.classroomServiceImpl).getClassroomByName("Pierwsza");
         assertThat(responseEntity.getStatusCodeValue(), is(404));
     }
 
     @Test
     public void showClassroomStudentsByClassroomNumber() {
         //given
-        when(classroomController.classroomService.getClassroomStudentsByClassroomNumber(1)).thenReturn(studentSetInClassroom);
+        when(classroomController.classroomServiceImpl.getClassroomStudentsByClassroomNumber(1)).thenReturn(studentSetInClassroom);
         //when
         ResponseEntity responseEntity = classroomController.showClassroomStudentsByClassroomNumber(1);
         //then
-        verify(classroomController.classroomService).getClassroomStudentsByClassroomNumber(1);
+        verify(classroomController.classroomServiceImpl).getClassroomStudentsByClassroomNumber(1);
         assertThat(responseEntity.getBody(), is(new ArrayList<>(studentSetInClassroom)));
         assertThat(responseEntity.getStatusCodeValue(),is(200));
     }
@@ -275,11 +274,11 @@ public class ClassroomControllerTest {
     @Test
     public void showClassroomStudentsByClassroomNumberThrowException() {
         //given
-        when(classroomController.classroomService.getClassroomStudentsByClassroomNumber(1)).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.getClassroomStudentsByClassroomNumber(1)).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.showClassroomStudentsByClassroomNumber(1);
         //then
-        verify(classroomController.classroomService).getClassroomStudentsByClassroomNumber(1);
+        verify(classroomController.classroomServiceImpl).getClassroomStudentsByClassroomNumber(1);
         assertThat(responseEntity.getStatusCodeValue(),is(404));
     }
 
@@ -287,11 +286,11 @@ public class ClassroomControllerTest {
     @Test
     public void showClassroomStudentsByClassroomName() {
         //given
-        when(classroomController.classroomService.getClassroomStudentsByClassroomName("Pierwsza")).thenReturn(studentSetInClassroom);
+        when(classroomController.classroomServiceImpl.getClassroomStudentsByClassroomName("Pierwsza")).thenReturn(studentSetInClassroom);
         //when
         ResponseEntity responseEntity = classroomController.showClassroomStudentsByClassroomName("Pierwsza");
         //then
-        verify(classroomController.classroomService).getClassroomStudentsByClassroomName("Pierwsza");
+        verify(classroomController.classroomServiceImpl).getClassroomStudentsByClassroomName("Pierwsza");
         assertThat(responseEntity.getBody(), is(new ArrayList<>(studentSetInClassroom)));
         assertThat(responseEntity.getStatusCodeValue(), is(200));
     }
@@ -299,11 +298,11 @@ public class ClassroomControllerTest {
     @Test
     public void showClassroomStudentsByClassroomNameThrowexception() {
         //given
-        when(classroomController.classroomService.getClassroomStudentsByClassroomName("Pierwsza")).thenThrow(new RuntimeException());
+        when(classroomController.classroomServiceImpl.getClassroomStudentsByClassroomName("Pierwsza")).thenThrow(new RuntimeException());
         //when
         ResponseEntity responseEntity = classroomController.showClassroomStudentsByClassroomName("Pierwsza");
         //then
-        verify(classroomController.classroomService).getClassroomStudentsByClassroomName("Pierwsza");
+        verify(classroomController.classroomServiceImpl).getClassroomStudentsByClassroomName("Pierwsza");
         assertThat(responseEntity.getStatusCodeValue(), is(404));
     }
 
