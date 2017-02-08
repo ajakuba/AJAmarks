@@ -1,6 +1,6 @@
 package com.jakub.ajamarks.services.showdataservices;
 
-import com.jakub.ajamarks.config.DataBaseForTestConfiguration;
+import com.jakub.ajamarks.config.ForTestConfiguration;
 import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Mark;
 import com.jakub.ajamarks.entities.Student;
@@ -23,7 +23,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {DataBaseForTestConfiguration.class})
+@ContextConfiguration(classes = {ForTestConfiguration.class})
 @Transactional
 public class MarkServiceIntegrationTest {
 
@@ -128,7 +128,7 @@ public class MarkServiceIntegrationTest {
         mark.setMarkName("ndst");
         Mark savedMark = markService.saveMark(mark);
         //then
-        assertThat(6, is(markService.getAll().size()));
+        assertThat(5, is(markService.getAll().size()));
         assertThat(savedMark, is(mark));
     }
 
@@ -144,14 +144,15 @@ public class MarkServiceIntegrationTest {
     @Test
     public void getAllTest() {
         //given
-        markService.saveMark(mark2);
         //when
         List<Mark> all = markService.getAll();
         //the
-        assertThat(5, is(all.size()));
+        System.out.println("!!!!!!!!!!!\n"+all);
+        assertThat(4, is(all.size()));
         assertThat(all, hasItem(mark1));
         assertThat(all, hasItem(mark2));
         assertThat(all, hasItem(mark3));
+        assertThat(all, hasItem(markWithNoConnection));
     }
 
     @Test

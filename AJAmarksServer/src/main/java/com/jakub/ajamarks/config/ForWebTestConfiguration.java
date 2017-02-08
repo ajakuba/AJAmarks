@@ -1,7 +1,9 @@
 package com.jakub.ajamarks.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.PropertyOverrideConfigurer;
 import org.springframework.context.annotation.*;
+import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -14,20 +16,24 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 import java.util.Properties;
 
+import static org.springframework.context.annotation.FilterType.ANNOTATION;
+
 /**
  * Created by ja on 11.01.17.
  */
 
 @Configuration
-//@PropertySources({
-//        @PropertySource("classpath:hsqlfortest.properties"),
-//        @PropertySource("classpath:mysqlfortest.properties")
-//})
-@PropertySource("classpath:mysqlfortest.properties")
-@ComponentScan(basePackages = "com.jakub.ajamarks")
 @EnableJpaRepositories("com.jakub.ajamarks.repositories")
 @EnableTransactionManagement
-public class DataBaseForTestConfiguration {
+@PropertySources({
+        @PropertySource("classpath:hsqlfortest.properties"),
+        @PropertySource("classpath:mysqlfortest.properties"),
+        @PropertySource("classpath:jpaforWebtestsproperties.properties")
+})
+public class ForWebTestConfiguration {
+
+    @Autowired
+    Environment env;
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
@@ -60,11 +66,13 @@ public class DataBaseForTestConfiguration {
     @Bean
     public Properties jpaProperties() {
         Properties properties = new Properties();
-        properties.setProperty("hibernate.hbm2ddl.import_files", "initial_data_for_test.sql");
-        properties.setProperty("hibernate.hbm2ddl.auto", "create");
-        properties.setProperty("hibernate.connection.useUnicode", "true");
-        properties.setProperty("hibernate.connection.characterEncoding", "UTF-8");
-        properties.setProperty("hibernate.connection.charSet", "UTF-8");
+        properties.setProperty("hibernate.hbm2ddl.import_files", env.getProperty("hibernate.hbm2ddl.import_files"));
+        properties.setProperty("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
+        properties.setProperty("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+        properties.setProperty("hibernate.format_sql", env.getProperty("hibernate.format_sql"));
+        properties.setProperty("hibernate.connection.useUnicode", env.getProperty("hibernate.connection.useUnicode"));
+        properties.setProperty("hibernate.connection.characterEncoding", env.getProperty("hibernate.connection.characterEncoding"));
+        properties.setProperty("hibernate.connection.charSet", env.getProperty("hibernate.connection.charSet"));
         return properties;
     }
 

@@ -2,7 +2,6 @@
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/serializers/ClassroomDeserializer.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/repositories/MarkRepository.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/MarkServiceImpl.java
-/home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/config/DataBaseForTestConfiguration.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/StudentService.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/serializers/MarkSerializer.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/Start.java
@@ -11,6 +10,7 @@
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/StudentServiceImpl.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/config/BeanConfiguration.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/entities/Subject.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/config/StartConfiguration.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/SubjectService.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/config/DataBaseConfiguration.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/repositories/StudentRepository.java
@@ -20,7 +20,9 @@
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/MarkService.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/repositories/ClassroomRepository.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/ClassroomServiceImpl.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/config/ForWebTestConfiguration.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/entities/Classroom.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/showdataservices/SubjectServiceImpl.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/config/ForTestConfiguration.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/services/statisticservices/StatisticService.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/main/java/com/jakub/ajamarks/repositories/SubjectRepository.java

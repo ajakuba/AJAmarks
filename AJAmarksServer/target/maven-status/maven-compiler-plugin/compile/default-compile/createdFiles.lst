@@ -11,13 +11,14 @@ com/jakub/ajamarks/config/BeanConfiguration.class
 com/jakub/ajamarks/entities/Classroom.class
 com/jakub/ajamarks/services/showdataservices/SubjectServiceImpl.class
 com/jakub/ajamarks/services/showdataservices/MarkServiceImpl.class
+com/jakub/ajamarks/config/ForTestConfiguration.class
 com/jakub/ajamarks/services/showdataservices/SubjectService.class
 com/jakub/ajamarks/serializers/MarkSerializer.class
 com/jakub/ajamarks/entities/Student.class
 com/jakub/ajamarks/entities/Mark.class
+com/jakub/ajamarks/config/StartConfiguration.class
 com/jakub/ajamarks/repositories/MarkRepository.class
 com/jakub/ajamarks/repositories/ClassroomRepository.class
-com/jakub/ajamarks/config/DataBaseForTestConfiguration.class
 com/jakub/ajamarks/services/showdataservices/ClassroomService.class
 com/jakub/ajamarks/services/showdataservices/ClassroomServiceImpl.class
 com/jakub/ajamarks/services/showdataservices/StudentService.class

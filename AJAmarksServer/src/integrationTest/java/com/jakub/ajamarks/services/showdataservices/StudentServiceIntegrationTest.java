@@ -1,6 +1,6 @@
 package com.jakub.ajamarks.services.showdataservices;
 
-import com.jakub.ajamarks.config.DataBaseForTestConfiguration;
+import com.jakub.ajamarks.config.ForTestConfiguration;
 import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Mark;
 import com.jakub.ajamarks.entities.Student;
@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,7 +25,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = DataBaseForTestConfiguration.class)
+@ContextConfiguration(classes = ForTestConfiguration.class)
 @Transactional
 public class StudentServiceIntegrationTest {
 

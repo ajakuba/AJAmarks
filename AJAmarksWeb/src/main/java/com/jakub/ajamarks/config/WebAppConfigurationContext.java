@@ -19,10 +19,10 @@ import static org.springframework.context.annotation.FilterType.ANNOTATION;
 @ComponentScan(basePackages = "com.jakub.ajamarks", excludeFilters = {
         @ComponentScan.Filter(type = ANNOTATION, value = Configuration.class)})
 @Import(value = {SwaggerConfiguration.class, DataBaseConfiguration.class})
-@PropertySources({
-        @PropertySource("classpath:mysql.properties"),
-        //   @PropertySource("classpath:hsql.properties")
-})
+//@PropertySources({
+//        @PropertySource("classpath:mysql.properties"),
+//        //   @PropertySource("classpath:hsql.properties")
+//})
 public class WebAppConfigurationContext extends WebMvcConfigurerAdapter {
 
     @Bean

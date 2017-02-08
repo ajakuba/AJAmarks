@@ -1,7 +1,9 @@
 package com.jakub.ajamarks.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.PropertyOverrideConfigurer;
 import org.springframework.context.annotation.*;
+import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -23,9 +25,14 @@ import java.util.Properties;
 @EnableTransactionManagement
 @PropertySources({
         @PropertySource("classpath:mysql.properties"),
-     //   @PropertySource("classpath:hsql.properties")
+        @PropertySource("classpath:hsql.properties"),
+        @PropertySource("classpath:jpaproperties.properties")
 })
+
 public class DataBaseConfiguration {
+
+    @Autowired
+    Environment env;
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
@@ -50,11 +57,13 @@ public class DataBaseConfiguration {
     @Bean
     public Properties jpaProperties() {
         Properties properties = new Properties();
-        properties.setProperty("hibernate.hbm2ddl.import_files", "initial_data.sql");
-        properties.setProperty("hibernate.hbm2ddl.auto", "create");
-        properties.setProperty("hibernate.connection.useUnicode", "true");
-        properties.setProperty("hibernate.connection.characterEncoding", "UTF-8");
-        properties.setProperty("hibernate.connection.charSet", "UTF-8");
+        properties.setProperty("hibernate.hbm2ddl.import_files", env.getProperty("hibernate.hbm2ddl.import_files"));
+        properties.setProperty("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
+        properties.setProperty("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+        properties.setProperty("hibernate.format_sql", env.getProperty("hibernate.format_sql"));
+        properties.setProperty("hibernate.connection.useUnicode", env.getProperty("hibernate.connection.useUnicode"));
+        properties.setProperty("hibernate.connection.characterEncoding", env.getProperty("hibernate.connection.characterEncoding"));
+        properties.setProperty("hibernate.connection.charSet", env.getProperty("hibernate.connection.charSet"));
         return properties;
     }
 

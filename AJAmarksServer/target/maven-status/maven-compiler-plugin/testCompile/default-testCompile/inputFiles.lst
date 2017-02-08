@@ -4,6 +4,7 @@
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/integrationTest/java/com/jakub/ajamarks/services/showdataservices/MarkServiceIntegrationTest.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/test/java/com/jakub/ajamarks/services/showdataservices/ClassroomServiceImplTest.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/integrationTest/java/com/jakub/ajamarks/services/statisticservices/StatisticServiceIntegrationTest.java
+/home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/integrationTest/java/com/jakub/ajamarks/config/DataBaseConfigurationTest.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/test/java/com/jakub/ajamarks/services/statisticservices/StatisticServiceImplTest.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/test/java/com/jakub/ajamarks/services/showdataservices/MarkServiceImplTest.java
 /home/ja/IdeaProjects/AJAmarks/AJAmarksServer/src/integrationTest/java/com/jakub/ajamarks/services/showdataservices/StudentServiceIntegrationTest.java

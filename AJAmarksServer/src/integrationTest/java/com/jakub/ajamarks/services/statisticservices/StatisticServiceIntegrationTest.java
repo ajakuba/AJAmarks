@@ -1,6 +1,6 @@
 package com.jakub.ajamarks.services.statisticservices;
 
-import com.jakub.ajamarks.config.DataBaseForTestConfiguration;
+import com.jakub.ajamarks.config.ForTestConfiguration;
 import com.jakub.ajamarks.entities.Classroom;
 import com.jakub.ajamarks.entities.Mark;
 import com.jakub.ajamarks.entities.Student;
@@ -26,7 +26,7 @@ import static org.junit.Assert.assertTrue;
  * Created by ja on 17.01.17.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = DataBaseForTestConfiguration.class)
+@ContextConfiguration(classes = {ForTestConfiguration.class})
 @Transactional
 public class StatisticServiceIntegrationTest {
 

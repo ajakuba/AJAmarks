@@ -1,6 +1,6 @@
 package com.jakub.ajamarks.config;
 
-import com.jakub.ajamarks.services.showdataservices.SubjectService;
+import com.google.common.annotations.VisibleForTesting;
 import org.springframework.context.annotation.*;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -10,11 +10,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import static org.springframework.context.annotation.FilterType.ANNOTATION;
 
 @Configuration
-@ComponentScan(basePackages = "com.jakub.ajamarks", excludeFilters = {
-        @ComponentScan.Filter(type = ANNOTATION, value = Configuration.class)})
-@PropertySource("classpath:mysqlfortest.properties")
+@ComponentScan(basePackages = "com.jakub.ajamarks")
 public class WebAppTestConfigurationContext extends WebMvcConfigurerAdapter {
-
 
     @Bean
     public InternalResourceViewResolver jspViewResolver() {

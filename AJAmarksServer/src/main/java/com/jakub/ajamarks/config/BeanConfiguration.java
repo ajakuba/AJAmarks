@@ -10,8 +10,6 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import static org.springframework.context.annotation.FilterType.ANNOTATION;
 
 @Configuration
-@ComponentScan(basePackages = "com.jakub.ajamarks", excludeFilters = {
-        @ComponentScan.Filter(type = ANNOTATION, value = Configuration.class)})
 public class BeanConfiguration {
 
     @Bean

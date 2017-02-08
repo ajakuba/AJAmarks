@@ -20,19 +20,19 @@ public class StudentSerializer extends JsonSerializer<Student> {
         jsonGenerator.writeObjectField("userName", student.getUserName());
         jsonGenerator.writeObjectField("firstName", student.getFirstName());
         jsonGenerator.writeObjectField("lastName", student.getLastName());
-        jsonGenerator.writeObjectField("classroom", getStudentClassroom(student.getClassroom()));
+        jsonGenerator.writeObjectField("classroom", student.getClassroom());
         jsonGenerator.writeObjectField("studentsMarks", getmarkValueList(student));
         jsonGenerator.writeEndObject();
     }
 
-    private Classroom getStudentClassroom(Classroom classroom){
-        Classroom simpleClassroom = new Classroom();
-        simpleClassroom.setClassroomName(classroom.getClassroomName());
-        simpleClassroom.setClassroomNumber(classroom.getClassroomNumber());
-        simpleClassroom.setStudentsInClassroom(Collections.emptySet());
-
-        return simpleClassroom;
-    }
+//    private Classroom getStudentClassroom(Classroom classroom){
+//        Classroom simpleClassroom = new Classroom();
+//        simpleClassroom.setClassroomName(classroom.getClassroomName());
+//        simpleClassroom.setClassroomNumber(classroom.getClassroomNumber());
+//        simpleClassroom.setStudentsInClassroom(Collections.emptySet());
+//
+//        return simpleClassroom;
+//    }
 
 
     private List<Integer> getmarkValueList(Student student) {

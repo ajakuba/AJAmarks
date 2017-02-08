@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.jakub.ajamarks.config.DataBaseConfigurationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.463 sec <<< FAILURE! - in com.jakub.ajamarks.config.DataBaseConfigurationTest
+jpaPropertyTest(com.jakub.ajamarks.config.DataBaseConfigurationTest)  Time elapsed: 0.004 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[tru]e> but was:<[fals]e>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.jakub.ajamarks.config.DataBaseConfigurationTest.jpaPropertyTest(DataBaseConfigurationTest.java:30)
+

@@ -1,6 +1,8 @@
 package com.jakub.ajamarks.controllers;
 
 
+import com.jakub.ajamarks.config.ForTestConfiguration;
+import com.jakub.ajamarks.config.StartConfiguration;
 import com.jakub.ajamarks.config.WebAppConfigurationContext;
 import com.jakub.ajamarks.config.WebAppTestConfigurationContext;
 import com.jakub.ajamarks.entities.Subject;
@@ -8,6 +10,7 @@ import com.jakub.ajamarks.services.showdataservices.SubjectService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -15,6 +18,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -32,17 +36,16 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {WebAppTestConfigurationContext.class})
+@ContextConfiguration(classes = {WebAppTestConfigurationContext.class, ForTestConfiguration.class})
 @WebAppConfiguration(value = "src/main/webapp")
 public class SubjectRESTTest {
-
 
     private MockMvc mockMvc;
 
 //    @Autowired
 //    SubjectService mockSubjectService;
 
-    private SubjectController subjectController;
+    private SubjectService mockSubjectService;
 
 
     @Autowired
@@ -52,42 +55,38 @@ public class SubjectRESTTest {
     @Before
     public void setUp() {
 
-        subjectController = new SubjectController();
-        subjectController.subjectService = mock(SubjectService.class);
+        mockSubjectService = mock(SubjectService.class);
 
         //because mocking is managed by Spring we should invoke reset() to clean Mocking
-  //      Mockito.reset(mockSubjectService);
+       // Mockito.reset(mockSubjectService);
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 
 
     }
 
     @Test
-    public void showAllTest() throws Exception {
+    public void showSubjectTest() throws Exception {
 
         Subject subject1 = new Subject();
-        subject1.setSubjectId(1);
+        subject1.setSubjectId(1L);
         subject1.setSubjectName("Matematyka");
-
-        Subject subject2 = new Subject();
-        subject1.setSubjectId(2);
-        subject1.setSubjectName("Polski");
 
         List<Subject> subjects = new ArrayList<>();
         subjects.add(subject1);
-        subjects.add(subject2);
 
-        when(subjectController.subjectService.getAll()).thenReturn(subjects);
+        when(mockSubjectService.getSubjectById(1L)).thenReturn(subject1);
 
-        mockMvc.perform(get("/api/subject/subject").contentType(MediaType.APPLICATION_JSON))
+        ResultActions perform = mockMvc.perform(get("/api/subject/subject/{subjectId}", 1L).contentType(MediaType.APPLICATION_JSON));
+
+        System.out.println("!!!!!!!!!!!!!!!!!!"+perform.andReturn().getResponse().getContentAsString());
+
+        perform
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(2)))
-            //    .andExpect(content().contentType(MediaType.APPLICATION_JSON.getType()))
-                .andExpect(jsonPath("$[0].subjectName", is("Matematyka")))
-                .andExpect(jsonPath("$[1].subjectName", is("Historia")));
+                .andExpect(jsonPath("$.subjectId", is(1L)))
+                .andExpect(jsonPath("$.subjectName", is("Matematyka")));
 
 
-        verify(subjectController.subjectService).getAll();
+        verify(mockSubjectService).getSubjectById(1L);
 
     }
 
